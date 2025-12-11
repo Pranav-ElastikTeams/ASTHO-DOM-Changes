@@ -1590,7 +1590,204 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         flex: 0 0 100%;
         max-width: 100%
     }
-} @media (min-width: 1024px) {
+} @media (min-width: 1023px) {
+    .navspace {
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    .navbar {
+        position: absolute;
+        min-width : 655px;
+        margin: 0;
+        padding: 0 0rem;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: flex-start;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        transition: opacity 0.2s ease-in-out;
+        text-align: left;
+        max-width: calc(100% - 30px);
+        box-sizing: border-box;
+    }
+    
+    .nav-logo:hover {
+        opacity: 0.9;
+    }
+    
+    .nav-logo span {
+        color: #06476b;
+        font-size: 14px;
+        font-weight: 600; 
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+        margin-top: 10px;
+        transition: color 0.2s ease-in-out;
+        font-family: 'Open Sans', Arial, sans-serif;
+    }
+    
+    .nav-logo:hover span {
+        color: #c35322;
+    }
+
+    .nav-menu__close {
+        visibility: hidden;
+    }
+    .nav-toggle {
+        visibility: hidden;
+    }
+    /* Ensure navigation is always visible on larger screens */
+    .nav-menu {
+        display: flex !important;
+        position: static !important;
+        padding: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    /* Keep navigation and its contents visible when search is active */
+    .search-wrapper.show-inline-search ~ .nav-menu,
+    .search-wrapper.show-inline-search ~ .nav-menu .nav-menu__link-container {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Desktop Search Styles */
+    .nav-menu__search-container {
+        position: static;
+        padding: 0;
+        width: auto;
+        display: none; /* Hidden by default, shown by JS */
+    }
+
+    /* Make the form horizontal */
+    .nav-menu__search-container form {
+        padding: 0 !important;
+    }
+
+    .nav-menu__search-container .flex {
+        padding: 0 !important;
+        align-items: center;
+    }
+
+    .nav-menu__search {
+        font-size: 1.8rem;
+        width: 280px;
+        background: transparent;
+        border-bottom: 1px solid #c5c0c0;
+        padding: 8px 0;
+        margin: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+    }
+
+    .btn-search {
+        margin-left: -32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: #06476b;
+    }
+
+    .btn-search:hover {
+        color: #c35322;
+    }
+
+    /* Show the search form when active */
+    .search-wrapper.show-inline-search .desktop-search-placeholder {
+        display: block;
+        position: relative;
+    }
+
+    .search-wrapper.show-inline-search .desktop-search-placeholder .nav-menu__search-container {
+        display: block;
+    }
+
+    /* Hide the search toggle when search is active */
+    .search-wrapper.show-inline-search .search-toggle-container {
+        display: none;
+    }
+    .nav-menu__link-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-left: 28px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    /* Style for dropdown navigation */
+    .nav-menu__link {
+        position: relative;
+        padding: 1rem 0;
+    }
+    .nav-menu__link > .nav-menu__link-text {
+        padding: 0.5rem 0;
+        transition: border-color 0.2s ease;
+        color: #06476b;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Jost', sans-serif;
+    }
+    .nav-menu__link > .nav-menu__link-text:hover,
+    .nav-menu__link > .nav-menu__link-text:focus {
+        border-bottom: 4px solid #c35322;
+        outline: none;
+    }
+    /* Dropdown menu styles */
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 250px;
+        background: #f5f5f5;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        padding: 0.5rem 0;
+        border-radius: 4px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        margin-top: 5px;
+    }
+    .group:hover .submenu,
+    .group:focus-within .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Add border to parent link when submenu is open */
+    .group:hover .nav-menu__link > .nav-menu__link-text,
+    .group:focus-within .nav-menu__link > .nav-menu__link-text {
+        border-bottom: 4px solid #c35322;
+    }
+    .submenu li a {
+        display: block;
+        padding: 0.5rem 1.5rem;
+        color: #367aab;
+        transition: color 0.2s ease;
+    }
+    .submenu li a:hover,
+    .submenu li a:focus {
+        color: #c35322;
+        background-color: rgba(195, 83, 34, 0.05);
+    }
+}
+
+@media (min-width: 1024px) {
     .col-lg {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -2136,12 +2333,21 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 /* Submenu styles */
 .submenu {
     display: none;
-    position: relative;
+    position: absolute;
+    top: 100%;
     left: 0;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    min-width: 250px;
+    background: #f5f5f5;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    z-index: 1000;
     list-style: none;
+    margin: 0;
+}
+
+.nav-menu__link {
+    position: relative;
 }
 
 .submenu.active {
@@ -2156,12 +2362,12 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 .material-icons.toggle-l2 {
     transition: transform 0.2s ease;
     cursor: pointer;
-    margin-left: 8px;
     vertical-align: middle;
 }
 
 .nav-menu__link a {
-    color: #06476b
+    color: #06476b;
+    font-size: 18px
 } .nav-menu__search {
     border-bottom: 1px solid #c5c0c0;
     background-color: transparent;
@@ -2170,18 +2376,41 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         margin-left: -3.2rem;
         font-size: 3.2rem;
         color: #555
-    } .navbar {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    top: 0.8rem
-} @media (max-width: 1023px) {
-    .navbar {
-        top: 0.8rem
-    }
+} 
+.navbar {
+    position: static;
+    transform: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1023px) {
+.navbar {
+    width: auto;
+    margin: 0 auto;
+    align-items: center;
+}
+.nav-logo {
+    padding-left: 10px;
+}
+.submenu {
+    padding: 10px;
+}
+} .nav-toggle--search {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    color: #06476b;
 } .nav-toggle--search:active, .nav-toggle--search:focus, .nav-toggle--search:hover, .nav-toggle:active, .nav-toggle:focus, .nav-toggle:hover {
-    color: #c35322
+    color: #06476b;
+}
+
+.nav-toggle--search:active, .nav-toggle--search:focus, .nav-toggle--search:hover, .nav-toggle:active, .nav-toggle:focus, .nav-toggle:hover {
+    color: #c35322;
+    text-decoration: none;
 } .hero {
     min-height: 50rem;
     padding-bottom: 8rem
@@ -2203,7 +2432,28 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     .hero-container {
     margin-top: 150px;
     }
-} .hero-container {
+    .nav-logo {
+    padding-left: 20px;
+}
+} @media (max-width: 461px) {
+    .nav-toggle {
+        padding-left: 10px;
+    }
+    .nav-toggle > span {
+        visibility: hidden;
+    }
+    .nav-toggle--search > span {
+        visibility: hidden;
+    }
+    .search-toggle-container {
+        margin-left: auto;
+        width: auto;
+        position: relative;
+        right: -10rem;
+    }
+}
+
+.hero-container {
     z-index: 1
 } .bg-img--hero {
     left: 0;

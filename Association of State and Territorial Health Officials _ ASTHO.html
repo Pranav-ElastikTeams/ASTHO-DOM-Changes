@@ -10049,13 +10049,13 @@
                     <div class="container">
                         <div class="flex pt-8 justify-between items-center">
 
-                            <div>
+                            <div class="hamburger">
                                 <div class="flex cursor-pointer nav-toggle"><i class="material-icons mr-4">menu</i><span
                                         class="uppercase">Menu</span></div>
                             </div>
 
                             <div>
-                                <div class="navbar flex flex-col items-center">
+                                <div class="navbar flex flex-col">
 
                                     <a href="https://www.astho.org/" target=""
                                         class="flex flex-col items-center nav-logo">
@@ -10063,46 +10063,66 @@
 
                                         <img src="./Association of State and Territorial Health Officials _ ASTHO_files/astho-logo.png"
                                             alt="ASTHO logo" class="w-1/2 lg:w-auto">
+                                        <span class="uppercase lg:block hidden">ASSOCIATION OF STATE AND TERRITORIAL HEALTH
+                                        OFFICIALS</span>
 
                                     </a>
-
-
-
-                                    <span class="uppercase lg:block hidden">ASSOCIATION OF STATE AND TERRITORIAL HEALTH
-                                        OFFICIALS</span>
+                                    
                                 </div>
                             </div>
 
-                            <div class="flex lg:flex-row flex-col">
-
-                                <div>
-                                    <div class="flex pr-8 nav-toggle--search cursor-pointer"><i
-                                            class="material-icons mr-4">search</i><span class="uppercase">Search</span>
-                                    </div>
+                            <div class="search-wrapper flex lg:flex-row flex-col" role="search">
+                                <div class="search-toggle-container">
+                                    <button type="button" 
+                                            class="flex pr-8 nav-toggle--search cursor-pointer" 
+                                            aria-expanded="false" 
+                                            aria-controls="search-form"
+                                            id="search-toggle"
+                                            aria-label="Toggle search">
+                                        <i class="material-icons mr-4" aria-hidden="true">search</i>
+                                        <span class="uppercase">Search</span>
+                                    </button>
                                 </div>
-
-
-
+                                <!-- Desktop search container (empty, will get the form injected via CSS/JS) -->
+                                <div class="desktop-search-placeholder hidden lg:block"></div>
+                                <!-- Mobile search form -->
+                                <div id="search-form" class="search-form hidden w-full lg:hidden mt-4" role="search" aria-label="Search form">
+                                    <form action="https://www.astho.org/search" method="get" class="flex w-full">
+                                        <input type="text" 
+                                               placeholder="Search" 
+                                               name="q" 
+                                               required 
+                                               class="w-full p-2 border border-gray-300"
+                                               aria-label="Search input"
+                                               id="search-input">
+                                        <button type="submit" 
+                                                class="bg-blue-600 text-white p-2"
+                                                aria-label="Submit search">
+                                            <i class="material-icons" aria-hidden="true">search</i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-
-
-
-
-                    <div class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full">
+                    <div id="main-nav" class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full bg-white" role="dialog" aria-modal="true" aria-labelledby="menu-title" tabindex="-1">
+                        <h2 id="menu-title" class="sr-only">Main Navigation</h2>
                         <div class="container">
                             <div class="flex justify-end">
-                                <i class="material-icons nav-menu__close cursor-pointer">close</i>
+                                <button type="button" class="nav-menu__close" aria-label="Close menu" id="menu-close">
+                                    <i class="material-icons" aria-hidden="true">close</i>
+                                </button>
                             </div>
-                            <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center" role="menubar">
+                            <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center" role="menubar" aria-label="Main navigation">
                                 <!-- About Us -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/about/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/about/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle About Us submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/about/history/" target="_self" class="" role="menuitem">Our History</a>
@@ -10110,8 +10130,6 @@
                                         <li role="none">
                                             <a href="https://www.astho.org/about/governance/" target="_self" class="" role="menuitem">Leadership and Governance</a>
                                         </li>
-                                    <li>
-
                                         <li role="none">
                                             <a href="https://www.astho.org/about/partnerships/" target="_self" class="" role="menuitem">Partnerships</a>
                                         </li>
@@ -10132,10 +10150,12 @@
 
                                 <!-- Members -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/members/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">Members</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/members/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Members</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Members submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/members/member-directory/" target="_self" class="" role="menuitem">ASTHO Member Directory</a>
@@ -10159,10 +10179,12 @@
                                 </li>
                                 <!-- Our Work -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/topic/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">Our Work</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/topic/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Our Work</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Our Work submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/topic/infectious-disease-prevention/covid-19/" target="_self" class="" role="menuitem">COVID-19</a>
@@ -10219,10 +10241,12 @@
                                 </li>
                                 <!-- Policy & Advocacy -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/advocacy/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">Policy &amp; Advocacy</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/advocacy/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Policy &amp; Advocacy</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Policy & Advocacy submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/advocacy/federal-government-affairs/" target="_self" class="" role="menuitem">Federal Government Affairs</a>
@@ -10240,10 +10264,12 @@
                                 </li>
                                 <!-- Education & Events -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/education/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">Education &amp; Events</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/education/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Education &amp; Events</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Education & Events submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/education/past-events/" target="_self" class="" role="menuitem">Past Event Recordings</a>
@@ -10255,10 +10281,12 @@
                                 </li>
                                 <!-- Communications -->
                                 <li class="group relative" role="none">
-                                    <h3 class="nav-menu__link">
-                                        <a href="https://www.astho.org/communications/" target="_self" class="" role="menuitem" aria-haspopup="true" aria-expanded="false">Communications</a>
-                                        <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
-                                    </h3>
+                                    <div class="nav-menu__link">
+                                        <a href="https://www.astho.org/communications/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Communications</a>
+                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Communications submenu" tabindex="0">
+                                            <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+                                        </button>
+                                    </div>
                                     <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
                                         <li role="none">
                                             <a href="https://www.astho.org/communications/blog/" target="_self" class="" role="menuitem">Blog</a>
@@ -10292,8 +10320,8 @@
 
                 <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    // Get all dropdown toggles (the arrow icons)
-                    const dropdownToggles = document.querySelectorAll('.nav-menu__link .material-icons.toggle-l2');
+                    // Get all dropdown toggles (the arrow buttons)
+                    const dropdownToggles = document.querySelectorAll('.toggle-l2');
                     let activeDropdown = null;
 
                     // Function to close all dropdowns
@@ -10304,35 +10332,99 @@
                         document.querySelectorAll('.nav-menu__link').forEach(link => {
                             link.classList.remove('active');
                         });
+                        document.querySelectorAll('.toggle-l2').forEach(btn => {
+                            btn.setAttribute('aria-expanded', 'false');
+                        });
                         activeDropdown = null;
                     }
 
-                    // Add click event to each dropdown toggle
-                    dropdownToggles.forEach(toggle => {
-                        toggle.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                            const parentLink = this.closest('.nav-menu__link');
-                            const submenu = this.closest('li').querySelector('.submenu');
-                            
-                            // If clicking the same dropdown, close it
-                            if (activeDropdown === submenu) {
-                                closeAllDropdowns();
-                                return;
+                    // Function to toggle submenu
+                    function toggleSubmenu(button) {
+                        const parentLi = button.closest('li');
+                        const parentLink = button.closest('.nav-menu__link');
+                        const submenu = parentLi.querySelector('.submenu');
+                        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                        
+                        // Close other open dropdowns
+                        if (activeDropdown && activeDropdown !== submenu) {
+                            const currentButton = document.querySelector('.toggle-l2[aria-expanded="true"]');
+                            if (currentButton) {
+                                currentButton.setAttribute('aria-expanded', 'false');
+                                currentButton.closest('.nav-menu__link').classList.remove('active');
+                                currentButton.closest('li').querySelector('.submenu').classList.remove('active');
                             }
-                            
-                            // Close any open dropdown first
-                            closeAllDropdowns();
-                            
-                            // Open the clicked dropdown
+                        }
+                        
+                        // Toggle current dropdown
+                        if (!isExpanded) {
+                            button.setAttribute('aria-expanded', 'true');
                             parentLink.classList.add('active');
                             submenu.classList.add('active');
                             activeDropdown = submenu;
+                            
+                            // Focus first item in submenu when opened
+                            const firstItem = submenu.querySelector('a[role="menuitem"]');
+                            if (firstItem) {
+                                firstItem.focus();
+                            }
+                        } else {
+                            closeAllDropdowns();
+                        }
+                    }
+
+                    // Add event listeners to dropdown toggles
+                    dropdownToggles.forEach(toggle => {
+                        // Click handler
+                        toggle.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            toggleSubmenu(this);
+                        });
+                        
+                        // Keyboard handler
+                        toggle.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                toggleSubmenu(this);
+                            } else if (e.key === 'Escape') {
+                                closeAllDropdowns();
+                                this.focus();
+                            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                                e.preventDefault();
+                                const submenu = this.closest('li').querySelector('.submenu');
+                                if (submenu) {
+                                    const firstItem = submenu.querySelector('a[role="menuitem"]');
+                                    if (firstItem) {
+                                        firstItem.focus();
+                                    }
+                                }
+                            }
+                        });
+                    });
+                    
+                    // Add keyboard navigation for menu items
+                    document.querySelectorAll('.nav-menu__link-text').forEach(link => {
+                        link.addEventListener('keydown', function(e) {
+                            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                                e.preventDefault();
+                                const toggle = this.nextElementSibling;
+                                if (toggle && toggle.classList.contains('toggle-l2')) {
+                                    toggle.focus();
+                                }
+                            }
                         });
                     });
 
                     // Close dropdowns when clicking outside
                     document.addEventListener('click', function(e) {
-                        if (!e.target.closest('.nav-menu__item')) {
+                        if (!e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
+                            closeAllDropdowns();
+                        }
+                    });
+                    
+                    // Close dropdowns when tabbing out of menu
+                    document.addEventListener('focusin', function(e) {
+                        if (activeDropdown && !e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
                             closeAllDropdowns();
                         }
                     });
@@ -10346,8 +10438,49 @@
                     // Close dropdowns when pressing Escape key
                     document.addEventListener('keydown', function(e) {
                         if (e.key === 'Escape') {
-                            closeAllDropdowns();
+                            const activeToggle = document.querySelector('.toggle-l2[aria-expanded="true"]');
+                            if (activeToggle) {
+                                closeAllDropdowns();
+                                activeToggle.focus();
+                            }
                         }
+                    });
+                    
+                    // Add keyboard navigation for submenu items
+                    document.querySelectorAll('.submenu [role="menuitem"]').forEach(item => {
+                        item.setAttribute('tabindex', '-1');
+                        
+                        item.addEventListener('keydown', function(e) {
+                            const menuItems = Array.from(this.parentElement.parentElement.querySelectorAll('[role="menuitem"]'));
+                            const currentIndex = menuItems.indexOf(this);
+                            
+                            switch(e.key) {
+                                case 'ArrowDown':
+                                    e.preventDefault();
+                                    const nextItem = menuItems[currentIndex + 1] || menuItems[0];
+                                    nextItem.focus();
+                                    break;
+                                case 'ArrowUp':
+                                    e.preventDefault();
+                                    const prevItem = menuItems[currentIndex - 1] || menuItems[menuItems.length - 1];
+                                    prevItem.focus();
+                                    break;
+                                case 'Escape':
+                                    e.preventDefault();
+                                    const toggle = this.closest('li').parentElement.previousElementSibling.querySelector('.toggle-l2');
+                                    if (toggle) {
+                                        closeAllDropdowns();
+                                        toggle.focus();
+                                    }
+                                    break;
+                                case 'Tab':
+                                    // Close menu when tabbing out of the last item
+                                    if (!e.shiftKey && currentIndex === menuItems.length - 1) {
+                                        closeAllDropdowns();
+                                    }
+                                    break;
+                            }
+                        });
                     });
                 });
                 </script>
@@ -15628,6 +15761,262 @@
             <div class="sz-feedback-container-arrow-right"></div>
         </div>
     </section>
+
+    <script>
+    // Search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchToggle = document.querySelector('.nav-toggle--search');
+        const navMenu = document.querySelector('.nav-menu');
+        const searchWrapper = document.querySelector('.search-wrapper');
+        const desktopPlaceholder = document.querySelector('.desktop-search-placeholder');
+        const searchContainer = document.querySelector('.nav-menu__search-container');
+        const navMenuClose = document.querySelector('.nav-menu__close');
+
+        // Function to close mobile menu
+        function closeMobileMenu() {
+            if (navMenu) navMenu.classList.add('hidden');
+        }
+
+        // Function to handle search toggle
+        function handleSearchToggle() {
+            if (window.innerWidth >= 1023 && desktopPlaceholder && searchContainer) {
+                // Desktop: show inline search
+                searchWrapper.classList.add('show-inline-search');
+                
+                // Move the search container to the placeholder if it's not already there
+                if (!desktopPlaceholder.contains(searchContainer)) {
+                    desktopPlaceholder.appendChild(searchContainer);
+                }
+                
+                // Focus the search input
+                const searchInput = searchContainer.querySelector('input[type="text"]');
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            } else if (navMenu && searchContainer) {
+                // Mobile/tablet: open slide-down search menu
+                navMenu.classList.remove('hidden');
+                
+                // Make sure search container is in the mobile menu
+                const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
+                if (!mobileSearchContainer) {
+                    const menuContainer = document.querySelector('.nav-menu .container');
+                    if (menuContainer && searchContainer.parentNode !== menuContainer) {
+                        menuContainer.appendChild(searchContainer);
+                    }
+                }
+                
+                // Focus the search input
+                const searchInput = searchContainer.querySelector('input[type="text"]');
+                if (searchInput) {
+                    setTimeout(() => {
+                        searchInput.focus();
+                    }, 100);
+                }
+            }
+        }
+
+        // Event listeners
+        if (searchToggle) {
+            searchToggle.addEventListener('click', handleSearchToggle);
+        }
+
+        // Close menu when clicking the close button
+        if (navMenuClose) {
+            navMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close search when clicking outside on desktop
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth >= 1023 && searchWrapper && searchWrapper.classList.contains('show-inline-search')) {
+                if (!searchWrapper.contains(event.target) && 
+                    !event.target.closest('.nav-toggle--search')) {
+                    searchWrapper.classList.remove('show-inline-search');
+                }
+            }
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth < 1023 && searchContainer) {
+                    // On mobile, ensure search container is in the mobile menu
+                    const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
+                    if (!mobileSearchContainer) {
+                        const menuContainer = document.querySelector('.nav-menu .container');
+                        if (menuContainer) {
+                            menuContainer.appendChild(searchContainer);
+                        }
+                    }
+                    searchWrapper.classList.remove('show-inline-search');
+                }
+            }, 250);
+        });
+    });
+
+    // Keyboard Navigation for Dropdown Menus
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggles = document.querySelectorAll('.toggle-l2');
+        
+        // Function to close all dropdowns except the one passed as parameter
+        function closeAllDropdowns(exceptThisOne = null) {
+            dropdownToggles.forEach(toggle => {
+                if (toggle !== exceptThisOne) {
+                    const dropdown = toggle.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('submenu')) {
+                        toggle.setAttribute('aria-expanded', 'false');
+                        dropdown.style.display = 'none';
+                        const icon = toggle.querySelector('i');
+                        if (icon) icon.textContent = 'arrow_drop_down';
+                    }
+                }
+            });
+        }
+
+        // Function to toggle dropdown
+        function toggleDropdown(toggle) {
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            const dropdown = toggle.nextElementSibling;
+            
+            if (isExpanded) {
+                toggle.setAttribute('aria-expanded', 'false');
+                if (dropdown && dropdown.classList.contains('submenu')) {
+                    dropdown.style.display = 'none';
+                    const icon = toggle.querySelector('i');
+                    if (icon) icon.textContent = 'arrow_drop_down';
+                }
+            } else {
+                closeAllDropdowns(toggle);
+                toggle.setAttribute('aria-expanded', 'true');
+                if (dropdown && dropdown.classList.contains('submenu')) {
+                    dropdown.style.display = 'block';
+                    const icon = toggle.querySelector('i');
+                    if (icon) icon.textContent = 'arrow_drop_up';
+                    
+                    // Focus on first item in dropdown
+                    const firstLink = dropdown.querySelector('a');
+                    if (firstLink) {
+                        firstLink.focus();
+                    }
+                }
+            }
+        }
+
+        // Initialize dropdown toggles
+        dropdownToggles.forEach(toggle => {
+            const dropdown = toggle.nextElementSibling;
+            
+            // Initialize ARIA attributes
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('role', 'button');
+            
+            if (dropdown && dropdown.classList.contains('submenu')) {
+                // Hide dropdown by default
+                dropdown.style.display = 'none';
+                
+                // Add role to submenu and menu items
+                dropdown.setAttribute('role', 'menu');
+                const menuItems = dropdown.querySelectorAll('a');
+                menuItems.forEach(item => {
+                    item.setAttribute('role', 'menuitem');
+                    item.tabIndex = -1;
+                });
+                
+                // Toggle on click
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleDropdown(toggle);
+                });
+                
+                // Toggle on keydown
+                toggle.addEventListener('keydown', (e) => {
+                    switch (e.key) {
+                        case 'Enter':
+                        case ' ':
+                            e.preventDefault();
+                            toggleDropdown(toggle);
+                            break;
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            if (toggle.getAttribute('aria-expanded') === 'false') {
+                                toggleDropdown(toggle);
+                            }
+                            break;
+                        case 'Escape':
+                            toggle.setAttribute('aria-expanded', 'false');
+                            dropdown.style.display = 'none';
+                            const icon = toggle.querySelector('i');
+                            if (icon) icon.textContent = 'arrow_drop_down';
+                            toggle.focus();
+                            break;
+                    }
+                });
+                
+                // Handle keyboard navigation in dropdown
+                dropdown.addEventListener('keydown', (e) => {
+                    const menuItems = Array.from(dropdown.querySelectorAll('a'));
+                    const currentIndex = menuItems.indexOf(document.activeElement);
+                    
+                    switch (e.key) {
+                        case 'Escape':
+                            e.preventDefault();
+                            toggle.setAttribute('aria-expanded', 'false');
+                            dropdown.style.display = 'none';
+                            const icon = toggle.querySelector('i');
+                            if (icon) icon.textContent = 'arrow_drop_down';
+                            toggle.focus();
+                            break;
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            if (currentIndex < menuItems.length - 1) {
+                                menuItems[currentIndex + 1].focus();
+                            } else {
+                                menuItems[0].focus();
+                            }
+                            break;
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            if (currentIndex > 0) {
+                                menuItems[currentIndex - 1].focus();
+                            } else {
+                                menuItems[menuItems.length - 1].focus();
+                            }
+                            break;
+                        case 'Home':
+                            e.preventDefault();
+                            menuItems[0].focus();
+                            break;
+                        case 'End':
+                            e.preventDefault();
+                            menuItems[menuItems.length - 1].focus();
+                            break;
+                    }
+                });
+                
+                // Close when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                        toggle.setAttribute('aria-expanded', 'false');
+                        dropdown.style.display = 'none';
+                        const icon = toggle.querySelector('i');
+                        if (icon) icon.textContent = 'arrow_drop_down';
+                    }
+                });
+            }
+        });
+        
+        // Close dropdowns when tabbing out of the menu
+        document.addEventListener('focusin', (e) => {
+            const mainNav = document.querySelector('.nav-menu');
+            if (mainNav && !mainNav.contains(e.target) && !e.target.closest('.nav-menu__link')) {
+                closeAllDropdowns();
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
