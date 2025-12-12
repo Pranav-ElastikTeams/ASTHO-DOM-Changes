@@ -1388,7 +1388,17 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     -webkit-box-flex: 0;
     flex: 0 0 100%;
     max-width: 100%
-} @media (min-width: 576px) {
+} 
+.nav-menu__link > .nav-menu__link-text {
+    padding: 0.5rem 0;
+    transition: border-color 0.2s ease;
+    color: #06476b;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+}
+@media (min-width: 576px) {
     .col-sm {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1490,6 +1500,10 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         max-width: 100%
     }
 } @media (min-width: 768px) {
+    .hero-container {
+        top: 15%;
+        position: absolute;
+    }
     .col-md {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1604,6 +1618,11 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         box-sizing: border-box;
         justify-content: flex-start;
     }
+    .close-container {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
     .hamburger {
         display: none;
     }
@@ -1648,6 +1667,7 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         display: flex !important;
         position: static !important;
         padding: 0 !important;
+        margin-top: -1rem;
         visibility: visible !important;
         opacity: 1 !important;
         flex-wrap: wrap;
@@ -1725,24 +1745,18 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         display: flex !important;
         flex-direction: row !important;
         justify-content: flex-start;
-        gap: 1rem;
+        align-items: center;
         padding-left: 28px;
-        width: 100%;
+        gap: 1rem;
         flex-wrap: wrap;
+        margin-top: 1rem;
     }
     /* Style for dropdown navigation */
     .nav-menu__link {
         position: relative;
         padding: 1rem 0;
     }
-    .nav-menu__link > .nav-menu__link-text {
-        padding: 0.5rem 0;
-        transition: border-color 0.2s ease;
-        color: #06476b;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: 'Jost', sans-serif;
-    }
+    
     .nav-menu__link > .nav-menu__link-text:hover,
     .nav-menu__link > .nav-menu__link-text:focus {
         border-bottom: 4px solid #c35322;
@@ -1784,6 +1798,33 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     .submenu li a:focus {
         color: #c35322;
         background-color: rgba(195, 83, 34, 0.05);
+    }
+    .hero-container {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
+    @media (min-width: 1023px) {
+        .hero-container {
+            padding: 0 2rem;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1022px) {
+        .hero-container {
+            padding: 0 1.5rem;
+        }
+    }
+    
+    @media (min-width: 576px) and (max-width: 767px) {
+        .hero-container {
+            padding: 0 1.25rem;
+        }
     }
 }
 
@@ -2251,7 +2292,24 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 } .button--orange:active, .button--orange:focus, .button--orange:hover {
         background-color: #853817;
         color: #fff
-    } .button--blue {
+    } 
+    
+    /* Responsive button font size to match hero h1 */
+    @media (max-width: 1023px) {
+        .button--blue {
+            font-size: 1.5rem;
+            padding: 0.75rem 1.5rem;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .button--blue {
+            font-size: 1.25rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+    
+    .button--blue {
     background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,.1089)),color-stop(56.52%,hsla(0,0%,100%,0))),#06476b;
     background: linear-gradient(180deg,hsla(0,0%,100%,.1089),hsla(0,0%,100%,0) 56.52%),#06476b;
     color: #fff
@@ -2399,11 +2457,15 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 .submenu {
     padding: 10px;
 }
+.hero-container h1 {
+    font-size: 4rem;
+}
 } .nav-toggle--search {
     font-family: 'Jost', sans-serif;
     font-weight: 600;
     transition: color 0.2s ease;
     color: #06476b;
+    letter-spacing: 1px;
 } .nav-toggle--search:active, .nav-toggle--search:focus, .nav-toggle--search:hover, .nav-toggle:active, .nav-toggle:focus, .nav-toggle:hover {
     color: #06476b;
 }
@@ -2412,28 +2474,46 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     color: #c35322;
     text-decoration: none;
 } .hero {
-    min-height: 50rem;
-    padding-bottom: 8rem
-} @media (max-width: 1023px) {
-    .hero {
-        min-height: 50rem
+    /* Base height with aspect ratio of original image (1440x624) */
+    position: relative;
+    padding-bottom: 43.33%; 
+    background-image: url('https://www.astho.org/globalassets/images/hero/astho-hero-map.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    margin-top: 0;
+    min-height: 60vh; /* Better mobile display */
+    
+    @media (max-width: 767px) {
+        min-height: 45vh;
+        height: auto;
+        padding-bottom: 0;
+        background-size: 160% auto;
+        background-position: center -70px;
     }
-} @media (max-width: 1023px) {
-    .hero h1 {
-        font-size: 4rem
+    @media (min-width: 768px) {
+        min-height: 400px;
+        background-position: center -50px;
+        height: 0;
     }
-    .hero-container {
-    margin-top: 200px;
+    @media (min-width: 1024px) {
+        min-height: 500px;
+        background-position: center -100px;
+    }
+    @media (min-width: 1200px) {
+        min-height: 600px;
+        background-position: center -150px;
     }
 } @media (max-width: 767px) {
-    .hero h1 {
-        font-size: 3.2rem
-    }
-    .hero-container {
-    margin-top: 150px;
-    }
     .nav-logo {
     padding-left: 20px;
+}
+.hero-container {
+    padding-top: 10px;
+}
+.hero-container h1 {
+    font-size: 2rem;
 }
 } @media (max-width: 461px) {
     .nav-toggle {
