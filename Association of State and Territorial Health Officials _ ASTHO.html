@@ -8514,12 +8514,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const currentOrigin = window.location.origin;
-            const externalSelector = `a[href^='http']:not([href^='${currentOrigin}'], :has(img, h1, h2, h3, h4, h5, h6))`;
+            // Exclude navigation and utility links from getting the external icon
+            const externalSelector = `a[href^='http']:not([href^='${currentOrigin}'], :has(img, h1, h2, h3, h4, h5, h6), .nav-util a, .nav-menu a, .nav-main a)`;
             const externalLinks = document.querySelectorAll(externalSelector);
 
             for (const externalLink of externalLinks) {
-                // Skip if this is already marked as external or is in the hero-sharebar
-                if (externalLink.closest('.hero-sharebar') || externalLink.classList.contains('external-link-processed')) {
+                // Skip if this is already marked as external or is in the navigation/utility sections
+                if (externalLink.closest('.hero-sharebar, .nav-util, .nav-menu, .nav-main') || 
+                    externalLink.classList.contains('external-link-processed')) {
                     continue;
                 }
 
@@ -10015,26 +10017,23 @@
                             <div class="flex justify-end">
 
 
-                                <a href="https://account.astho.org/" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="My Profile open_in_new (External Link)"
-                                    rel="noopener noreferrer">My Profile<span class="external-link-icon">&nbsp;<span
-                                            class="material-icons"
-                                            style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
+                                <a href="https://account.astho.org/" class="text-white mr-8 no-external-icon"
+                                    title="My Profile"
+                                    rel="noopener"
+                                    data-no-external-icon="true">My Profile</a>
 
-                                <a href="https://learn.astho.org/" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="e-Learning Center open_in_new (External Link)"
-                                    rel="noopener noreferrer">e-Learning Center<span
-                                        class="external-link-icon">&nbsp;<span class="material-icons"
-                                            style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
+                                <a href="https://learn.astho.org/" class="text-white mr-8 no-external-icon"
+                                    title="e-Learning Center"
+                                    rel="noopener"
+                                    data-no-external-icon="true">e-Learning Center</a>
 
-                                <a href="https://my.astho.org/home" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="my.ASTHO open_in_new (External Link)"
-                                    rel="noopener noreferrer">my.ASTHO<span class="external-link-icon">&nbsp;<span
-                                            class="material-icons"
-                                            style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
+                                <a href="https://my.astho.org/home" class="text-white mr-8 no-external-icon"
+                                    title="my.ASTHO"
+                                    rel="noopener"
+                                    data-no-external-icon="true">my.ASTHO</a>
 
                                 <a href="https://www.astho.org/about/contact/" class="text-white mr-8">Contact Us</a>
-
+                                <!-- <p class="text-white mr-8">Welcome, brightfindpm</p> -->
                             </div>
 
 
@@ -10050,8 +10049,13 @@
                         <div class="flex pt-8 justify-between items-center">
 
                             <div class="hamburger">
-                                <div class="flex cursor-pointer nav-toggle"><i class="material-icons mr-4">menu</i><span
-                                        class="uppercase">Menu</span></div>
+                                <button class="flex items-center nav-toggle" 
+                                        aria-expanded="false" 
+                                        aria-controls="mobile-menu"
+                                        aria-label="Toggle navigation menu">
+                                    <i class="material-icons mr-2" aria-hidden="true">menu</i>
+                                    <span class="uppercase">Menu</span>
+                                </button>
                             </div>
 
                             <div>
@@ -16015,7 +16019,140 @@
             }
         });
     });
-    </script>
+
+    // Mobile Menu Keyboard Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('main-nav');
+        const menuClose = document.getElementById('menu-close');
+        const menuLinks = document.querySelectorAll('.nav-menu__link a, .nav-menu__link button');
+        const firstMenuItem = menuLinks[0];
+        const lastMenuItem = menuLinks[menuLinks.length - 1];
+        let menuOpen = false;
+
+        // Toggle menu function
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            menuToggle.setAttribute('aria-expanded', menuOpen);
+            
+            if (menuOpen) {
+                menu.classList.remove('hidden');
+                menu.focus();
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            } else {
+                menu.classList.add('hidden');
+                menuToggle.focus();
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        }
+
+        // Close menu function
+        function closeMenu() {
+            menuOpen = false;
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menu.classList.add('hidden');
+            menuToggle.focus();
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        // Toggle menu on button click
+        if (menuToggle) {
+            menuToggle.addEventListener('click', toggleMenu);
+            
+            // Handle keyboard events on menu toggle button
+            menuToggle.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleMenu();
+                } else if (e.key === 'Escape' && menuOpen) {
+                    closeMenu();
+                }
+            });
+        }
+
+        // Close menu when clicking the close button
+        if (menuClose) {
+            menuClose.addEventListener('click', closeMenu);
+            
+            // Handle keyboard events on close button
+            menuClose.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
+                    e.preventDefault();
+                    closeMenu();
+                }
+            });
+        }
+
+        // Handle keyboard navigation within the menu
+        if (menu) {
+            menu.addEventListener('keydown', function(e) {
+                // Close menu on Escape key
+                if (e.key === 'Escape') {
+                    closeMenu();
+                }
+                
+                // Trap focus within the menu when open
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        // Shift + Tab
+                        if (document.activeElement === firstMenuItem) {
+                            e.preventDefault();
+                            lastMenuItem.focus();
+                        }
+                    } else {
+                        // Tab
+                        if (document.activeElement === lastMenuItem) {
+                            e.preventDefault();
+                            firstMenuItem.focus();
+                        }
+                    }
+                }
+            });
+        }
+
+        // Handle keyboard events on menu items
+        menuLinks.forEach(link => {
+            // Toggle submenu on Enter/Space when on a button
+            link.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    if (this.tagName === 'BUTTON' || this.getAttribute('role') === 'button') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                }
+                
+                // Handle arrow keys for menu navigation
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const nextItem = this.parentElement.nextElementSibling?.querySelector('a, button');
+                    if (nextItem) nextItem.focus();
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prevItem = this.parentElement.previousElementSibling?.querySelector('a, button');
+                    if (prevItem) {
+                        prevItem.focus();
+                    } else {
+                        menuToggle.focus();
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (menuOpen && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when focus moves outside the menu
+        document.addEventListener('focusin', function(e) {
+            if (menuOpen && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                closeMenu();
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
