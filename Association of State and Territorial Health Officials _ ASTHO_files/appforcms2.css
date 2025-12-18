@@ -2590,7 +2590,7 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     }
 } @media (max-width: 767px) {
 .hero-container {
-    padding-top: 10px;
+    padding-top: 0px;
 }
 .hero-container h1 {
     font-size: 2rem;
@@ -2649,8 +2649,8 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
         left: 0;
         width: 100%;
         height: 24rem
-    } .hero-banner {
-    margin-top: -16rem;
+    } 
+    .hero-banner {
     padding-bottom: 8rem
 } .hero-banner .profile-img {
         max-width: 8rem;
@@ -4316,4 +4316,102 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 .c-search-filter__button {
     display: inline-block;
     margin: 10px;
+}
+
+/* 344px */
+@media (max-width: 345px) {
+  .hero-banner {
+    margin-top: -23rem;
+  }
+}
+
+/* 360px */
+@media (min-width: 346px) and (max-width: 361px) {
+  .hero-banner {
+    margin-top: -16rem;
+  }
+}
+
+/* 375px */
+@media (min-width: 362px) and (max-width: 376px) {
+  .hero-banner {
+    margin-top: -12rem;
+  }
+}
+
+/* 390px */
+@media (min-width: 377px) and (max-width: 391px) {
+  .hero-banner {
+    margin-top: -20rem;
+  }
+}
+
+/* 412px */
+@media (min-width: 392px) and (max-width: 413px) {
+  .hero-banner {
+    margin-top: -20rem;
+  }
+}
+
+/* 414px */
+@media (min-width: 414px) and (max-width: 414px) {
+  .hero-banner {
+    margin-top: -20rem;
+  }
+}
+
+/* 430px */
+@media (min-width: 415px) and (max-width: 431px) {
+  .hero-banner {
+    margin-top: -20rem;
+  }
+}
+
+/* 540px */
+@media (min-width: 432px) and (max-width: 541px) {
+  .hero-banner {
+    margin-top: -7rem;
+  }
+}
+
+/* 768px */
+@media (min-width: 542px) and (max-width: 769px) {
+  .hero-banner {
+    margin-top: -14rem;
+  }
+}
+
+/* 820px */
+@media (min-width: 770px) and (max-width: 821px) {
+  .hero-banner {
+    margin-top: -14rem;
+  }
+}
+
+/* 853px */
+@media (min-width: 822px) and (max-width: 854px) {
+  .hero-banner {
+    margin-top: -14rem;
+  }
+}
+
+/* 912px */
+@media (min-width: 855px) and (max-width: 913px) {
+  .hero-banner {
+    margin-top: -14rem;
+  }
+}
+
+/* 1024px */
+@media (min-width: 914px) and (max-width: 1025px) {
+  .hero-banner {
+    margin-top: -21rem;
+  }
+}
+
+/* 1026px and above */
+@media (min-width: 1026px) {
+  .hero-banner {
+    margin-top: -28rem;
+  }
 }
