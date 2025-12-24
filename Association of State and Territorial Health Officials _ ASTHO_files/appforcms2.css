@@ -4339,6 +4339,61 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
   }
 }
 
+/* Mobile ShareThis Buttons */
+@media (max-width: 480px) {
+  #st-2.st-sticky-share-buttons {
+    position: fixed !important;
+    bottom: 15px !important;
+    top: auto !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 9999 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  #st-2 .st-btn {
+    flex: 1 1 20% !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    min-height: 40px !important;
+  }
+
+  /* Hide toggle arrows on mobile */
+  #st-2 .st-toggle {
+    display: none !important;
+  }
+
+  /* Ensure proper spacing between buttons */
+  #st-2 .st-btn + .st-btn {
+    border-left: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* Maintain button hover states */
+  #st-2 .st-btn:hover {
+    transform: none !important;
+    opacity: 0.9 !important;
+  }
+
+  /* Ensure proper icon sizing */
+  #st-2 .st-btn > span {
+    margin: 0 !important;
+    font-size: 18px !important;
+  }
+}
+
 /* 390px */
 @media (min-width: 377px) and (max-width: 391px) {
   .hero-banner {
