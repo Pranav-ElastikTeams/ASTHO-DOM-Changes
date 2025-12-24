@@ -4394,6 +4394,55 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
   }
 }
 
+/* Focus indicator styles */
+.tab:focus,
+.card a:focus,
+.card button:focus {
+    outline: 3px solid #0056b3;
+    outline-offset: 2px;
+    position: relative;
+}
+
+/* Alternative focus for dark backgrounds */
+.text-white.tab:focus {
+    outline-color: #00bfff;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Ensure cards in inactive panels are visually hidden */
+.tab-content:not(.tab-content--active) .card {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Restore for active panel */
+.tab-content--active .card {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Focus order debugging (optional, remove in production) */
+[role="tabpanel"]:focus {
+    box-shadow: inset 0 0 0 2px #4CAF50;
+}
+
 /* 390px */
 @media (min-width: 377px) and (max-width: 391px) {
   .hero-banner {
