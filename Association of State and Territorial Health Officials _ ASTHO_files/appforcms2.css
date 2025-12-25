@@ -2720,7 +2720,72 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
-} .bg-img--video {
+}
+
+.events-date .events-day {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.events-date .events-month {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+/* Scrollable events header - Always scrollable on all devices */
+.events__header {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 1rem 12px; /* Add horizontal padding for scroll area */
+    margin: 0 -1rem; /* Compensate for container padding */
+    scrollbar-width: thin; /* Show thin scrollbar in Firefox */
+    scrollbar-color: #c1c1c1 transparent; /* Scrollbar color for Firefox */
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.events__header::-webkit-scrollbar {
+    height: 6px;
+}
+
+.events__header::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.events__header::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 3px;
+}
+
+.events__header::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}
+
+/* Ensure tabs don't wrap and have proper spacing */
+.events__header .event-tab {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Add a subtle gradient fade effect at the right edge */
+.events__header-wrapper {
+    position: relative;
+}
+
+.events__header-wrapper:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    pointer-events: none;
+}
+
+.bg-img--video {
     bottom: 0;
     height: 16rem;
     width: 100%;

@@ -10667,139 +10667,226 @@
                                     </div>
                                 </span>
                             </div>
-                            <div
-                                class="block eventlistblock col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half">
+                            <div class="block eventlistblock col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half">
                                 <div class="events">
-                                    <h2>Events &amp; Opportunities</h2>
-                                    <header role="tablist" aria-label="Event Tabs"
-                                        class="events__header flex border-b border-solid border-gray-400 mb-8">
-                                        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1"
-                                            class="cursor-pointer py-2 px-4 text-center font-bold event-tab event-tab--active">All</button>
-                                        <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2"
-                                            class="cursor-pointer py-2 px-4 text-center font-bold event-tab event-tab">Webinar</button>
-                                    </header>
+                                    <div class="events__header-wrapper">
+                                        <h2 class="sr-only">Events &amp; Opportunities</h2>
+                                        
+                                        <div role="tablist" aria-label="Event Tabs" class="events__header flex border-b border-solid border-gray-400 mb-8">
+                                            <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="cursor-pointer py-2 px-4 text-center font-bold event-tab event-tab--active">All</button>
+                                            <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Webinar</button>
+                                            <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Training</button>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="events__body relative">
-                                        <ul id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"
-                                            class="event-tab__content flex flex-col pl-0 event-tab__content--active">
-                                            <li class="flex">
-                                                <div
-                                                    class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    <h2 class="events-day pb-0">16</h2>
-                                                    <h4 class="events-month font-bold">Dec</h4>
-                                                </div>
-
-                                                <div class="flex flex-col pl-16 pr-8 pb-8">
-                                                    <h5 class="pb-2 font-bold">The Next Frontier of Public Health
-                                                        Interoperability: TEFCA, HDUs, and What Comes Next</h5>
-                                                    <div class="pb-4">In part 1 of this 2-part series, speakers will
-                                                        provide a foundational overview of public health intermediaries
-                                                        and national interoperability initiatives, including updates on
-                                                        the Trusted Exchange Framework and Common Agreement (TEFCA) and
-                                                        the CMS Interoperability Framework.</div>
-
-                                                    <div class="pb-4 flex items-center event-icon">
-                                                        <i class="material-icons mr-2">today</i>
-                                                        <div class="font-bold">Dec 16, 2025</div>
-                                                    </div>
-                                                    <div class="pb-4 flex items-center event-icon">
-                                                        <i class="material-icons mr-2">location_on</i>
-                                                        <div>Virtual, Online</div>
-                                                    </div>
-
-
-                                                    <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=12626008-33ca-f011-bbd2-6045bd0a0ee3"
-                                                        target="" class="pb-4 link-arrow external-link-processed"
-                                                        title=" (External Link)"
-                                                        aria-label="Register open_in_new (External Link)"
-                                                        rel="noopener noreferrer">Register<span
-                                                            class="external-link-icon">&nbsp;<span
-                                                                class="material-icons"
-                                                                style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
-
-                                                </div>
-                                            </li>
-                                            <span>
-
+                                        <section id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" class="event-tab__content event-tab__content--active">
+                                            <h3 class="sr-only">All Events</h3>
+                                            <ol class="flex flex-col pl-0">
                                                 <li class="flex">
-
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                        <time datetime="2026-01-22" class="events-day pb-0">22</time>
+                                                        <time datetime="2026-01" class="events-month font-bold">Jan</time>
                                                     </div>
+                                                
+                                                    <article class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <p class="pb-4">In the last webinar of this 2-part series, speakers will take a deeper dive into how intermediaries, including Health Information Exchanges (HIEs) and Health Data Utilities (HDUs), support real-world data exchange for public health action. Participants will hear directly from public health agencies as they share experiences, lessons learned, and considerations for engaging in interoperability initiatives.</p>
+                                                    
+                                                        <dl class="pb-4">
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Date</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
+                                                                    <time datetime="2026-01-22" class="font-bold">Jan 22, 2026</time>
+                                                                </dd>
+                                                            </div>
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Location</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <span>Virtual, Online</span>
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
+                                                    
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3" target="_blank" title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+                                                        </a>
+                                                    </article>
+                                                </li>
+                                                
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                        <time datetime="2026-02-11" class="events-day pb-0">11</time>
+                                                        <time datetime="2026-02" class="events-month font-bold">Feb</time>
+                                                    </div>
+                                                
+                                                    <article class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady Hands, Steady Teams: Leading with Confidence and Composure</h4>
+                                                        <p class="pb-4">Discover how intentional leadership can become your organization's anchor in uncertain times. Join us to explore practical ways leaders build trust, set a sustainable pace, and provide calm, credible direction when it matters most.</p>
+                                                    
+                                                        <dl class="pb-4">
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Date</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
+                                                                    <time datetime="2026-02-11" class="font-bold">Feb 11, 2026</time>
+                                                                </dd>
+                                                            </div>
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Location</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <span>Online, Virtual</span>
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
+                                                    
+                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration" target="_blank" class="pb-4 link-arrow external-link-processed" title="Register for Insight and Inspiration webinar (External Link)" aria-label="Register (opens in new window)" rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+                                                        </a>
+                                                    </article>
+                                                </li>
+                                                
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
                                                     <div class="flex flex-col pl-16 pr-8 pb-8">
-
-
-                                                        <a href="https://www.astho.org/education/upcoming-events/"
-                                                            target="" class="button button--blue">View More</a>
-
-
+                                                        <a href="/education/upcoming-events/" class="button button--blue">View More</a>
                                                     </div>
                                                 </li>
-
-                                            </span>
-                                        </ul>
-
-                                        <ul id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-lstcounter"
-                                            class="event-tab__content flex flex-col pl-0" hidden="true">
-                                            <li class="flex">
-                                                <div
-                                                    class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    <h2 class="events-day pb-0">16</h2>
-                                                    <h4 class="events-month font-bold">Dec</h4>
-                                                </div>
-
-                                                <div class="flex flex-col pl-16 pr-8 pb-8">
-                                                    <h5 class="pb-2 font-bold">The Next Frontier of Public Health
-                                                        Interoperability: TEFCA, HDUs, and What Comes Next</h5>
-                                                    <div class="pb-4">In part 1 of this 2-part series, speakers will
-                                                        provide a foundational overview of public health intermediaries
-                                                        and national interoperability initiatives, including updates on
-                                                        the Trusted Exchange Framework and Common Agreement (TEFCA) and
-                                                        the CMS Interoperability Framework.</div>
-
-                                                    <div class="pb-4 flex items-center event-icon">
-                                                        <i class="material-icons mr-2">today</i>
-                                                        <div class="font-bold">Dec 16, 2025</div>
-                                                    </div>
-                                                    <div class="pb-4 flex items-center event-icon">
-                                                        <i class="material-icons mr-2">location_on</i>
-                                                        <div>Virtual, Online</div>
-                                                    </div>
-
-
-                                                    <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=12626008-33ca-f011-bbd2-6045bd0a0ee3"
-                                                        target="" class="pb-4 link-arrow external-link-processed"
-                                                        title=" (External Link)"
-                                                        aria-label="Register open_in_new (External Link)"
-                                                        rel="noopener noreferrer">Register<span
-                                                            class="external-link-icon">&nbsp;<span
-                                                                class="material-icons"
-                                                                style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
-
-                                                </div>
-                                            </li>
-                                            <span>
-
+                                            </ol>
+                                        </section>
+                                    
+                                        <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" class="event-tab__content" hidden>
+                                            <h3 class="sr-only">Webinar Events</h3>
+                                            <ol class="flex flex-col pl-0">
                                                 <li class="flex">
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                        <time datetime="2026-01-22" class="events-day pb-0">22</time>
+                                                        <time datetime="2026-01" class="events-month font-bold">Jan</time>
                                                     </div>
+                                                
+                                                    <article class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <p class="pb-4">In the last webinar of this 2-part series, speakers will take a deeper dive into how intermediaries, including Health Information Exchanges (HIEs) and Health Data Utilities (HDUs), support real-world data exchange for public health action. Participants will hear directly from public health agencies as they share experiences, lessons learned, and considerations for engaging in interoperability initiatives.</p>
+                                                    
+                                                        <dl class="pb-4">
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Date</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
+                                                                    <time datetime="2026-01-22" class="font-bold">Jan 22, 2026</time>
+                                                                </dd>
+                                                            </div>
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Location</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <span>Virtual, Online</span>
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
+                                                    
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3" target="_blank" title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+                                                        </a>
+                                                    </article>
+                                                </li>
+                                                
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                        <time datetime="2026-02-11" class="events-day pb-0">11</time>
+                                                        <time datetime="2026-02" class="events-month font-bold">Feb</time>
+                                                    </div>
+                                                
+                                                    <article class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady Hands, Steady Teams: Leading with Confidence and Composure</h4>
+                                                        <p class="pb-4">Discover how intentional leadership can become your organization's anchor in uncertain times. Join us to explore practical ways leaders build trust, set a sustainable pace, and provide calm, credible direction when it matters most.</p>
+                                                    
+                                                        <dl class="pb-4">
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Date</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
+                                                                    <time datetime="2026-02-11" class="font-bold">Feb 11, 2026</time>
+                                                                </dd>
+                                                            </div>
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Location</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <span>Online, Virtual</span>
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
+                                                    
+                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration" target="_blank" class="pb-4 link-arrow external-link-processed" title="Register for Insight and Inspiration webinar (External Link)" aria-label="Register (opens in new window)" rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+                                                        </a>
+                                                    </article>
+                                                </li>
+                                                
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
                                                     <div class="flex flex-col pl-16 pr-8 pb-8">
-
-
-                                                        <a href="https://www.astho.org/education/upcoming-events/#Webinar"
-                                                            target="" class="button button--blue">View More</a>
+                                                        <a href="/education/upcoming-events/#Webinar" class="button button--blue">View More</a>
                                                     </div>
                                                 </li>
-
-                                            </span>
-                                        </ul>
+                                            </ol>
+                                        </section>
+                                    
+                                        <section id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" class="event-tab__content" hidden>
+                                            <h3 class="sr-only">Training Events</h3>
+                                            <ol class="flex flex-col pl-0">
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                        <time datetime="2026-03-24" class="events-day pb-0">24</time>
+                                                        <time datetime="2026-03" class="events-month font-bold">Mar</time>
+                                                    </div>
+                                                
+                                                    <article class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <h4 class="pb-2 font-bold">Leading Change Workshop</h4>
+                                                        <p class="pb-4">Join ASTHO for a brand-new workshop designed to help members of the public health workforce build capacity to successfully respond to change. Discover applicable skills to navigate uncertainty as an individual, as part of a team, and within a larger organization.</p>
+                                                    
+                                                        <dl class="pb-4">
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Date</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
+                                                                    <time datetime="2026-03-24/2026-03-25" class="font-bold">Mar 24 - 25, 2026</time>
+                                                                </dd>
+                                                            </div>
+                                                            <div class="pb-4 flex items-center event-icon">
+                                                                <dt class="sr-only">Location</dt>
+                                                                <dd class="flex items-center">
+                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <span>Arlington, Virginia</span>
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
+                                                    
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=9e866e96-bdce-f011-bbd3-6045bd0a0ae3" target="_blank" title="Register for the Leading Change Workshop (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+                                                        </a>
+                                                    </article>
+                                                </li>
+                                                
+                                                <li class="flex">
+                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
+                                                    <div class="flex flex-col pl-16 pr-8 pb-8">
+                                                        <a href="/education/upcoming-events/#Training" class="button button--blue">View More</a>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
                                     </div>
                                 </div>
-
+                                
                                 <script>
-                                    $(document).ready(function () {
+                                    $(document).ready(function() {
                                         var anchor = window.location.hash;
-
+                                    
                                         if (anchor) {
                                             var button = $("div.events button:contains('" + anchor.substring(1, anchor.length) + "')");
                                             if (button) {
