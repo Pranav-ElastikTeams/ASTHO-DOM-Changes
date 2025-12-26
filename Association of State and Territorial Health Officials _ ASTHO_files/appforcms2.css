@@ -2328,7 +2328,78 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     color: #c35322
 } .category-tag i.material-icons, .category-tag i.material-icons-outlined {
         font-size: 1.6rem
-    } .nav {
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 1rem;
+  transform: translateX(-50%) translateY(-1rem);
+
+  padding: 0.6rem 1.25rem;
+  background-color: #06476b;
+  color: #ffffff;
+
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  z-index: 10000;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+/* Show only when keyboard-focused */
+.skip-link:focus,
+.skip-link:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  outline: none;
+  color: #ffffff;
+}
+
+/* Visible focus ring for high-contrast users */
+.skip-link:focus-visible {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #06476b;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .skip-link {
+    left: 1rem;
+    transform: translateY(-1rem);
+    font-size: 1rem;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
+
+#main-content {
+  scroll-margin-top: 6rem;
+}
+
+.nav {
     z-index: 4;
     background-color: #f9f9f9;
     margin-bottom: 3.2rem
