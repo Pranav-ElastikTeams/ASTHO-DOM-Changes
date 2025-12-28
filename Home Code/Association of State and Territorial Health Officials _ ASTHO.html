@@ -16241,165 +16241,185 @@
     <script>
     (function () {
         'use strict';
-
+    
         var container = document.querySelector('.tab-card-collection');
         if (!container) return;
-
+    
         var tabs = Array.from(container.querySelectorAll('[role="tab"]'));
         var panels = Array.from(container.querySelectorAll('[role="tabpanel"]'));
-
-        // Helper: get panel id for a tab
+    
+        var activePanel = null;
+    
         function panelIdFor(tab) {
             return tab.dataset.tabTarget || tab.getAttribute('aria-controls');
         }
-
-        // Make all tabs focusable (but do NOT activate on focus)
-        tabs.forEach(function (tab, i) {
-            tab.setAttribute('tabindex', '0');
-            tab.dataset.index = i;
-            tab.addEventListener('keydown', onTabKeyDown);
-            tab.addEventListener('click', function (e) {
-                // Click activates but does not change keyboard-only rules
-                activateTab(tab, false);
-            });
-        });
-
-        // Initialize panels: only keep the active panel visible; ensure cards are not focusable
-        panels.forEach(function (panel) {
-            // Panels are considered in this container only
-            var associatedTab = container.querySelector('[aria-controls="' + panel.id + '"]');
-            var isActive = associatedTab && associatedTab.getAttribute('aria-selected') === 'true';
-            if (!isActive) {
-                panel.hidden = true;
-                panel.setAttribute('aria-hidden', 'true');
-            } else {
-                panel.hidden = false;
-                panel.setAttribute('aria-hidden', 'false');
-            }
-            // Ensure no card focusables are reachable until Enter/Space activates
-            var cardFocusables = panel.querySelectorAll('.card a, .card button, .card [tabindex]');
-            cardFocusables.forEach(function (el) {
+    
+        /* -------------------------------
+           Keyboard-only panel deactivation
+           (DOES NOT affect UI visibility)
+        -------------------------------- */
+        function deactivatePanelKeyboard(panel) {
+            if (!panel) return;
+        
+            var focusables = panel.querySelectorAll('.card a, .card button');
+            focusables.forEach(function (el) {
                 el.setAttribute('tabindex', '-1');
             });
-        });
-
-        // Activate a tab's panel. If focusFirstCard is true, move focus into first visible card.
+        
+            if (activePanel === panel) {
+                activePanel = null;
+            }
+        }
+    
+        function deactivateAllPanelKeyboards() {
+            panels.forEach(deactivatePanelKeyboard);
+        }
+    
+        /* -------------------------------
+           Activate tab (visual + optional keyboard)
+        -------------------------------- */
         function activateTab(tab, focusFirstCard) {
-            // update tabs
             tabs.forEach(function (t) {
                 t.setAttribute('aria-selected', 'false');
                 t.classList.remove('tab--active');
             });
+        
             tab.setAttribute('aria-selected', 'true');
             tab.classList.add('tab--active');
-
+        
             var targetId = panelIdFor(tab);
-
-            panels.forEach(function (panel) {
-                var isTarget = panel.id === targetId;
-                if (isTarget) {
-                    panel.hidden = false;
-                    panel.setAttribute('aria-hidden', 'false');
-                    // Ensure visual active class is applied so CSS shows the panel
-                    panel.classList.add('tab-content--active');
-                    // Make this panel's cards focusable only if user explicitly requested enter (focusFirstCard)
-                    var focusables = panel.querySelectorAll('.card a, .card button');
-                    focusables.forEach(function (el) {
-                        el.setAttribute('tabindex', focusFirstCard ? '0' : '-1');
-                    });
-                    if (focusFirstCard) {
-                        // Attach card keyboard handlers once
-                        if (!panel.dataset.handlersAttached) {
-                            attachCardKeyHandlers(panel);
-                            panel.dataset.handlersAttached = 'true';
-                        }
-                        // Focus the first visible focusable inside cards
-                        var first = panel.querySelector('.card a, .card button');
-                        if (first) first.focus();
-                    }
-                } else {
-                    panel.hidden = true;
-                    panel.setAttribute('aria-hidden', 'true');
-                    // Remove visual active class from inactive panels
-                    panel.classList.remove('tab-content--active');
-                    // Ensure other panels' cards are not focusable
-                    var others = panel.querySelectorAll('.card a, .card button');
-                    others.forEach(function (el) { el.setAttribute('tabindex', '-1'); });
+            var panel = panels.find(function (p) {
+                return p.id === targetId;
+            });
+        
+            // Hide other panels visually (UI behavior)
+            panels.forEach(function (p) {
+                if (p !== panel) {
+                    p.hidden = true;
+                    p.setAttribute('aria-hidden', 'true');
+                    p.classList.remove('tab-content--active');
+                    deactivatePanelKeyboard(p);
                 }
             });
+        
+            if (!panel) return;
+        
+            panel.hidden = false;
+            panel.setAttribute('aria-hidden', 'false');
+            panel.classList.add('tab-content--active');
+        
+            var cards = panel.querySelectorAll('.card a, .card button');
+            cards.forEach(function (el) {
+                el.setAttribute('tabindex', focusFirstCard ? '0' : '-1');
+            });
+        
+            if (focusFirstCard && cards.length) {
+                if (!panel.dataset.handlersAttached) {
+                    attachCardKeyHandlers(panel);
+                    panel.dataset.handlersAttached = 'true';
+                }
+                activePanel = panel;
+                cards[0].focus();
+            }
         }
-
+    
+        /* -------------------------------
+           Tab keyboard behavior
+        -------------------------------- */
         function onTabKeyDown(e) {
             var tab = e.currentTarget;
             var idx = parseInt(tab.dataset.index, 10);
-
-            // Enter or Space: activate and move into first card
+        
+            // Any Tab navigation kills panel keyboard access
+            deactivateAllPanelKeyboards();
+        
             if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
                 e.preventDefault();
                 activateTab(tab, true);
                 return;
             }
-
-            // Tab from a tab: move focus to next tab (do not enter panel/cards)
+        
             if (e.key === 'Tab' && !e.shiftKey) {
-                // If not last tab, move to next tab and prevent default
                 if (idx < tabs.length - 1) {
                     e.preventDefault();
                     tabs[idx + 1].focus();
-                } else {
-                    // Last tab: allow default to move focus out of tabs to next DOM element
-                    // Do not auto-activate
                 }
+                // last tab → allow natural DOM exit
             }
-            // Shift+Tab on tabs: allow default (move backwards in DOM)
+            // Shift+Tab = native behavior
         }
-
-        // Attach key handlers to cards in a panel to support in-panel navigation rules
+    
+        /* -------------------------------
+           Card keyboard behavior
+        -------------------------------- */
         function attachCardKeyHandlers(panel) {
-            // Collect focusable items in reading order inside .card elements
             var focusable = Array.from(panel.querySelectorAll('.card a, .card button'));
             if (!focusable.length) return;
-
+        
             focusable.forEach(function (el, i) {
                 el.addEventListener('keydown', function (ev) {
-                    // Tab forward inside cards
+                
+                    if (panel !== activePanel) return;
+                
+                    // Tab forward
                     if (ev.key === 'Tab' && !ev.shiftKey) {
                         if (i === focusable.length - 1) {
-                            // Last card -> move focus to next tab (without activating it)
-                            var activeTabIndex = tabs.findIndex(function (t) { return t.getAttribute('aria-selected') === 'true'; });
+                            var activeTabIndex = tabs.findIndex(function (t) {
+                                return t.getAttribute('aria-selected') === 'true';
+                            });
+                        
+                            deactivatePanelKeyboard(panel);
+                        
                             if (activeTabIndex < tabs.length - 1) {
                                 ev.preventDefault();
                                 tabs[activeTabIndex + 1].focus();
-                            } else {
-                                // Last tab's last card: allow default to move to next DOM element
                             }
+                            // last tab → allow DOM exit
                         }
-                        // otherwise let default move to next focusable within the panel
                     }
-
-                    // Shift+Tab backward inside cards
+                
+                    // Shift + Tab backward
                     if (ev.key === 'Tab' && ev.shiftKey) {
                         if (i === 0) {
-                            // First card + Shift+Tab -> move focus back to the active tab
                             ev.preventDefault();
-                            var activeTab = tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; });
+                            deactivatePanelKeyboard(panel);
+                        
+                            var activeTab = tabs.find(function (t) {
+                                return t.getAttribute('aria-selected') === 'true';
+                            });
                             if (activeTab) activeTab.focus();
                         }
-                        // otherwise let default move to previous focusable
                     }
                 });
             });
         }
-
-        // Ensure initial active tab exists and that its panel is visible but its cards are not keyboard reachable
-        var initialTab = tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; }) || tabs[0];
+    
+        /* -------------------------------
+           Init
+        -------------------------------- */
+        tabs.forEach(function (tab, i) {
+            tab.setAttribute('tabindex', '0');
+            tab.dataset.index = i;
+            tab.addEventListener('keydown', onTabKeyDown);
+            tab.addEventListener('click', function () {
+                activateTab(tab, false);
+            });
+        });
+    
+        panels.forEach(function (panel) {
+            deactivatePanelKeyboard(panel);
+        });
+    
+        var initialTab =
+            tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; }) ||
+            tabs[0];
+    
         if (initialTab) {
-            // Activate panel visually but do not make cards focusable until explicit activation
             activateTab(initialTab, false);
         }
-
+    
     })();
-    </script>
+</script>
 
 </body>
 
