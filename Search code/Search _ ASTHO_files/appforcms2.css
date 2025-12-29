@@ -1691,7 +1691,7 @@ a {
     }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
     .navspace {
         justify-content: flex-start;
         gap: 2rem;
@@ -2976,6 +2976,102 @@ a {
 
 .hero-banner__row .col-navy {
     background-color: #242c3d
+}
+
+/* Search results accessibility improvements */
+@media (min-width: 768px) {
+    .search-results-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .search-results-content {
+        order: 2; /* Visually appears on the right */
+    }
+    
+    .search-filters-column {
+        order: 1; /* Visually appears on the left */
+        padding-right: 15px;
+    }
+}
+
+/* Ensure proper spacing and mobile layout */
+.search-filters {
+    margin-bottom: 2rem;
+}
+
+.search-filters__content {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.search-filters-heading {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .search-results-content {
+        order: 1;
+    }
+    
+    .search-filters-column {
+        order: 2;
+    }
+}
+/* Filter Toggle Button Styles */
+.filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.filter-toggle__icon {
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Filter Panel */
+@media (max-width: 767.98px) {
+    .search-filters {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        display: block !important; /* Ensure it's always block for the transition */
+    }
+    .search-filters[aria-hidden="false"] {
+        max-height: 2000px; /* Adjust based on your content */
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Hide the aside when it's not expanded on mobile/tablet */
+    .search-filters[aria-hidden="true"] {
+        display: none !important;
+    }
+}
+/* Show toggle button only on mobile/tablet (below 1024px) */
+@media (min-width: 768px) {
+    .filter-toggle {
+        display: none;
+    }
+    
+    .search-filters {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: none !important;
+    }
 }
 
 .breadcrumb-container .breadcrumb-item, .breadcrumb-container .breadcrumb-item a {

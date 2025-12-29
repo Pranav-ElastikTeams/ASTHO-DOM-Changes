@@ -1226,740 +1226,14 @@ window.addEventListener('message', function(event) {
           </nav>
       </section>
       </header>
-    <main class="main">
-    
-
 
 <main id="main" class="main block main--search">
     <div class="container">
         <h2 class="search-results__title"></h2>
         <div class="block-inner">
-            <div class="row">
-<div class="col-md-3">
-    <div class="search-filters">
-        <form>
-            <header>
-                <h3 class="search-filters__headline">Filter Results</h3>
-                <p>
-                    <a class="search-filters__clear" href="/search">
-                        Clear All Filters
-                    </a>
-                </p>
-                <input type="hidden" name="q" placeholder="" class="form-control" value="">
-                <input type="hidden" name="s" placeholder="" class="form-control">
-                <input type="hidden" name="n" placeholder="" class="form-control" value="20">
-            </header>
-        
-            <div class="filter-list">
-                <!-- Topic Filters -->
-                <fieldset class="category-list">
-                    <legend class="category-list__header">Filter by Topic</legend>
-                    <ul class="list">
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]" id="topic-advocacy" name="Advocacy" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Advocacy" type="hidden" value="false">
-                            <label for="topic-advocacy">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]">
-                                    Advocacy (73)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]" id="topic-phig" name="PHIG" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="PHIG" type="hidden" value="false">
-                            <label for="topic-phig">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]">
-                                    PHIG (32)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]" id="topic-chronic-disease" name="Chronic Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Chronic Disease" type="hidden" value="false">
-                            <label for="topic-chronic-disease">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]">
-                                    Chronic Disease (76)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]" id="topic-communications" name="Communications" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Communications" type="hidden" value="false">
-                            <label for="topic-communications">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]">
-                                    Communications (50)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]" id="topic-covid19" name="COVID-19" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="COVID-19" type="hidden" value="false">
-                            <label for="topic-covid19">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]">
-                                    COVID-19 (357)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]" id="topic-environmental-health" name="Environmental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Environmental Health" type="hidden" value="false">
-                            <label for="topic-environmental-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]">
-                                    Environmental Health (164)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]" id="topic-funding" name="Funding" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Funding" type="hidden" value="false">
-                            <label for="topic-funding">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]">
-                                    Funding (170)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]" id="topic-access-to-care" name="Access to Care" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Access to Care" type="hidden" value="false">
-                            <label for="topic-access-to-care">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]">
-                                    Access to Care (228)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]" id="topic-health-equity" name="Health Equity" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Health Equity" type="hidden" value="false">
-                            <label for="topic-health-equity">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]">
-                                    Health Equity (498)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]" id="topic-infectious-disease" name="Infectious Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Infectious Disease" type="hidden" value="false">
-                            <label for="topic-infectious-disease">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]">
-                                    Infectious Disease (481)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]" id="topic-data-modernization" name="Data Modernization and Informatics" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Data Modernization and Informatics" type="hidden" value="false">
-                            <label for="topic-data-modernization">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]">
-                                    Data Modernization and Informatics (142)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]" id="topic-islands-areas" name="Islands Areas" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Islands Areas" type="hidden" value="false">
-                            <label for="topic-islands-areas">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]">
-                                    Islands Areas (97)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]" id="topic-leadership-workforce" name="Leadership and Workforce Development" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Leadership and Workforce Development" type="hidden" value="false">
-                            <label for="topic-leadership-workforce">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]">
-                                    Leadership and Workforce Development (208)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]" id="topic-members" name="Members" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Members" type="hidden" value="false">
-                            <label for="topic-members">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]">
-                                    Members (204)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]" id="topic-news" name="News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="News" type="hidden" value="false">
-                            <label for="topic-news">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]">
-                                    News (295)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]" id="topic-partnership" name="Partnership" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Partnership" type="hidden" value="false">
-                            <label for="topic-partnership">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]">
-                                    Partnership (196)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]" id="topic-policy" name="Policy" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Policy" type="hidden" value="false">
-                            <label for="topic-policy">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]">
-                                    Policy (414)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]" id="topic-population-health" name="Population Health and Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Population Health and Prevention" type="hidden" value="false">
-                            <label for="topic-population-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]">
-                                    Population Health and Prevention (735)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]" id="topic-preparedness" name="Preparedness" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Preparedness" type="hidden" value="false">
-                            <label for="topic-preparedness">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]">
-                                    Preparedness (219)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]" id="topic-public-health-infrastructure" name="Public Health Infrastructure and Systems Improvement" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Public Health Infrastructure and Systems Improvement" type="hidden" value="false">
-                            <label for="topic-public-health-infrastructure">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]">
-                                    Public Health Infrastructure and Systems Improvement (299)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]" id="topic-social-behavioral-health" name="Social and Behavioral Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Social and Behavioral Health" type="hidden" value="false">
-                            <label for="topic-social-behavioral-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]">
-                                    Social and Behavioral Health (373)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]" id="topic-women-infant-family" name="Women-Infant-Family Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Women-Infant-Family Health" type="hidden" value="false">
-                            <label for="topic-women-infant-family">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]">
-                                    Women-Infant-Family Health (251)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]" id="topic-workforce" name="Workforce" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Workforce" type="hidden" value="false">
-                            <label for="topic-workforce">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]">
-                                    Workforce (190)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]" id="topic-state" name="State" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="State" type="hidden" value="false">
-                            <label for="topic-state">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]">
-                                    State (255)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]" id="topic-federal" name="Federal" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Federal" type="hidden" value="false">
-                            <label for="topic-federal">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]">
-                                    Federal (193)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]" id="topic-public-health-news" name="Public Health News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Public Health News" type="hidden" value="false">
-                            <label for="topic-public-health-news">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]">
-                                    Public Health News (151)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]" id="topic-substance-misuse" name="Substance Misuse" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Substance Misuse" type="hidden" value="false">
-                            <label for="topic-substance-misuse">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]">
-                                    Substance Misuse (143)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]" id="topic-sdoh" name="SDoH" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="SDoH" type="hidden" value="false">
-                            <label for="topic-sdoh">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]">
-                                    SDoH (139)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]" id="topic-astho-news" name="ASTHO News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="ASTHO News" type="hidden" value="false">
-                            <label for="topic-astho-news">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]">
-                                    ASTHO News (133)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]" id="topic-public-health-infrastructure2" name="Public Health Infrastructure" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Public Health Infrastructure" type="hidden" value="false">
-                            <label for="topic-public-health-infrastructure2">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]">
-                                    Public Health Infrastructure (112)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]" id="topic-at-risk-populations" name="At-Risk Populations" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="At-Risk Populations" type="hidden" value="false">
-                            <label for="topic-at-risk-populations">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]">
-                                    At-Risk Populations (112)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]" id="topic-immunization" name="Immunization" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Immunization" type="hidden" value="false">
-                            <label for="topic-immunization">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]">
-                                    Immunization (110)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]" id="topic-leadership-development" name="Leadership Development" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Leadership Development" type="hidden" value="false">
-                            <label for="topic-leadership-development">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]">
-                                    Leadership Development (102)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]" id="topic-race-public-health" name="Race and Public Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Race and Public Health" type="hidden" value="false">
-                            <label for="topic-race-public-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]">
-                                    Race and Public Health (96)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]" id="topic-elimination-disparities" name="Elimination of Disparities" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Elimination of Disparities" type="hidden" value="false">
-                            <label for="topic-elimination-disparities">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]">
-                                    Elimination of Disparities (87)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]" id="topic-opioids" name="Opioids" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Opioids" type="hidden" value="false">
-                            <label for="topic-opioids">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]">
-                                    Opioids (85)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]" id="topic-infant-child-health" name="Infant Child Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Infant Child Health" type="hidden" value="false">
-                            <label for="topic-infant-child-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]">
-                                    Infant Child Health (83)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]" id="topic-pandemics" name="Pandemics" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Pandemics" type="hidden" value="false">
-                            <label for="topic-pandemics">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]">
-                                    Pandemics (82)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]" id="topic-mental-health" name="Mental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Mental Health" type="hidden" value="false">
-                            <label for="topic-mental-health">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]">
-                                    Mental Health (77)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]" id="topic-medicaid-partnerships" name="Medicaid and Public Health Partnerships" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Medicaid and Public Health Partnerships" type="hidden" value="false">
-                            <label for="topic-medicaid-partnerships">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]">
-                                    Medicaid and Public Health Partnerships (75)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]" id="topic-overdose-prevention" name="Overdose Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Overdose Prevention" type="hidden" value="false">
-                            <label for="topic-overdose-prevention">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]">
-                                    Overdose Prevention (72)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]" id="topic-public-health-law" name="Public Health Law" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Public Health Law" type="hidden" value="false">
-                            <label for="topic-public-health-law">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]">
-                                    Public Health Law (64)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]" id="topic-covid-vaccine" name="COVID Vaccine" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="COVID Vaccine" type="hidden" value="false">
-                            <label for="topic-covid-vaccine">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]">
-                                    COVID Vaccine (57)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]" id="topic-food-water-safety" name="Food &amp; Water Safety" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Food &amp; Water Safety" type="hidden" value="false">
-                            <label for="topic-food-water-safety">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]">
-                                    Food &amp; Water Safety (50)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]" id="topic-vaccine-distribution" name="Vaccine Distribution" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Vaccine Distribution" type="hidden" value="false">
-                            <label for="topic-vaccine-distribution">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]">
-                                    Vaccine Distribution (46)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]" id="topic-disability-inclusion" name="Disability Inclusion" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Disability Inclusion" type="hidden" value="false">
-                            <label for="topic-disability-inclusion">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]">
-                                    Disability Inclusion (42)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]" id="topic-maternal-morbidity" name="Maternal Morbidity and Mortality" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Maternal Morbidity and Mortality" type="hidden" value="false">
-                            <label for="topic-maternal-morbidity">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]">
-                                    Maternal Morbidity and Mortality (41)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]" id="topic-astho-member-news" name="ASTHO Member News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="ASTHO Member News" type="hidden" value="false">
-                            <label for="topic-astho-member-news">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]">
-                                    ASTHO Member News (40)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]" id="topic-stis" name="STIs" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="STIs" type="hidden" value="false">
-                            <label for="topic-stis">
-                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]">
-                                    STIs (37)
-                                </a>
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-            
-                <!-- Location Filters -->
-                <fieldset class="category-list">
-                    <legend class="category-list__header">Filter by Location</legend>
-                    <ul class="list">
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]" id="location-california" name="California" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="California" type="hidden" value="false">
-                            <label for="location-california">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]">
-                                    California (135)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]" id="location-colorado" name="Colorado" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Colorado" type="hidden" value="false">
-                            <label for="location-colorado">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]">
-                                    Colorado (94)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]" id="location-connecticut" name="Connecticut" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Connecticut" type="hidden" value="false">
-                            <label for="location-connecticut">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]">
-                                    Connecticut (65)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]" id="location-new-york" name="New York" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="New York" type="hidden" value="false">
-                            <label for="location-new-york">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]">
-                                    New York (116)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]" id="location-washington" name="Washington" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Washington" type="hidden" value="false">
-                            <label for="location-washington">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]">
-                                    Washington (109)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]" id="location-massachusetts" name="Massachusetts" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Massachusetts" type="hidden" value="false">
-                            <label for="location-massachusetts">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]">
-                                    Massachusetts (96)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]" id="location-new-jersey" name="New Jersey" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="New Jersey" type="hidden" value="false">
-                            <label for="location-new-jersey">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]">
-                                    New Jersey (88)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]" id="location-maryland" name="Maryland" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Maryland" type="hidden" value="false">
-                            <label for="location-maryland">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]">
-                                    Maryland (88)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]" id="location-illinois" name="Illinois" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Illinois" type="hidden" value="false">
-                            <label for="location-illinois">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]">
-                                    Illinois (83)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]" id="location-texas" name="Texas" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Texas" type="hidden" value="false">
-                            <label for="location-texas">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]">
-                                    Texas (80)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]" id="location-virginia" name="Virginia" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Virginia" type="hidden" value="false">
-                            <label for="location-virginia">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]">
-                                    Virginia (76)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]" id="location-oregon" name="Oregon" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Oregon" type="hidden" value="false">
-                            <label for="location-oregon">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]">
-                                    Oregon (63)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]" id="location-rhode-island" name="Rhode Island" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Rhode Island" type="hidden" value="false">
-                            <label for="location-rhode-island">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]">
-                                    Rhode Island (58)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]" id="location-michigan" name="Michigan" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Michigan" type="hidden" value="false">
-                            <label for="location-michigan">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]">
-                                    Michigan (50)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]" id="location-hawaii" name="Hawaii" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Hawaii" type="hidden" value="false">
-                            <label for="location-hawaii">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]">
-                                    Hawaii (50)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]" id="location-utah" name="Utah" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Utah" type="hidden" value="false">
-                            <label for="location-utah">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]">
-                                    Utah (48)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]" id="location-north-carolina" name="North Carolina" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="North Carolina" type="hidden" value="false">
-                            <label for="location-north-carolina">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]">
-                                    North Carolina (37)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]" id="location-oklahoma" name="Oklahoma" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Oklahoma" type="hidden" value="false">
-                            <label for="location-oklahoma">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]">
-                                    Oklahoma (33)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]" id="location-minnesota" name="Minnesota" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Minnesota" type="hidden" value="false">
-                            <label for="location-minnesota">
-                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]">
-                                    Minnesota (32)
-                                </a>
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-            
-                <!-- Published Date Filters -->
-                <fieldset class="category-list">
-                    <legend class="category-list__header">Filter by Published Date</legend>
-                    <ul class="list">
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]" id="date-last-30-days" name="Last 30 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Last 30 Days" type="hidden" value="false">
-                            <label for="date-last-30-days">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]">
-                                    Last 30 Days (11)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]" id="date-last-90-days" name="Last 90 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Last 90 Days" type="hidden" value="false">
-                            <label for="date-last-90-days">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]">
-                                    Last 90 Days (56)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]" id="date-last-180-days" name="Last 180 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="Last 180 Days" type="hidden" value="false">
-                            <label for="date-last-180-days">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]">
-                                    Last 180 Days (165)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]" id="date-2025" name="2025" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="2025" type="hidden" value="false">
-                            <label for="date-2025">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]">
-                                    2025 (340)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]" id="date-2024" name="2024" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="2024" type="hidden" value="false">
-                            <label for="date-2024">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]">
-                                    2024 (356)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]" id="date-2023" name="2023" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="2023" type="hidden" value="false">
-                            <label for="date-2023">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]">
-                                    2023 (402)
-                                </a>
-                            </label>
-                        </li>
-                        <li class="list-item">
-                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]" id="date-2022-or-earlier" name="2022 or earlier" onchange="checkboxUpdate(this)" type="checkbox" value="true">
-                            <input name="2022 or earlier" type="hidden" value="false">
-                            <label for="date-2022-or-earlier">
-                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]">
-                                    2022 or earlier (990)
-                                </a>
-                            </label>
-                        </li>
-                    </ul>
-                    <div>
-                        <label class="date-label" for="date-from"><small>From</small></label>
-                        <input class="date" type="date" id="date-from" name="from">
-                    </div>
-                    <div>
-                        <label class="date-label" for="date-to"><small>To</small></label>
-                        <input class="date" type="date" id="date-to" name="to">
-                    </div>
-                    <input id="date-range-submit" type="submit" value="Submit Date Range" class="button button--blue button--small">
-                </fieldset>
-            </div>
-        </form>
-    </div>
-</div>
-                <div class="col-md-9">
+            <div class="row search-results-container">
+                <!-- Search Results (moved first in DOM for accessibility) -->
+                <div class="col-md-9 search-results-content">
                         <h1 class="page-heading">
                             Displaying 1-20 of 2088 results for 
                         </h1>
@@ -3164,6 +2438,749 @@ As schools work to stay open for in-person learning, it is essential to understa
 
 
                 </div>
+                <div class="col-md-3">
+        <button class="filter-toggle d-md-none" aria-expanded="true" aria-controls="search-filters">
+            <span class="filter-toggle__text">Show Filter</span>
+            <span class="filter-toggle__icon material-icons" aria-hidden="true">keyboard_arrow_down</span>
+        </button>
+    <aside id="search-filters" class="search-filters">
+    <form>
+        <header>
+            <h3 class="search-filters__headline">Filter Results</h3>
+            <p>
+                <a class="search-filters__clear" href="/search">
+                    Clear All Filters
+                </a>
+            </p>
+            <input type="hidden" name="q" placeholder="" class="form-control" value="">
+            <input type="hidden" name="s" placeholder="" class="form-control">
+            <input type="hidden" name="n" placeholder="" class="form-control" value="20">
+        </header>
+    
+        <div class="filter-list">
+            <!-- Topic Filters -->
+            <div class="filter-section">
+                <button type="button" class="category-list__header" aria-expanded="false" aria-controls="topic-list">
+                    Filter by Topic
+                </button>
+                <fieldset id="topic-list" class="category-list" disabled>
+                    <legend class="sr-only">Filter by Topic</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]" id="topic-advocacy" name="Advocacy" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Advocacy" type="hidden" value="false">
+                            <label for="topic-advocacy">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]" tabindex="-1">
+                                    Advocacy (73)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]" id="topic-phig" name="PHIG" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="PHIG" type="hidden" value="false">
+                            <label for="topic-phig">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]" tabindex="-1">
+                                    PHIG (32)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]" id="topic-chronic-disease" name="Chronic Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Chronic Disease" type="hidden" value="false">
+                            <label for="topic-chronic-disease">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]" tabindex="-1">
+                                    Chronic Disease (76)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]" id="topic-communications" name="Communications" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Communications" type="hidden" value="false">
+                            <label for="topic-communications">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]" tabindex="-1">
+                                    Communications (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]" id="topic-covid19" name="COVID-19" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="COVID-19" type="hidden" value="false">
+                            <label for="topic-covid19">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]" tabindex="-1">
+                                    COVID-19 (357)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]" id="topic-environmental-health" name="Environmental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Environmental Health" type="hidden" value="false">
+                            <label for="topic-environmental-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]" tabindex="-1">
+                                    Environmental Health (164)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]" id="topic-funding" name="Funding" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Funding" type="hidden" value="false">
+                            <label for="topic-funding">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]" tabindex="-1">
+                                    Funding (170)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]" id="topic-access-to-care" name="Access to Care" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Access to Care" type="hidden" value="false">
+                            <label for="topic-access-to-care">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]" tabindex="-1">
+                                    Access to Care (228)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]" id="topic-health-equity" name="Health Equity" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Health Equity" type="hidden" value="false">
+                            <label for="topic-health-equity">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]" tabindex="-1">
+                                    Health Equity (498)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]" id="topic-infectious-disease" name="Infectious Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Infectious Disease" type="hidden" value="false">
+                            <label for="topic-infectious-disease">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]" tabindex="-1">
+                                    Infectious Disease (481)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]" id="topic-data-modernization" name="Data Modernization and Informatics" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Data Modernization and Informatics" type="hidden" value="false">
+                            <label for="topic-data-modernization">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]" tabindex="-1">
+                                    Data Modernization and Informatics (142)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]" id="topic-islands-areas" name="Islands Areas" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Islands Areas" type="hidden" value="false">
+                            <label for="topic-islands-areas">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]" tabindex="-1">
+                                    Islands Areas (97)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]" id="topic-leadership-workforce" name="Leadership and Workforce Development" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Leadership and Workforce Development" type="hidden" value="false">
+                            <label for="topic-leadership-workforce">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]" tabindex="-1">
+                                    Leadership and Workforce Development (208)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]" id="topic-members" name="Members" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Members" type="hidden" value="false">
+                            <label for="topic-members">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]" tabindex="-1">
+                                    Members (204)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]" id="topic-news" name="News" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="News" type="hidden" value="false">
+                            <label for="topic-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]" tabindex="-1">
+                                    News (295)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]" id="topic-partnership" name="Partnership" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Partnership" type="hidden" value="false">
+                            <label for="topic-partnership">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]" tabindex="-1">
+                                    Partnership (196)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]" id="topic-policy" name="Policy" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Policy" type="hidden" value="false">
+                            <label for="topic-policy">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]" tabindex="-1">
+                                    Policy (414)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]" id="topic-population-health" name="Population Health and Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Population Health and Prevention" type="hidden" value="false">
+                            <label for="topic-population-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]" tabindex="-1">
+                                    Population Health and Prevention (735)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]" id="topic-preparedness" name="Preparedness" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Preparedness" type="hidden" value="false">
+                            <label for="topic-preparedness">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]" tabindex="-1">
+                                    Preparedness (219)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]" id="topic-public-health-infrastructure" name="Public Health Infrastructure and Systems Improvement" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Public Health Infrastructure and Systems Improvement" type="hidden" value="false">
+                            <label for="topic-public-health-infrastructure">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]" tabindex="-1">
+                                    Public Health Infrastructure and Systems Improvement (299)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]" id="topic-social-behavioral-health" name="Social and Behavioral Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Social and Behavioral Health" type="hidden" value="false">
+                            <label for="topic-social-behavioral-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]" tabindex="-1">
+                                    Social and Behavioral Health (373)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]" id="topic-women-infant-family" name="Women-Infant-Family Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Women-Infant-Family Health" type="hidden" value="false">
+                            <label for="topic-women-infant-family">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]" tabindex="-1">
+                                    Women-Infant-Family Health (251)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]" id="topic-workforce" name="Workforce" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Workforce" type="hidden" value="false">
+                            <label for="topic-workforce">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]" tabindex="-1">
+                                    Workforce (190)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]" id="topic-state" name="State" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="State" type="hidden" value="false">
+                            <label for="topic-state">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]" tabindex="-1">
+                                    State (255)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]" id="topic-federal" name="Federal" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Federal" type="hidden" value="false">
+                            <label for="topic-federal">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]" tabindex="-1">
+                                    Federal (193)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]" id="topic-public-health-news" name="Public Health News" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Public Health News" type="hidden" value="false">
+                            <label for="topic-public-health-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]" tabindex="-1">
+                                    Public Health News (151)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]" id="topic-substance-misuse" name="Substance Misuse" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Substance Misuse" type="hidden" value="false">
+                            <label for="topic-substance-misuse">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]" tabindex="-1">
+                                    Substance Misuse (143)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]" id="topic-sdoh" name="SDoH" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="SDoH" type="hidden" value="false">
+                            <label for="topic-sdoh">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]" tabindex="-1">
+                                    SDoH (139)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]" id="topic-astho-news" name="ASTHO News" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="ASTHO News" type="hidden" value="false">
+                            <label for="topic-astho-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]" tabindex="-1">
+                                    ASTHO News (133)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]" id="topic-public-health-infrastructure2" name="Public Health Infrastructure" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Public Health Infrastructure" type="hidden" value="false">
+                            <label for="topic-public-health-infrastructure2">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]" tabindex="-1">
+                                    Public Health Infrastructure (112)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]" id="topic-at-risk-populations" name="At-Risk Populations" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="At-Risk Populations" type="hidden" value="false">
+                            <label for="topic-at-risk-populations">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]" tabindex="-1">
+                                    At-Risk Populations (112)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]" id="topic-immunization" name="Immunization" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Immunization" type="hidden" value="false">
+                            <label for="topic-immunization">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]" tabindex="-1">
+                                    Immunization (110)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]" id="topic-leadership-development" name="Leadership Development" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Leadership Development" type="hidden" value="false">
+                            <label for="topic-leadership-development">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]" tabindex="-1">
+                                    Leadership Development (102)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]" id="topic-race-public-health" name="Race and Public Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Race and Public Health" type="hidden" value="false">
+                            <label for="topic-race-public-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]" tabindex="-1">
+                                    Race and Public Health (96)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]" id="topic-elimination-disparities" name="Elimination of Disparities" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Elimination of Disparities" type="hidden" value="false">
+                            <label for="topic-elimination-disparities">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]" tabindex="-1">
+                                    Elimination of Disparities (87)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]" id="topic-opioids" name="Opioids" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Opioids" type="hidden" value="false">
+                            <label for="topic-opioids">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]" tabindex="-1">
+                                    Opioids (85)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]" id="topic-infant-child-health" name="Infant Child Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Infant Child Health" type="hidden" value="false">
+                            <label for="topic-infant-child-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]" tabindex="-1">
+                                    Infant Child Health (83)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]" id="topic-pandemics" name="Pandemics" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Pandemics" type="hidden" value="false">
+                            <label for="topic-pandemics">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]" tabindex="-1">
+                                    Pandemics (82)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]" id="topic-mental-health" name="Mental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Mental Health" type="hidden" value="false">
+                            <label for="topic-mental-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]" tabindex="-1">
+                                    Mental Health (77)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]" id="topic-medicaid-partnerships" name="Medicaid and Public Health Partnerships" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Medicaid and Public Health Partnerships" type="hidden" value="false">
+                            <label for="topic-medicaid-partnerships">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]" tabindex="-1">
+                                    Medicaid and Public Health Partnerships (75)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]" id="topic-overdose-prevention" name="Overdose Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Overdose Prevention" type="hidden" value="false">
+                            <label for="topic-overdose-prevention">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]" tabindex="-1">
+                                    Overdose Prevention (72)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]" id="topic-public-health-law" name="Public Health Law" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Public Health Law" type="hidden" value="false">
+                            <label for="topic-public-health-law">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]" tabindex="-1">
+                                    Public Health Law (64)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]" id="topic-covid-vaccine" name="COVID Vaccine" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="COVID Vaccine" type="hidden" value="false">
+                            <label for="topic-covid-vaccine">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]" tabindex="-1">
+                                    COVID Vaccine (57)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]" id="topic-food-water-safety" name="Food &amp; Water Safety" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Food &amp; Water Safety" type="hidden" value="false">
+                            <label for="topic-food-water-safety">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]" tabindex="-1">
+                                    Food &amp; Water Safety (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]" id="topic-vaccine-distribution" name="Vaccine Distribution" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Vaccine Distribution" type="hidden" value="false">
+                            <label for="topic-vaccine-distribution">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]" tabindex="-1">
+                                    Vaccine Distribution (46)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]" id="topic-disability-inclusion" name="Disability Inclusion" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Disability Inclusion" type="hidden" value="false">
+                            <label for="topic-disability-inclusion">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]" tabindex="-1">
+                                    Disability Inclusion (42)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]" id="topic-maternal-morbidity" name="Maternal Morbidity and Mortality" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Maternal Morbidity and Mortality" type="hidden" value="false">
+                            <label for="topic-maternal-morbidity">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]" tabindex="-1">
+                                    Maternal Morbidity and Mortality (41)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]" id="topic-astho-member-news" name="ASTHO Member News" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="ASTHO Member News" type="hidden" value="false">
+                            <label for="topic-astho-member-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]" tabindex="-1">
+                                    ASTHO Member News (40)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]" id="topic-stis" name="STIs" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="STIs" type="hidden" value="false">
+                            <label for="topic-stis">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]" tabindex="-1">
+                                    STIs (37)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        
+            <!-- Location Filters -->
+            <div class="filter-section">
+                <button type="button" class="category-list__header" aria-expanded="false" aria-controls="location-list">
+                    Filter by Location
+                </button>
+                <fieldset id="location-list" class="category-list" disabled>
+                    <legend class="sr-only">Filter by Location</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]" id="location-california" name="California" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="California" type="hidden" value="false">
+                            <label for="location-california">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]" tabindex="-1">
+                                    California (135)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]" id="location-colorado" name="Colorado" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Colorado" type="hidden" value="false">
+                            <label for="location-colorado">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]" tabindex="-1">
+                                    Colorado (94)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]" id="location-connecticut" name="Connecticut" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Connecticut" type="hidden" value="false">
+                            <label for="location-connecticut">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]" tabindex="-1">
+                                    Connecticut (65)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]" id="location-new-york" name="New York" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="New York" type="hidden" value="false">
+                            <label for="location-new-york">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]" tabindex="-1">
+                                    New York (116)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]" id="location-washington" name="Washington" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Washington" type="hidden" value="false">
+                            <label for="location-washington">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]" tabindex="-1">
+                                    Washington (109)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]" id="location-massachusetts" name="Massachusetts" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Massachusetts" type="hidden" value="false">
+                            <label for="location-massachusetts">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]" tabindex="-1">
+                                    Massachusetts (96)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]" id="location-new-jersey" name="New Jersey" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="New Jersey" type="hidden" value="false">
+                            <label for="location-new-jersey">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]" tabindex="-1">
+                                    New Jersey (88)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]" id="location-maryland" name="Maryland" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Maryland" type="hidden" value="false">
+                            <label for="location-maryland">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]" tabindex="-1">
+                                    Maryland (88)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]" id="location-illinois" name="Illinois" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Illinois" type="hidden" value="false">
+                            <label for="location-illinois">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]" tabindex="-1">
+                                    Illinois (83)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]" id="location-texas" name="Texas" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Texas" type="hidden" value="false">
+                            <label for="location-texas">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]" tabindex="-1">
+                                    Texas (80)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]" id="location-virginia" name="Virginia" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Virginia" type="hidden" value="false">
+                            <label for="location-virginia">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]" tabindex="-1">
+                                    Virginia (76)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]" id="location-oregon" name="Oregon" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Oregon" type="hidden" value="false">
+                            <label for="location-oregon">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]" tabindex="-1">
+                                    Oregon (63)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]" id="location-rhode-island" name="Rhode Island" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Rhode Island" type="hidden" value="false">
+                            <label for="location-rhode-island">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]" tabindex="-1">
+                                    Rhode Island (58)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]" id="location-michigan" name="Michigan" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Michigan" type="hidden" value="false">
+                            <label for="location-michigan">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]" tabindex="-1">
+                                    Michigan (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]" id="location-hawaii" name="Hawaii" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Hawaii" type="hidden" value="false">
+                            <label for="location-hawaii">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]" tabindex="-1">
+                                    Hawaii (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]" id="location-utah" name="Utah" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Utah" type="hidden" value="false">
+                            <label for="location-utah">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]" tabindex="-1">
+                                    Utah (48)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]" id="location-north-carolina" name="North Carolina" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="North Carolina" type="hidden" value="false">
+                            <label for="location-north-carolina">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]" tabindex="-1">
+                                    North Carolina (37)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]" id="location-oklahoma" name="Oklahoma" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Oklahoma" type="hidden" value="false">
+                            <label for="location-oklahoma">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]" tabindex="-1">
+                                    Oklahoma (33)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]" id="location-minnesota" name="Minnesota" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Minnesota" type="hidden" value="false">
+                            <label for="location-minnesota">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]" tabindex="-1">
+                                    Minnesota (32)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        
+            <!-- Published Date Filters -->
+            <div class="filter-section">
+                <button type="button" class="category-list__header" aria-expanded="false" aria-controls="date-list">
+                    Filter by Published Date
+                </button>
+                <fieldset id="date-list" class="category-list" disabled>
+                    <legend class="sr-only">Filter by Published Date</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]" id="date-last-30-days" name="Last 30 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Last 30 Days" type="hidden" value="false">
+                            <label for="date-last-30-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]" tabindex="-1">
+                                    Last 30 Days (11)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]" id="date-last-90-days" name="Last 90 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Last 90 Days" type="hidden" value="false">
+                            <label for="date-last-90-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]" tabindex="-1">
+                                    Last 90 Days (56)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]" id="date-last-180-days" name="Last 180 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="Last 180 Days" type="hidden" value="false">
+                            <label for="date-last-180-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]" tabindex="-1">
+                                    Last 180 Days (165)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]" id="date-2025" name="2025" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="2025" type="hidden" value="false">
+                            <label for="date-2025">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]" tabindex="-1">
+                                    2025 (340)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]" id="date-2024" name="2024" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="2024" type="hidden" value="false">
+                            <label for="date-2024">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]" tabindex="-1">
+                                    2024 (356)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]" id="date-2023" name="2023" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="2023" type="hidden" value="false">
+                            <label for="date-2023">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]" tabindex="-1">
+                                    2023 (402)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]" id="date-2022-or-earlier" name="2022 or earlier" onchange="checkboxUpdate(this)" type="checkbox" value="true" tabindex="-1">
+                            <input name="2022 or earlier" type="hidden" value="false">
+                            <label for="date-2022-or-earlier">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]" tabindex="-1">
+                                    2022 or earlier (990)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                    <div>
+                        <label class="date-label" for="date-from"><small>From</small></label>
+                        <input class="date" type="date" id="date-from" name="from" tabindex="-1">
+                    </div>
+                    <div>
+                        <label class="date-label" for="date-to"><small>To</small></label>
+                        <input class="date" type="date" id="date-to" name="to" tabindex="-1">
+                    </div>
+                    <input id="date-range-submit" type="submit" value="Submit Date Range" class="button button--blue button--small" tabindex="-1">
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</aside>
+</div>
                 <!--end column-->
             </div>
             <!--end row -->
@@ -3314,7 +3331,6 @@ As schools work to stay open for in-person learning, it is essential to understa
             </script>
         </div>
     </div>
-</main>
 
         <section>
             <div class="backToTop">
@@ -4069,6 +4085,263 @@ $(document).ready(function(){
         });
     });    
   });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Filter toggle for mobile/desktop
+    const filterToggle = document.querySelector('.filter-toggle');
+    const searchFilters = document.getElementById('search-filters');
+    
+    if (filterToggle && searchFilters) {
+        // Set initial state
+        const isMobile = window.innerWidth < 992;
+        if (isMobile) {
+            searchFilters.setAttribute('aria-hidden', 'true');
+            filterToggle.setAttribute('aria-expanded', 'false');
+        } else {
+            searchFilters.removeAttribute('aria-hidden');
+            filterToggle.setAttribute('aria-expanded', 'true');
+        }
+        
+        // Toggle filters on button click
+        filterToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            searchFilters.setAttribute('aria-hidden', isExpanded);
+            
+            // Toggle the icon
+            const icon = this.querySelector('.filter-toggle__icon');
+            if (icon) {
+                icon.style.transform = isExpanded ? 'rotate(0)' : 'rotate(-180deg)';
+            }
+        });
+        
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                const isMobileNow = window.innerWidth < 992;
+                if (isMobileNow !== isMobile) {
+                    if (isMobileNow) {
+                        // Switched to mobile
+                        searchFilters.setAttribute('aria-hidden', 'true');
+                        filterToggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        // Switched to desktop
+                        searchFilters.removeAttribute('aria-hidden');
+                        filterToggle.setAttribute('aria-expanded', 'true');
+                    }
+                }
+            }, 250);
+        });
+    }
+    
+    // Keyboard navigation for filter sections
+    const filterSections = document.querySelectorAll('.filter-section');
+    let activeSection = null;
+
+    // Initialize filter sections
+    function initializeFilterSections() {
+        filterSections.forEach(section => {
+            const header = section.querySelector('.category-list__header');
+            const fieldset = section.querySelector('fieldset');
+            const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+            
+            if (!header || !fieldset) return;
+            
+            // Set initial states
+            header.setAttribute('tabindex', '0');
+            header.setAttribute('role', 'button');
+            
+            // Make checkboxes non-tabbable but keep them enabled
+            checkboxes.forEach(checkbox => {
+                checkbox.setAttribute('tabindex', '-1');
+            });
+            
+            // Make all interactive elements in the fieldset not focusable by default
+            const interactiveElements = fieldset.querySelectorAll('a, input, button, [tabindex="0"]');
+            interactiveElements.forEach(el => {
+                el.setAttribute('tabindex', '-1');
+            });
+            
+            // Add click handler for the header
+            header.addEventListener('click', () => {
+                toggleFilterSection(section);
+            });
+            
+            // Add keyboard support
+            header.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFilterSection(section);
+                } else if (e.key === 'Tab' && e.shiftKey && activeSection) {
+                    // Handle Shift+Tab from header when section is active
+                    const lastFocusable = getLastFocusableElement(activeSection);
+                    if (lastFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                }
+            });
+            
+            // Handle keyboard navigation within the fieldset
+            fieldset.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    deactivateFilterSection(section);
+                    header.focus();
+                } else if (e.key === 'Tab') {
+                    const focusableElements = getFocusableElements(fieldset);
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+                    
+                    if (e.shiftKey && document.activeElement === firstElement) {
+                        // Shift+Tab from first element moves to header
+                        e.preventDefault();
+                        header.focus();
+                    } else if (!e.shiftKey && document.activeElement === lastElement) {
+                        // Tab from last element moves to next section header or out
+                        const nextSection = getNextSection(section);
+                        if (nextSection) {
+                            e.preventDefault();
+                            nextSection.querySelector('.category-list__header').focus();
+                        }
+                    }
+                }
+            });
+            
+            // Handle clicks on links to toggle checkboxes
+            fieldset.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const checkbox = link.closest('li').querySelector('input[type="checkbox"]');
+                    if (checkbox) {
+                        checkbox.checked = !checkbox.checked;
+                        // Trigger any change events
+                        const event = new Event('change');
+                        checkbox.dispatchEvent(event);
+                    }
+                });
+            });
+            
+            // Handle date range form submission
+            const dateSubmit = fieldset.querySelector('#date-range-submit');
+            if (dateSubmit) {
+                dateSubmit.addEventListener('click', (e) => {
+                    // Add any date validation here if needed
+                    fieldset.closest('form').submit();
+                });
+            }
+        });
+        
+        // Close sections when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.filter-section') && activeSection) {
+                deactivateFilterSection(activeSection);
+            }
+        });
+    }
+    
+    // Toggle a filter section
+    function toggleFilterSection(section) {
+        if (activeSection === section) {
+            deactivateFilterSection(section);
+        } else {
+            if (activeSection) {
+                deactivateFilterSection(activeSection);
+            }
+            activateFilterSection(section);
+        }
+    }
+    
+    // Activate a filter section
+    function activateFilterSection(section) {
+        const header = section.querySelector('.category-list__header');
+        const fieldset = section.querySelector('fieldset');
+        const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+        
+        if (!header || !fieldset) return;
+        
+        // Update ARIA and state
+        header.setAttribute('aria-expanded', 'true');
+        
+        // Make checkboxes keyboard accessible
+        checkboxes.forEach(checkbox => {
+            checkbox.removeAttribute('tabindex');
+        });
+        
+        // Make all interactive elements focusable
+        const interactiveElements = fieldset.querySelectorAll('a, input, button, [tabindex="-1"]');
+        interactiveElements.forEach(el => {
+            if (el.closest('.filter-section') === section) {
+                el.removeAttribute('tabindex');
+            }
+        });
+        
+        // Focus the first focusable element
+        const firstFocusable = getFirstFocusableElement(fieldset);
+        if (firstFocusable) {
+            firstFocusable.focus();
+        }
+        
+        activeSection = section;
+    }
+    
+    // Deactivate a filter section
+    function deactivateFilterSection(section) {
+        if (!section) return;
+        
+        const header = section.querySelector('.category-list__header');
+        const fieldset = section.querySelector('fieldset');
+        const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+        
+        if (!header || !fieldset) return;
+        
+        // Update ARIA and state
+        header.setAttribute('aria-expanded', 'false');
+        
+        // Make checkboxes non-tabbable but keep them enabled
+        checkboxes.forEach(checkbox => {
+            checkbox.setAttribute('tabindex', '-1');
+        });
+        
+        // Make all interactive elements not focusable
+        const interactiveElements = fieldset.querySelectorAll('a, input, button, [tabindex="0"]');
+        interactiveElements.forEach(el => {
+            el.setAttribute('tabindex', '-1');
+        });
+        
+        if (activeSection === section) {
+            activeSection = null;
+        }
+    }
+    
+    // Helper functions
+    function getFocusableElements(container) {
+        return Array.from(container.querySelectorAll(
+            'a[href], button, input, select, textarea, [tabindex]:not([tabindex^="-"])'
+        )).filter(el => !el.disabled && el.offsetParent !== null);
+    }
+    
+    function getFirstFocusableElement(container) {
+        const elements = getFocusableElements(container);
+        return elements.length > 0 ? elements[0] : null;
+    }
+    
+    function getLastFocusableElement(container) {
+        const elements = getFocusableElements(container);
+        return elements.length > 0 ? elements[elements.length - 1] : null;
+    }
+    
+    function getNextSection(currentSection) {
+        const sections = Array.from(document.querySelectorAll('.filter-section'));
+        const currentIndex = sections.indexOf(currentSection);
+        return currentIndex < sections.length - 1 ? sections[currentIndex + 1] : null;
+    }
+    
+    // Initialize everything
+    initializeFilterSections();
 });
 </script>
 
