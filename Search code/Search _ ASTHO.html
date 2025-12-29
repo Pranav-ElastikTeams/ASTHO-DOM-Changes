@@ -1241,7 +1241,7 @@ window.addEventListener('message', function(event) {
             <header>
                 <h3 class="search-filters__headline">Filter Results</h3>
                 <p>
-                    <a class="search-filters__clear" href="https://integration.astho.org/search">
+                    <a class="search-filters__clear" href="/search">
                         Clear All Filters
                     </a>
                 </p>
@@ -1249,871 +1249,712 @@ window.addEventListener('message', function(event) {
                 <input type="hidden" name="s" placeholder="" class="form-control">
                 <input type="hidden" name="n" placeholder="" class="form-control" value="20">
             </header>
-
+        
             <div class="filter-list">
-
-                            <div class="category-list">
-                                <h4 class="category-list__header">
-                                    Topic
-                                </h4>
-
-                                    <div class="list">
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]" id="Advocacy" name="Advocacy" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Advocacy" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]">
-                                                            Advocacy
-
-(73)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]" id="PHIG" name="PHIG" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="PHIG" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]">
-                                                            PHIG
-
-(32)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]" id="Chronic_Disease" name="Chronic Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Chronic Disease" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]">
-                                                            Chronic Disease
-
-(76)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]" id="Communications" name="Communications" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Communications" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]">
-                                                            Communications
-
-(50)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]" id="COVID-19" name="COVID-19" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="COVID-19" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]">
-                                                            COVID-19
-
-(357)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]" id="Environmental_Health" name="Environmental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Environmental Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]">
-                                                            Environmental Health
-
-(164)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]" id="Funding" name="Funding" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Funding" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eFunding]">
-                                                            Funding
-
-(170)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]" id="Access_to_Care" name="Access to Care" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Access to Care" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]">
-                                                            Access to Care
-
-(228)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]" id="Health_Equity" name="Health Equity" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Health Equity" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]">
-                                                            Health Equity
-
-(498)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]" id="Infectious_Disease" name="Infectious Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Infectious Disease" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]">
-                                                            Infectious Disease
-
-(481)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]" id="Data_Modernization_and_Informatics" name="Data Modernization and Informatics" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Data Modernization and Informatics" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]">
-                                                            Data Modernization and Informatics
-
-(142)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]" id="Islands_Areas" name="Islands Areas" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Islands Areas" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]">
-                                                            Islands Areas
-
-(97)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]" id="Leadership_and_Workforce_Development" name="Leadership and Workforce Development" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Leadership and Workforce Development" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]">
-                                                            Leadership and Workforce Development
-
-(208)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]" id="Members" name="Members" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Members" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eMembers]">
-                                                            Members
-
-(204)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]" id="News" name="News" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="News" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eNews]">
-                                                            News
-
-(295)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]" id="Partnership" name="Partnership" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Partnership" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]">
-                                                            Partnership
-
-(196)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]" id="Policy" name="Policy" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Policy" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]">
-                                                            Policy
-
-(414)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]" id="Population_Health_and_Prevention" name="Population Health and Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Population Health and Prevention" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]">
-                                                            Population Health and Prevention
-
-(735)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]" id="Preparedness" name="Preparedness" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Preparedness" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]">
-                                                            Preparedness
-
-(219)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]" id="Public_Health_Infrastructure_and_Systems_Improvement" name="Public Health Infrastructure and Systems Improvement" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Public Health Infrastructure and Systems Improvement" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]">
-                                                            Public Health Infrastructure and Systems Improvement
-
-(299)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]" id="Social_and_Behavioral_Health" name="Social and Behavioral Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Social and Behavioral Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]">
-                                                            Social and Behavioral Health
-
-(373)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]" id="Women-Infant-Family_Health" name="Women-Infant-Family Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Women-Infant-Family Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]">
-                                                            Women-Infant-Family Health
-
-(251)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]" id="Workforce" name="Workforce" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Workforce" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]">
-                                                            Workforce
-
-(190)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]" id="State" name="State" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="State" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]">
-                                                            State
-
-(255)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]" id="Federal" name="Federal" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Federal" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]">
-                                                            Federal
-
-(193)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]" id="Public_Health_News" name="Public Health News" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Public Health News" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]">
-                                                            Public Health News
-
-(151)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]" id="Substance_Misuse" name="Substance Misuse" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Substance Misuse" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]">
-                                                            Substance Misuse
-
-(143)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]" id="SDoH" name="SDoH" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="SDoH" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]">
-                                                            SDoH
-
-(139)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]" id="ASTHO_News" name="ASTHO News" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="ASTHO News" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]">
-                                                            ASTHO News
-
-(133)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]" id="Public_Health_Infrastructure" name="Public Health Infrastructure" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Public Health Infrastructure" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]">
-                                                            Public Health Infrastructure
-
-(112)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]" id="At-Risk_Populations" name="At-Risk Populations" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="At-Risk Populations" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]">
-                                                            At-Risk Populations
-
-(112)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]" id="Immunization" name="Immunization" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Immunization" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]">
-                                                            Immunization
-
-(110)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]" id="Leadership_Development" name="Leadership Development" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Leadership Development" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]">
-                                                            Leadership Development
-
-(102)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]" id="Race_and_Public_Health" name="Race and Public Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Race and Public Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]">
-                                                            Race and Public Health
-
-(96)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]" id="Elimination_of_Disparities" name="Elimination of Disparities" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Elimination of Disparities" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]">
-                                                            Elimination of Disparities
-
-(87)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]" id="Opioids" name="Opioids" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Opioids" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]">
-                                                            Opioids
-
-(85)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]" id="Infant_Child_Health" name="Infant Child Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Infant Child Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]">
-                                                            Infant Child Health
-
-(83)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]" id="Pandemics" name="Pandemics" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Pandemics" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]">
-                                                            Pandemics
-
-(82)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]" id="Mental_Health" name="Mental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Mental Health" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]">
-                                                            Mental Health
-
-(77)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]" id="Medicaid_and_Public_Health_Partnerships" name="Medicaid and Public Health Partnerships" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Medicaid and Public Health Partnerships" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]">
-                                                            Medicaid and Public Health Partnerships
-
-(75)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]" id="Overdose_Prevention" name="Overdose Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Overdose Prevention" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]">
-                                                            Overdose Prevention
-
-(72)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]" id="Public_Health_Law" name="Public Health Law" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Public Health Law" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]">
-                                                            Public Health Law
-
-(64)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]" id="COVID_Vaccine" name="COVID Vaccine" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="COVID Vaccine" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]">
-                                                            COVID Vaccine
-
-(57)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]" id="Food___Water_Safety" name="Food &amp; Water Safety" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Food &amp; Water Safety" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]">
-                                                            Food &amp; Water Safety
-
-(50)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]" id="Vaccine_Distribution" name="Vaccine Distribution" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Vaccine Distribution" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]">
-                                                            Vaccine Distribution
-
-(46)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]" id="Disability_Inclusion" name="Disability Inclusion" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Disability Inclusion" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]">
-                                                            Disability Inclusion
-
-(42)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]" id="Maternal_Morbidity_and_Mortality" name="Maternal Morbidity and Mortality" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Maternal Morbidity and Mortality" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]">
-                                                            Maternal Morbidity and Mortality
-
-(41)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]" id="ASTHO_Member_News" name="ASTHO Member News" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="ASTHO Member News" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]">
-                                                            ASTHO Member News
-
-(40)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]" id="STIs" name="STIs" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="STIs" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]">
-                                                            STIs
-
-(37)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                    </div>
-
-                            </div>
-                            <div class="category-list">
-                                <h4 class="category-list__header">
-                                    Location
-                                </h4>
-
-                                    <div class="list">
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]" id="California" name="California" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="California" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]">
-                                                            California
-
-(135)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]" id="Colorado" name="Colorado" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Colorado" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eColorado]">
-                                                            Colorado
-
-(94)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]" id="Connecticut" name="Connecticut" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Connecticut" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]">
-                                                            Connecticut
-
-(65)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]" id="New_York" name="New York" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="New York" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eNew+York]">
-                                                            New York
-
-(116)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]" id="Washington" name="Washington" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Washington" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eWashington]">
-                                                            Washington
-
-(109)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]" id="Massachusetts" name="Massachusetts" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Massachusetts" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]">
-                                                            Massachusetts
-
-(96)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]" id="New_Jersey" name="New Jersey" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="New Jersey" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]">
-                                                            New Jersey
-
-(88)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]" id="Maryland" name="Maryland" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Maryland" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eMaryland]">
-                                                            Maryland
-
-(88)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]" id="Illinois" name="Illinois" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Illinois" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eIllinois]">
-                                                            Illinois
-
-(83)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]" id="Texas" name="Texas" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Texas" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eTexas]">
-                                                            Texas
-
-(80)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]" id="Virginia" name="Virginia" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Virginia" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eVirginia]">
-                                                            Virginia
-
-(76)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]" id="Oregon" name="Oregon" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Oregon" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eOregon]">
-                                                            Oregon
-
-(63)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]" id="Rhode_Island" name="Rhode Island" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Rhode Island" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]">
-                                                            Rhode Island
-
-(58)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]" id="Michigan" name="Michigan" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Michigan" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eMichigan]">
-                                                            Michigan
-
-(50)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]" id="Hawaii" name="Hawaii" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Hawaii" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eHawaii]">
-                                                            Hawaii
-
-(50)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]" id="Utah" name="Utah" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Utah" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eUtah]">
-                                                            Utah
-
-(48)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]" id="North_Carolina" name="North Carolina" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="North Carolina" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]">
-                                                            North Carolina
-
-(37)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]" id="Oklahoma" name="Oklahoma" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Oklahoma" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]">
-                                                            Oklahoma
-
-(33)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]" id="Minnesota" name="Minnesota" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Minnesota" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]">
-                                                            Minnesota
-
-(32)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                    </div>
-
-                            </div>
-                            <div class="category-list">
-                                <h4 class="category-list__header">
-                                    Published Date
-                                </h4>
-
-                                    <div class="list">
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]" id="Last_30_Days" name="Last 30 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Last 30 Days" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]">
-                                                            Last 30 Days
-
-(11)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]" id="Last_90_Days" name="Last 90 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Last 90 Days" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]">
-                                                            Last 90 Days
-
-(56)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]" id="Last_180_Days" name="Last 180 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="Last 180 Days" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]">
-                                                            Last 180 Days
-
-(165)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]" id="z025" name="2025" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="2025" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]">
-                                                            2025
-
-(340)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]" id="z024" name="2024" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="2024" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]">
-                                                            2024
-
-(356)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]" id="z023" name="2023" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="2023" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]">
-                                                            2023
-
-(402)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="list-item">
-                                                <label>
-                                                    <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]" id="z022_or_earlier" name="2022 or earlier" onchange="checkboxUpdate(this)" type="checkbox" value="true"><input name="2022 or earlier" type="hidden" value="false">
-                                                    <span>
-                                                        <a href="https://integration.astho.org/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]">
-                                                            2022 or earlier
-
-(990)                                                        </a>
-                                                    </span>
-                                                </label>
-                                            </div>
-
-                                    </div>
-                                    <div>
-                                        <label class="date-label" for="date-from"><small>From</small></label>
-                                        <input class="date" type="date" id="date-from" name="from">
-                                    </div>
-                                    <div>
-                                        <label class="date-label" for="date-to"><small>To</small></label>
-                                        <input class="date" type="date" id="date-to" name="to">
-                                    </div>
-                                    <input id="date-range-submit" type="submit" value="Submit Date Range" class="button button--blue button--small">
-
-                            </div>
+                <!-- Topic Filters -->
+                <fieldset class="category-list">
+                    <legend class="category-list__header">Filter by Topic</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]" id="topic-advocacy" name="Advocacy" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Advocacy" type="hidden" value="false">
+                            <label for="topic-advocacy">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eAdvocacy]">
+                                    Advocacy (73)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]" id="topic-phig" name="PHIG" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="PHIG" type="hidden" value="false">
+                            <label for="topic-phig">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePHIG]">
+                                    PHIG (32)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]" id="topic-chronic-disease" name="Chronic Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Chronic Disease" type="hidden" value="false">
+                            <label for="topic-chronic-disease">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eChronic+Disease]">
+                                    Chronic Disease (76)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]" id="topic-communications" name="Communications" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Communications" type="hidden" value="false">
+                            <label for="topic-communications">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eCommunications]">
+                                    Communications (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]" id="topic-covid19" name="COVID-19" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="COVID-19" type="hidden" value="false">
+                            <label for="topic-covid19">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19]">
+                                    COVID-19 (357)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]" id="topic-environmental-health" name="Environmental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Environmental Health" type="hidden" value="false">
+                            <label for="topic-environmental-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health]">
+                                    Environmental Health (164)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]" id="topic-funding" name="Funding" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Funding" type="hidden" value="false">
+                            <label for="topic-funding">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eFunding]">
+                                    Funding (170)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]" id="topic-access-to-care" name="Access to Care" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Access to Care" type="hidden" value="false">
+                            <label for="topic-access-to-care">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care]">
+                                    Access to Care (228)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]" id="topic-health-equity" name="Health Equity" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Health Equity" type="hidden" value="false">
+                            <label for="topic-health-equity">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity]">
+                                    Health Equity (498)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]" id="topic-infectious-disease" name="Infectious Disease" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Infectious Disease" type="hidden" value="false">
+                            <label for="topic-infectious-disease">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease]">
+                                    Infectious Disease (481)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]" id="topic-data-modernization" name="Data Modernization and Informatics" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Data Modernization and Informatics" type="hidden" value="false">
+                            <label for="topic-data-modernization">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eData+Modernization+and+Informatics]">
+                                    Data Modernization and Informatics (142)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]" id="topic-islands-areas" name="Islands Areas" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Islands Areas" type="hidden" value="false">
+                            <label for="topic-islands-areas">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eIslands+Areas]">
+                                    Islands Areas (97)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]" id="topic-leadership-workforce" name="Leadership and Workforce Development" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Leadership and Workforce Development" type="hidden" value="false">
+                            <label for="topic-leadership-workforce">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development]">
+                                    Leadership and Workforce Development (208)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]" id="topic-members" name="Members" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Members" type="hidden" value="false">
+                            <label for="topic-members">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eMembers]">
+                                    Members (204)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]" id="topic-news" name="News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="News" type="hidden" value="false">
+                            <label for="topic-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews]">
+                                    News (295)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]" id="topic-partnership" name="Partnership" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Partnership" type="hidden" value="false">
+                            <label for="topic-partnership">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePartnership]">
+                                    Partnership (196)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]" id="topic-policy" name="Policy" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Policy" type="hidden" value="false">
+                            <label for="topic-policy">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy]">
+                                    Policy (414)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]" id="topic-population-health" name="Population Health and Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Population Health and Prevention" type="hidden" value="false">
+                            <label for="topic-population-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention]">
+                                    Population Health and Prevention (735)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]" id="topic-preparedness" name="Preparedness" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Preparedness" type="hidden" value="false">
+                            <label for="topic-preparedness">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness]">
+                                    Preparedness (219)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]" id="topic-public-health-infrastructure" name="Public Health Infrastructure and Systems Improvement" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Public Health Infrastructure and Systems Improvement" type="hidden" value="false">
+                            <label for="topic-public-health-infrastructure">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement]">
+                                    Public Health Infrastructure and Systems Improvement (299)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]" id="topic-social-behavioral-health" name="Social and Behavioral Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Social and Behavioral Health" type="hidden" value="false">
+                            <label for="topic-social-behavioral-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health]">
+                                    Social and Behavioral Health (373)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]" id="topic-women-infant-family" name="Women-Infant-Family Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Women-Infant-Family Health" type="hidden" value="false">
+                            <label for="topic-women-infant-family">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health]">
+                                    Women-Infant-Family Health (251)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]" id="topic-workforce" name="Workforce" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Workforce" type="hidden" value="false">
+                            <label for="topic-workforce">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eWorkforce]">
+                                    Workforce (190)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]" id="topic-state" name="State" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="State" type="hidden" value="false">
+                            <label for="topic-state">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eState]">
+                                    State (255)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]" id="topic-federal" name="Federal" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Federal" type="hidden" value="false">
+                            <label for="topic-federal">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7eFederal]">
+                                    Federal (193)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]" id="topic-public-health-news" name="Public Health News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Public Health News" type="hidden" value="false">
+                            <label for="topic-public-health-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7ePublic+Health+News]">
+                                    Public Health News (151)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]" id="topic-substance-misuse" name="Substance Misuse" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Substance Misuse" type="hidden" value="false">
+                            <label for="topic-substance-misuse">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse]">
+                                    Substance Misuse (143)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]" id="topic-sdoh" name="SDoH" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="SDoH" type="hidden" value="false">
+                            <label for="topic-sdoh">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eSDoH]">
+                                    SDoH (139)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]" id="topic-astho-news" name="ASTHO News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="ASTHO News" type="hidden" value="false">
+                            <label for="topic-astho-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+News]">
+                                    ASTHO News (133)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]" id="topic-public-health-infrastructure2" name="Public Health Infrastructure" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Public Health Infrastructure" type="hidden" value="false">
+                            <label for="topic-public-health-infrastructure2">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePublic+Health+Infrastructure+and+Systems+Improvement%7ePublic+Health+Infrastructure]">
+                                    Public Health Infrastructure (112)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]" id="topic-at-risk-populations" name="At-Risk Populations" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="At-Risk Populations" type="hidden" value="false">
+                            <label for="topic-at-risk-populations">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eAt-Risk+Populations]">
+                                    At-Risk Populations (112)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]" id="topic-immunization" name="Immunization" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Immunization" type="hidden" value="false">
+                            <label for="topic-immunization">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization]">
+                                    Immunization (110)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]" id="topic-leadership-development" name="Leadership Development" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Leadership Development" type="hidden" value="false">
+                            <label for="topic-leadership-development">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eLeadership+and+Workforce+Development%7eLeadership+Development]">
+                                    Leadership Development (102)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]" id="topic-race-public-health" name="Race and Public Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Race and Public Health" type="hidden" value="false">
+                            <label for="topic-race-public-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eRace+and+Public+Health]">
+                                    Race and Public Health (96)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]" id="topic-elimination-disparities" name="Elimination of Disparities" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Elimination of Disparities" type="hidden" value="false">
+                            <label for="topic-elimination-disparities">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eElimination+of+Disparities]">
+                                    Elimination of Disparities (87)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]" id="topic-opioids" name="Opioids" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Opioids" type="hidden" value="false">
+                            <label for="topic-opioids">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOpioids]">
+                                    Opioids (85)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]" id="topic-infant-child-health" name="Infant Child Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Infant Child Health" type="hidden" value="false">
+                            <label for="topic-infant-child-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eInfant+Child+Health]">
+                                    Infant Child Health (83)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]" id="topic-pandemics" name="Pandemics" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Pandemics" type="hidden" value="false">
+                            <label for="topic-pandemics">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePreparedness%7ePandemics]">
+                                    Pandemics (82)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]" id="topic-mental-health" name="Mental Health" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Mental Health" type="hidden" value="false">
+                            <label for="topic-mental-health">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eMental+Health]">
+                                    Mental Health (77)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]" id="topic-medicaid-partnerships" name="Medicaid and Public Health Partnerships" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Medicaid and Public Health Partnerships" type="hidden" value="false">
+                            <label for="topic-medicaid-partnerships">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eAccess+to+Care%7eMedicaid+and+Public+Health+Partnerships]">
+                                    Medicaid and Public Health Partnerships (75)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]" id="topic-overdose-prevention" name="Overdose Prevention" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Overdose Prevention" type="hidden" value="false">
+                            <label for="topic-overdose-prevention">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSubstance+Misuse%7eOverdose+Prevention]">
+                                    Overdose Prevention (72)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]" id="topic-public-health-law" name="Public Health Law" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Public Health Law" type="hidden" value="false">
+                            <label for="topic-public-health-law">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePolicy%7ePublic+Health+Law]">
+                                    Public Health Law (64)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]" id="topic-covid-vaccine" name="COVID Vaccine" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="COVID Vaccine" type="hidden" value="false">
+                            <label for="topic-covid-vaccine">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eCOVID-19%7eCOVID+Vaccine]">
+                                    COVID Vaccine (57)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]" id="topic-food-water-safety" name="Food &amp; Water Safety" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Food &amp; Water Safety" type="hidden" value="false">
+                            <label for="topic-food-water-safety">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eEnvironmental+Health%7eFood+%26+Water+Safety]">
+                                    Food &amp; Water Safety (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]" id="topic-vaccine-distribution" name="Vaccine Distribution" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Vaccine Distribution" type="hidden" value="false">
+                            <label for="topic-vaccine-distribution">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eInfectious+Disease%7eImmunization%7eVaccine+Distribution]">
+                                    Vaccine Distribution (46)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]" id="topic-disability-inclusion" name="Disability Inclusion" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Disability Inclusion" type="hidden" value="false">
+                            <label for="topic-disability-inclusion">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eHealth+Equity%7eDisability+Inclusion]">
+                                    Disability Inclusion (42)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]" id="topic-maternal-morbidity" name="Maternal Morbidity and Mortality" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Maternal Morbidity and Mortality" type="hidden" value="false">
+                            <label for="topic-maternal-morbidity">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eWomen-Infant-Family+Health%7eMaternal+Morbidity+and+Mortality]">
+                                    Maternal Morbidity and Mortality (41)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]" id="topic-astho-member-news" name="ASTHO Member News" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="ASTHO Member News" type="hidden" value="false">
+                            <label for="topic-astho-member-news">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7eNews%7eASTHO+Member+News]">
+                                    ASTHO Member News (40)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]" id="topic-stis" name="STIs" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="STIs" type="hidden" value="false">
+                            <label for="topic-stis">
+                                <a href="/search?n=20&amp;r=SearchCategories[Topic%7ePopulation+Health+and+Prevention%7eSocial+and+Behavioral+Health%7eSTIs]">
+                                    STIs (37)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            
+                <!-- Location Filters -->
+                <fieldset class="category-list">
+                    <legend class="category-list__header">Filter by Location</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]" id="location-california" name="California" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="California" type="hidden" value="false">
+                            <label for="location-california">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eCalifornia]">
+                                    California (135)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]" id="location-colorado" name="Colorado" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Colorado" type="hidden" value="false">
+                            <label for="location-colorado">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eColorado]">
+                                    Colorado (94)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]" id="location-connecticut" name="Connecticut" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Connecticut" type="hidden" value="false">
+                            <label for="location-connecticut">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eConnecticut]">
+                                    Connecticut (65)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]" id="location-new-york" name="New York" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="New York" type="hidden" value="false">
+                            <label for="location-new-york">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+York]">
+                                    New York (116)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]" id="location-washington" name="Washington" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Washington" type="hidden" value="false">
+                            <label for="location-washington">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eWashington]">
+                                    Washington (109)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]" id="location-massachusetts" name="Massachusetts" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Massachusetts" type="hidden" value="false">
+                            <label for="location-massachusetts">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMassachusetts]">
+                                    Massachusetts (96)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]" id="location-new-jersey" name="New Jersey" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="New Jersey" type="hidden" value="false">
+                            <label for="location-new-jersey">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNew+Jersey]">
+                                    New Jersey (88)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]" id="location-maryland" name="Maryland" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Maryland" type="hidden" value="false">
+                            <label for="location-maryland">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMaryland]">
+                                    Maryland (88)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]" id="location-illinois" name="Illinois" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Illinois" type="hidden" value="false">
+                            <label for="location-illinois">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eIllinois]">
+                                    Illinois (83)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]" id="location-texas" name="Texas" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Texas" type="hidden" value="false">
+                            <label for="location-texas">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eTexas]">
+                                    Texas (80)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]" id="location-virginia" name="Virginia" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Virginia" type="hidden" value="false">
+                            <label for="location-virginia">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eVirginia]">
+                                    Virginia (76)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]" id="location-oregon" name="Oregon" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Oregon" type="hidden" value="false">
+                            <label for="location-oregon">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOregon]">
+                                    Oregon (63)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]" id="location-rhode-island" name="Rhode Island" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Rhode Island" type="hidden" value="false">
+                            <label for="location-rhode-island">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eRhode+Island]">
+                                    Rhode Island (58)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]" id="location-michigan" name="Michigan" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Michigan" type="hidden" value="false">
+                            <label for="location-michigan">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMichigan]">
+                                    Michigan (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]" id="location-hawaii" name="Hawaii" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Hawaii" type="hidden" value="false">
+                            <label for="location-hawaii">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eHawaii]">
+                                    Hawaii (50)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]" id="location-utah" name="Utah" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Utah" type="hidden" value="false">
+                            <label for="location-utah">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eUtah]">
+                                    Utah (48)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]" id="location-north-carolina" name="North Carolina" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="North Carolina" type="hidden" value="false">
+                            <label for="location-north-carolina">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eNorth+Carolina]">
+                                    North Carolina (37)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]" id="location-oklahoma" name="Oklahoma" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Oklahoma" type="hidden" value="false">
+                            <label for="location-oklahoma">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eOklahoma]">
+                                    Oklahoma (33)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]" id="location-minnesota" name="Minnesota" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Minnesota" type="hidden" value="false">
+                            <label for="location-minnesota">
+                                <a href="/search?n=20&amp;r=SearchCategories[Location%7eMinnesota]">
+                                    Minnesota (32)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            
+                <!-- Published Date Filters -->
+                <fieldset class="category-list">
+                    <legend class="category-list__header">Filter by Published Date</legend>
+                    <ul class="list">
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]" id="date-last-30-days" name="Last 30 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Last 30 Days" type="hidden" value="false">
+                            <label for="date-last-30-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[11%2f26%2f2025to12%2f26%2f2025]">
+                                    Last 30 Days (11)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]" id="date-last-90-days" name="Last 90 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Last 90 Days" type="hidden" value="false">
+                            <label for="date-last-90-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[9%2f27%2f2025to12%2f26%2f2025]">
+                                    Last 90 Days (56)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]" id="date-last-180-days" name="Last 180 Days" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="Last 180 Days" type="hidden" value="false">
+                            <label for="date-last-180-days">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[6%2f29%2f2025to12%2f26%2f2025]">
+                                    Last 180 Days (165)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]" id="date-2025" name="2025" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="2025" type="hidden" value="false">
+                            <label for="date-2025">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2025to12%2f31%2f2025]">
+                                    2025 (340)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]" id="date-2024" name="2024" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="2024" type="hidden" value="false">
+                            <label for="date-2024">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2024to12%2f31%2f2024]">
+                                    2024 (356)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]" id="date-2023" name="2023" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="2023" type="hidden" value="false">
+                            <label for="date-2023">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f2023to12%2f31%2f2023]">
+                                    2023 (402)
+                                </a>
+                            </label>
+                        </li>
+                        <li class="list-item">
+                            <input href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]" id="date-2022-or-earlier" name="2022 or earlier" onchange="checkboxUpdate(this)" type="checkbox" value="true">
+                            <input name="2022 or earlier" type="hidden" value="false">
+                            <label for="date-2022-or-earlier">
+                                <a href="/search?n=20&amp;r=SearchPublishDate[1%2f1%2f0001to12%2f31%2f2022]">
+                                    2022 or earlier (990)
+                                </a>
+                            </label>
+                        </li>
+                    </ul>
+                    <div>
+                        <label class="date-label" for="date-from"><small>From</small></label>
+                        <input class="date" type="date" id="date-from" name="from">
+                    </div>
+                    <div>
+                        <label class="date-label" for="date-to"><small>To</small></label>
+                        <input class="date" type="date" id="date-to" name="to">
+                    </div>
+                    <input id="date-range-submit" type="submit" value="Submit Date Range" class="button button--blue button--small">
+                </fieldset>
             </div>
         </form>
     </div>
@@ -2125,7 +1966,6 @@ window.addEventListener('message', function(event) {
 
                     <div class="search-within__wrapper">
                         <div class="search-wrap">
-
                             <div class="checkbox checkbox--text-first">
                                 <label class="checkbox__label" for="search-within">
                                     <input type="checkbox" name="sw" id="search-within">
@@ -2133,18 +1973,16 @@ window.addEventListener('message', function(event) {
                                     <span class="checkbox__icon"></span>
                                 </label>
                             </div>
-
+                        
                             <input type="hidden" name="q" placeholder="" class="form-control" value="">
                             <input type="hidden" name="s" placeholder="" class="form-control">
                             <input type="hidden" name="n" placeholder="" class="form-control" value="20">
-
-
+                        
                             <input type="search" name="f" class="search form-control" id="search" value="" autocomplete="off" v-model="q" @input="onChange" placeholder="Enter Search Term">
-
-
-                            <a class="search__submit button button--blue" onclick="GoClick(document.getElementById(&#39;search&#39;).value)">
+                        
+                            <button type="button" class="search__submit button button--blue" onclick="GoClick(document.getElementById('search').value)">
                                 GO
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -2282,8 +2120,6 @@ This resource highlights state-based program initiatives tailored to improving h
                                                         <span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                                     </h3>
                                             </header>
-                                            <section class="result-item__summary">
-                                            </section>
 
                                             <p class="article-list-excerpt">
 ASTHO Policy Committees (login required) Policy committees are instrumental in developing ASTHO policy through a process established by our membership in 2018. Committee members are subject matter experts in their field and are integral to ...                                            </p>
@@ -2323,8 +2159,6 @@ ASTHO’s membership comprises chief health officials from across the nation who
                                                         <span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                                     </h3>
                                             </header>
-                                            <section class="result-item__summary">
-                                            </section>
 
                                             <p class="article-list-excerpt">
 Are you ready to join an organization that puts people first? ASTHO's commitment to its employees starts with our values and deep commitment to improving health for all.                                            </p>

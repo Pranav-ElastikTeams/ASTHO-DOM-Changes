@@ -3656,6 +3656,23 @@ a.rail-return {
     margin: 1.6rem 0
 }
 
+/* Checkbox and label alignment in filter lists */
+.filter-list .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.filter-list .list-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.filter-list .list-item label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
 .main--search .article-list .result-item__labels {
     display: inline-block
 }
