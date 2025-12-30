@@ -2569,6 +2569,65 @@ a {
         font-size: 1.6rem
     }
 
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 1rem;
+    transform: translateX(-50%) translateY(-1rem);
+    padding: 0.6rem 1.25rem;
+    background-color: #06476b;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+    /* Show only when keyboard-focused */
+    .skip-link:focus,
+    .skip-link:focus-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        outline: none;
+        color: #ffffff;
+    }
+
+    /* Visible focus ring for high-contrast users */
+    .skip-link:focus-visible {
+        box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #06476b;
+    }
+
+@media (hover: none) and (pointer: coarse) {
+    .skip-link {
+        left: 1rem;
+        transform: translateY(-1rem);
+        font-size: 1rem;
+    }
+
+        .skip-link:focus,
+        .skip-link:focus-visible {
+            transform: translateY(0);
+        }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip-link {
+        transition: none;
+    }
+}
+
+#main-content {
+    scroll-margin-top: 6rem;
+}
+
 .nav {
     z-index: 4;
     background-color: #f9f9f9;
@@ -2978,17 +3037,16 @@ a {
     background-color: #242c3d
 }
 
-/* Search results accessibility improvements */
 @media (min-width: 768px) {
     .search-results-container {
         display: flex;
         flex-direction: row;
     }
-    
+
     .search-results-content {
         order: 2; /* Visually appears on the right */
     }
-    
+
     .search-filters-column {
         order: 1; /* Visually appears on the left */
         padding-right: 15px;
@@ -3018,7 +3076,7 @@ a {
     .search-results-content {
         order: 1;
     }
-    
+
     .search-filters-column {
         order: 2;
     }
@@ -3037,6 +3095,7 @@ a {
     cursor: pointer;
     margin-bottom: 1rem;
 }
+
 .filter-toggle__icon {
     transition: transform 0.3s ease;
 }
@@ -3051,22 +3110,23 @@ a {
         visibility: hidden;
         display: block !important; /* Ensure it's always block for the transition */
     }
-    .search-filters[aria-hidden="false"] {
-        max-height: 2000px; /* Adjust based on your content */
-        opacity: 1;
-        visibility: visible;
-    }
-    /* Hide the aside when it's not expanded on mobile/tablet */
-    .search-filters[aria-hidden="true"] {
-        display: none !important;
-    }
+
+        .search-filters[aria-hidden="false"] {
+            max-height: 2000px; /* Adjust based on your content */
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Hide the aside when it's not expanded on mobile/tablet */
+        .search-filters[aria-hidden="true"] {
+            display: none !important;
+        }
 }
 /* Show toggle button only on mobile/tablet (below 1024px) */
 @media (min-width: 768px) {
     .filter-toggle {
         display: none;
     }
-    
+
     .search-filters {
         opacity: 1 !important;
         visibility: visible !important;
@@ -3144,6 +3204,69 @@ a {
     -ms-flex-align: center;
     align-items: center
 }
+
+    .events-date .events-day {
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .events-date .events-month {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+/* Scrollable events header - Always scrollable on all devices */
+.events__header {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 1rem 12px; /* Add horizontal padding for scroll area */
+    margin: 0 -1rem; /* Compensate for container padding */
+    scrollbar-width: thin; /* Show thin scrollbar in Firefox */
+    scrollbar-color: #c1c1c1 transparent; /* Scrollbar color for Firefox */
+}
+
+    /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+    .events__header::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .events__header::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .events__header::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+        border-radius: 3px;
+    }
+
+        .events__header::-webkit-scrollbar-thumb:hover {
+            background-color: #a8a8a8;
+        }
+
+    /* Ensure tabs don't wrap and have proper spacing */
+    .events__header .event-tab {
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+/* Add a subtle gradient fade effect at the right edge */
+.events__header-wrapper {
+    position: relative;
+}
+
+    .events__header-wrapper:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        pointer-events: none;
+    }
 
 .bg-img--video {
     bottom: 0;
@@ -3750,23 +3873,6 @@ a.rail-return {
 
 .main--search .search-filters .filter-list .submit {
     margin: 1.6rem 0
-}
-
-/* Checkbox and label alignment in filter lists */
-.filter-list .list-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.filter-list .list-item input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-.filter-list .list-item label {
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
 }
 
 .main--search .article-list .result-item__labels {
@@ -5508,6 +5614,55 @@ a[href^="mailto:"] {
         margin: 0 !important;
         font-size: 18px !important;
     }
+}
+
+/* Focus indicator styles */
+.tab:focus,
+.card a:focus,
+.card button:focus {
+    outline: 3px solid #0056b3;
+    outline-offset: 2px;
+    position: relative;
+}
+
+/* Alternative focus for dark backgrounds */
+.text-white.tab:focus {
+    outline-color: #00bfff;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Ensure cards in inactive panels are visually hidden */
+.tab-content:not(.tab-content--active) .card {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Restore for active panel */
+.tab-content--active .card {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Focus order debugging (optional, remove in production) */
+[role="tabpanel"]:focus {
+    box-shadow: inset 0 0 0 2px #4CAF50;
 }
 
 /* 390px */
