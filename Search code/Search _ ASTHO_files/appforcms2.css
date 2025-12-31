@@ -3056,12 +3056,51 @@ a {
 /* Ensure proper spacing and mobile layout */
 .search-filters {
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
 .search-filters__content {
     background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 4px;
+}
+
+/* Ensure filter sections are properly spaced */
+.filter-section {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+/* Style for filter section headers */
+.category-list__header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #06476b;
+}
+
+/* Style for filter lists */
+.filter-section .list {
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+/* Style for individual filter items */
+.filter-section .list-item {
+    margin: 0.5rem 0;
+}
+
+/* Style for filter checkboxes */
+.filter-section input[type="checkbox"] {
+    margin-right: 0.5rem;
 }
 
 .search-filters-heading {
@@ -3114,18 +3153,29 @@ a {
         transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
         opacity: 0;
         visibility: hidden;
-        display: block !important; /* Ensure it's always block for the transition */
+        display: block !important;
     }
 
-        .search-filters[aria-hidden="false"] {
-            max-height: 2000px; /* Adjust based on your content */
-            opacity: 1;
-            visibility: visible;
-        }
-        /* Hide the aside when it's not expanded on mobile/tablet */
-        .search-filters[aria-hidden="true"] {
-            display: none !important;
-        }
+    .search-filters[aria-hidden="false"] {
+        max-height: none; 
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+    }
+    
+    .search-filters[aria-hidden="true"] {
+        display: none !important;
+    }
+    
+    .search-filters .category-list {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    
+    .search-filters .category-list .list {
+        max-height: none !important;
+        overflow: visible !important;
+    }
 }
 /* Show toggle button only on mobile/tablet (below 1024px) */
 @media (min-width: 768px) {
@@ -3137,6 +3187,11 @@ a {
         opacity: 1 !important;
         visibility: visible !important;
         max-height: none !important;
+        display: block !important;
+    }
+    
+    .search-filters {
+        margin-bottom: 2rem;
     }
 }
 
