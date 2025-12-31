@@ -1259,7 +1259,7 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
 } .text-lightblue {
     color: #367aab
 } .bg-grey {
-    background-color: #f6f6f6
+    background-color: #e0e0e0;
 } .link-icon-container svg {
     width: 1.6rem;
     height: 1.6rem;
@@ -2244,8 +2244,6 @@ a.text-white:active, a.text-white:focus, a.text-white:hover {
     padding-left: 15px;
     padding-right: 15px;
     display: revert
-} .bg-grey {
-    background-color: #e5e5e5
 } .bg-lightblue {
     background-color: #367aab
 } .bg-white {
