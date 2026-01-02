@@ -1428,7 +1428,7 @@ a.text-white:hover {
 }
 
 .bg-grey {
-    background-color: #f6f6f6
+    background-color: #e0e0e0
 }
 
 .link-icon-container svg {
@@ -3520,11 +3520,6 @@ a.rail-return:hover {
 
 .article-list .article-list-excerpt {
     padding: 0
-}
-
-.main--search .search-filters .filter-list .category-list {
-    border-top: 1px solid #ddd;
-    padding: 1.6rem 0
 }
 
 .main--search .search-filters .filter-list .category-list .category-list__header {
