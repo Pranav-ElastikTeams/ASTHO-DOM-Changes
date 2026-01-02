@@ -2640,7 +2640,8 @@ a.text-white:hover {
 
 .lightblue-container {
     background-color: #367aab;
-    color: #fff
+    color: #fff;
+    margin-bottom: 0 !important;
 }
 
 .lightblue-container h2,
@@ -2664,6 +2665,56 @@ a.text-white:hover {
     max-width: 38.4rem;
     margin: 1.6rem 0 1.6rem 3.2rem;
     height: auto
+}
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-content {
+    order: 1;
+}
+
+.sidebar {
+    order: 2;
+    padding: 1.5rem;
+    border-radius: 4px;
+    max-width: 38.4rem;
+}
+
+/* Mobile layout */
+@media (max-width: 991px) {
+    .content-layout {
+        gap: 0;
+    }
+    
+    .sidebar {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .sidebar .lightblue-container {
+        display: inline-block;
+        text-align: left;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 992px) {
+    .content-layout {
+        grid-template-columns: 1fr 38.4rem;
+    }
+    
+    .main-content {
+        order: 1;
+    }
+    
+    .sidebar {
+        order: 2;
+    }
 }
 
 .half-right-grey {
