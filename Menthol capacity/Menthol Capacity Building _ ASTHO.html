@@ -11432,12 +11432,7 @@
         document.addEventListener('DOMContentLoaded', function () {
 
             // Remove empty heading tags (h1-h6) for better accessibility
-            document.querySelectorAll('.accordion h1, .accordion h2, .accordion h3, .accordion h4, .accordion h5, .accordion h6').forEach(function (heading) {
-                if (!heading.textContent.trim()) {
-                    heading.remove();
-                }
-            });
-            document.querySelectorAll('.featured h2').forEach(function (heading) {
+            document.querySelectorAll('.accordion h1, .accordion h2, .accordion h3, .accordion h4, .accordion h5, .accordion h6, .featured h2').forEach(function (heading) {
                 if (!heading.textContent.trim()) {
                     heading.remove();
                 }
