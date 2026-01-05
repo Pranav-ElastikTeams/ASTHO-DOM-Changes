@@ -8520,7 +8520,7 @@
 
             for (const externalLink of externalLinks) {
                 // Skip if this is already marked as external or is in the navigation/utility sections
-                if (externalLink.closest('.hero-sharebar, .nav-util, .nav-menu, .nav-main') || 
+                if (externalLink.closest('.hero-sharebar, .nav-util, .nav-menu, .nav-main') ||
                     externalLink.classList.contains('external-link-processed')) {
                     continue;
                 }
@@ -10006,9 +10006,9 @@
     </script>
 
 
-        <div id="app">
-            <Header class="relative z-20">
-                <section class="nav w-full top-0 left-0">
+    <div id="app">
+        <Header class="relative z-20">
+            <section class="nav w-full top-0 left-0">
 
                 <div>
 
@@ -10019,19 +10019,14 @@
 
 
                                 <a href="https://account.astho.org/" class="text-white mr-8 no-external-icon"
-                                    title="My Profile"
-                                    rel="noopener"
-                                    data-no-external-icon="true">My Profile</a>
+                                    title="My Profile" rel="noopener" data-no-external-icon="true">My Profile</a>
 
                                 <a href="https://learn.astho.org/" class="text-white mr-8 no-external-icon"
-                                    title="e-Learning Center"
-                                    rel="noopener"
-                                    data-no-external-icon="true">e-Learning Center</a>
+                                    title="e-Learning Center" rel="noopener" data-no-external-icon="true">e-Learning
+                                    Center</a>
 
                                 <a href="https://my.astho.org/home" class="text-white mr-8 no-external-icon"
-                                    title="my.ASTHO"
-                                    rel="noopener"
-                                    data-no-external-icon="true">my.ASTHO</a>
+                                    title="my.ASTHO" rel="noopener" data-no-external-icon="true">my.ASTHO</a>
 
                                 <a href="https://www.astho.org/about/contact/" class="text-white mr-8">Contact Us</a>
                                 <!-- <p class="text-white mr-8">Welcome, brightfindpm</p> -->
@@ -10050,10 +10045,8 @@
                         <div class="flex pt-8 justify-between items-center">
 
                             <div class="hamburger">
-                                <button class="flex items-center nav-toggle" 
-                                        aria-expanded="false" 
-                                        aria-controls="mobile-menu"
-                                        aria-label="Toggle navigation menu">
+                                <button class="flex items-center nav-toggle" aria-expanded="false"
+                                    aria-controls="mobile-menu" aria-label="Toggle navigation menu">
                                     <i class="material-icons mr-2" aria-hidden="true">menu</i>
                                     <span class="uppercase">Menu</span>
                                 </button>
@@ -10068,22 +10061,20 @@
 
                                         <img src="./Association of State and Territorial Health Officials _ ASTHO_files/astho-logo.png"
                                             alt="ASTHO logo" class="w-1/2 lg:w-auto">
-                                        <span class="uppercase lg:block hidden">ASSOCIATION OF STATE AND TERRITORIAL HEALTH
-                                        OFFICIALS</span>
+                                        <span class="uppercase lg:block hidden">ASSOCIATION OF STATE AND TERRITORIAL
+                                            HEALTH
+                                            OFFICIALS</span>
 
                                     </a>
-                                    
+
                                 </div>
                             </div>
 
                             <div class="search-wrapper flex lg:flex-row flex-col" role="search">
                                 <div class="search-toggle-container">
-                                    <button type="button" 
-                                            class="flex pr-8 nav-toggle--search cursor-pointer" 
-                                            aria-expanded="false" 
-                                            aria-controls="search-form"
-                                            id="search-toggle"
-                                            aria-label="Toggle search">
+                                    <button type="button" class="flex pr-8 nav-toggle--search cursor-pointer"
+                                        aria-expanded="false" aria-controls="search-form" id="search-toggle"
+                                        aria-label="Toggle search">
                                         <i class="material-icons mr-4" aria-hidden="true">search</i>
                                         <span>Search</span>
                                     </button>
@@ -10091,18 +10082,14 @@
                                 <!-- Desktop search container (empty, will get the form injected via CSS/JS) -->
                                 <div class="desktop-search-placeholder hidden lg:block"></div>
                                 <!-- Mobile search form -->
-                                <div id="search-form" class="search-form hidden w-full lg:hidden mt-4" role="search" aria-label="Search form">
+                                <div id="search-form" class="search-form hidden w-full lg:hidden mt-4" role="search"
+                                    aria-label="Search form">
                                     <form action="https://www.astho.org/search" method="get" class="flex w-full">
-                                        <input type="text" 
-                                               placeholder="Search" 
-                                               name="q" 
-                                               required 
-                                               class="w-full p-2 border border-gray-300"
-                                               aria-label="Search input"
-                                               id="search-input">
-                                        <button type="submit" 
-                                                class="bg-blue-600 text-white p-2"
-                                                aria-label="Submit search">
+                                        <input type="text" placeholder="Search" name="q" required
+                                            class="w-full p-2 border border-gray-300" aria-label="Search input"
+                                            id="search-input">
+                                        <button type="submit" class="bg-blue-600 text-white p-2"
+                                            aria-label="Submit search">
                                             <i class="material-icons" aria-hidden="true">search</i>
                                         </button>
                                     </form>
@@ -10111,7 +10098,8 @@
                         </div>
                     </div>
 
-                    <div id="main-nav" class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full bg-white" role="dialog" aria-modal="true" aria-labelledby="menu-title" tabindex="-1">
+                    <div id="main-nav" class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full bg-white"
+                        role="dialog" aria-modal="true" aria-labelledby="menu-title" tabindex="-1">
                         <h2 id="menu-title" class="sr-only">Main Navigation</h2>
                         <div class="container">
                             <div class="flex justify-end close-container">
@@ -10119,36 +10107,48 @@
                                     <i class="material-icons" aria-hidden="true">close</i>
                                 </button>
                             </div>
-                            <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center" role="menubar" aria-label="Main navigation">
+                            <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center"
+                                role="menubar" aria-label="Main navigation">
                                 <!-- About Us -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/about/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle About Us submenu" tabindex="0">
+                                        <a href="https://www.astho.org/about/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">About Us</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle About Us submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/history/" target="_self" class="" role="menuitem">Our History</a>
+                                            <a href="https://www.astho.org/about/history/" target="_self" class=""
+                                                role="menuitem">Our History</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/governance/" target="_self" class="" role="menuitem">Leadership and Governance</a>
+                                            <a href="https://www.astho.org/about/governance/" target="_self" class=""
+                                                role="menuitem">Leadership and Governance</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/partnerships/" target="_self" class="" role="menuitem">Partnerships</a>
+                                            <a href="https://www.astho.org/about/partnerships/" target="_self" class=""
+                                                role="menuitem">Partnerships</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/careers/" target="_self" class="" role="menuitem">Careers at ASTHO</a>
+                                            <a href="https://www.astho.org/about/careers/" target="_self" class=""
+                                                role="menuitem">Careers at ASTHO</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/public-health-careers/" target="_self" class="" role="menuitem">Public Health Careers</a>
+                                            <a href="https://www.astho.org/about/public-health-careers/" target="_self"
+                                                class="" role="menuitem">Public Health Careers</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/strategic-plan/" target="_self" class="" role="menuitem">ASTHO's Strategic Plan</a>
+                                            <a href="https://www.astho.org/about/strategic-plan/" target="_self"
+                                                class="" role="menuitem">ASTHO's Strategic Plan</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/about/contact/" target="_self" class="" role="menuitem">Contact Us</a>
+                                            <a href="https://www.astho.org/about/contact/" target="_self" class=""
+                                                role="menuitem">Contact Us</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -10156,154 +10156,220 @@
                                 <!-- Members -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/members/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Members</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Members submenu" tabindex="0">
+                                        <a href="https://www.astho.org/members/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">Members</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle Members submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/members/member-directory/" target="_self" class="" role="menuitem">ASTHO Member Directory</a>
+                                            <a href="https://www.astho.org/members/member-directory/" target="_self"
+                                                class="" role="menuitem">ASTHO Member Directory</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/members/opportunities/" target="_self" class="" role="menuitem">Funding &amp; Collaboration Opportunities</a>
+                                            <a href="https://www.astho.org/members/opportunities/" target="_self"
+                                                class="" role="menuitem">Funding &amp; Collaboration Opportunities</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://my.astho.org/home" target="_blank" class="external-link-processed" title=" (External Link)" aria-label="my.ASTHO&nbsp;open_in_new (External Link)" rel="noopener noreferrer" role="menuitem">my.ASTHO<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
+                                            <a href="https://my.astho.org/home" target="_blank"
+                                                class="external-link-processed" title=" (External Link)"
+                                                aria-label="my.ASTHO&nbsp;open_in_new (External Link)"
+                                                rel="noopener noreferrer" role="menuitem">my.ASTHO<span
+                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                        style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/members/alumni-society/" target="_self" class="" role="menuitem">Alumni Society</a>
+                                            <a href="https://www.astho.org/members/alumni-society/" target="_self"
+                                                class="" role="menuitem">Alumni Society</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/members/slrc/" target="_self" class="" role="menuitem">Senior Leader Reserve Corps</a>
+                                            <a href="https://www.astho.org/members/slrc/" target="_self" class=""
+                                                role="menuitem">Senior Leader Reserve Corps</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/members/peer-networks/" target="_self" class="" role="menuitem">Peer Networks</a>
+                                            <a href="https://www.astho.org/members/peer-networks/" target="_self"
+                                                class="" role="menuitem">Peer Networks</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <!-- Our Work -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/topic/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Our Work</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Our Work submenu" tabindex="0">
+                                        <a href="https://www.astho.org/topic/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">Our Work</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle Our Work submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/infectious-disease-prevention/covid-19/" target="_self" class="" role="menuitem">COVID-19</a>
+                                            <a href="https://www.astho.org/topic/infectious-disease-prevention/covid-19/"
+                                                target="_self" class="" role="menuitem">COVID-19</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/data-modernization-informatics/" target="_self" class="" role="menuitem">Data Modernization and Informatics</a>
+                                            <a href="https://www.astho.org/topic/data-modernization-informatics/"
+                                                target="_self" class="" role="menuitem">Data Modernization and
+                                                Informatics</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/environmental-public-health/" target="_self" class="" role="menuitem">Environmental Public Health</a>
+                                            <a href="https://www.astho.org/topic/environmental-public-health/"
+                                                target="_self" class="" role="menuitem">Environmental Public Health</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/evidence-based-public-health/" target="_self" class="" role="menuitem">Evidence-Based Public Health</a>
+                                            <a href="https://www.astho.org/topic/evidence-based-public-health/"
+                                                target="_self" class="" role="menuitem">Evidence-Based Public Health</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/health-equity/" target="_self" class="" role="menuitem">Health Equity</a>
+                                            <a href="https://www.astho.org/topic/health-equity/" target="_self" class=""
+                                                role="menuitem">Health Equity</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/hiap/" target="_self" class="" role="menuitem">Health in All Policies</a>
+                                            <a href="https://www.astho.org/topic/hiap/" target="_self" class=""
+                                                role="menuitem">Health in All Policies</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/infectious-disease-prevention/" target="_self" class="" role="menuitem">Infectious Disease Prevention</a>
+                                            <a href="https://www.astho.org/topic/infectious-disease-prevention/"
+                                                target="_self" class="" role="menuitem">Infectious Disease
+                                                Prevention</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-leadership-development/" target="_self" class="" role="menuitem">Leadership Development</a>
+                                            <a href="https://www.astho.org/topic/public-health-leadership-development/"
+                                                target="_self" class="" role="menuitem">Leadership Development</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/population-health-prevention/" target="_self" class="" role="menuitem">Population Health and Prevention</a>
+                                            <a href="https://www.astho.org/topic/population-health-prevention/"
+                                                target="_self" class="" role="menuitem">Population Health and
+                                                Prevention</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-preparedness/" target="_self" class="" role="menuitem">Public Health Preparedness</a>
+                                            <a href="https://www.astho.org/topic/public-health-preparedness/"
+                                                target="_self" class="" role="menuitem">Public Health Preparedness</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/crisis-communications/" target="_self" class="" role="menuitem">Public Health &amp; Crisis Communications Resource Hub</a>
+                                            <a href="https://www.astho.org/topic/crisis-communications/" target="_self"
+                                                class="" role="menuitem">Public Health &amp; Crisis Communications
+                                                Resource Hub</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-infrastructure/" target="_self" class="" role="menuitem">Public Health Infrastructure and Systems Improvement</a>
+                                            <a href="https://www.astho.org/topic/public-health-infrastructure/"
+                                                target="_self" class="" role="menuitem">Public Health Infrastructure and
+                                                Systems Improvement</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-infrastructure/phig/" target="_self" class="" role="menuitem">Public Health Infrastructure Grant</a>
+                                            <a href="https://www.astho.org/topic/public-health-infrastructure/phig/"
+                                                target="_self" class="" role="menuitem">Public Health Infrastructure
+                                                Grant</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-data-research/" target="_self" class="" role="menuitem">Research, Analytics, and Data Visualization</a>
+                                            <a href="https://www.astho.org/topic/public-health-data-research/"
+                                                target="_self" class="" role="menuitem">Research, Analytics, and Data
+                                                Visualization</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/territories-freely-associated-states/" target="_self" class="" role="menuitem">U.S. Territories and Freely Associated States</a>
+                                            <a href="https://www.astho.org/topic/territories-freely-associated-states/"
+                                                target="_self" class="" role="menuitem">U.S. Territories and Freely
+                                                Associated States</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/public-health-workforce/" target="_self" class="" role="menuitem">Public Health Workforce</a>
+                                            <a href="https://www.astho.org/topic/public-health-workforce/"
+                                                target="_self" class="" role="menuitem">Public Health Workforce</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/topic/" target="_self" class="" role="menuitem">View All Topics</a>
+                                            <a href="https://www.astho.org/topic/" target="_self" class=""
+                                                role="menuitem">View All Topics</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <!-- Policy & Advocacy -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/advocacy/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Policy &amp; Advocacy</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Policy & Advocacy submenu" tabindex="0">
+                                        <a href="https://www.astho.org/advocacy/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">Policy &amp; Advocacy</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle Policy & Advocacy submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/advocacy/federal-government-affairs/" target="_self" class="" role="menuitem">Federal Government Affairs</a>
+                                            <a href="https://www.astho.org/advocacy/federal-government-affairs/"
+                                                target="_self" class="" role="menuitem">Federal Government Affairs</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/advocacy/state-health-policy/" target="_self" class="" role="menuitem">State Health Policy</a>
+                                            <a href="https://www.astho.org/advocacy/state-health-policy/" target="_self"
+                                                class="" role="menuitem">State Health Policy</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/advocacy/policy-statements/" target="_self" class="" role="menuitem">Policy Statements</a>
+                                            <a href="https://www.astho.org/advocacy/policy-statements/" target="_self"
+                                                class="" role="menuitem">Policy Statements</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/advocacy/health-policy-update/" target="_self" class="" role="menuitem">Health Policy Update Series</a>
+                                            <a href="https://www.astho.org/advocacy/health-policy-update/"
+                                                target="_self" class="" role="menuitem">Health Policy Update Series</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <!-- Education & Events -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/education/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Education &amp; Events</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Education & Events submenu" tabindex="0">
+                                        <a href="https://www.astho.org/education/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">Education &amp; Events</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle Education & Events submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/education/past-events/" target="_self" class="" role="menuitem">Past Event Recordings</a>
+                                            <a href="https://www.astho.org/education/past-events/" target="_self"
+                                                class="" role="menuitem">Past Event Recordings</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/education/upcoming-events/" target="_self" class="" role="menuitem">Upcoming Events, Trainings, and Opportunities</a>
+                                            <a href="https://www.astho.org/education/upcoming-events/" target="_self"
+                                                class="" role="menuitem">Upcoming Events, Trainings, and
+                                                Opportunities</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <!-- Communications -->
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
-                                        <a href="https://www.astho.org/communications/" target="_self" class="nav-menu__link-text" role="menuitem" aria-haspopup="true" aria-expanded="false">Communications</a>
-                                        <button class="toggle-l2" aria-expanded="false" aria-label="Toggle Communications submenu" tabindex="0">
+                                        <a href="https://www.astho.org/communications/" target="_self"
+                                            class="nav-menu__link-text" role="menuitem" aria-haspopup="true"
+                                            aria-expanded="false">Communications</a>
+                                        <button class="toggle-l2" aria-expanded="false"
+                                            aria-label="Toggle Communications submenu" tabindex="0">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100" role="menu">
+                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu">
                                         <li role="none">
-                                            <a href="https://www.astho.org/communications/blog/" target="_self" class="" role="menuitem">Blog</a>
+                                            <a href="https://www.astho.org/communications/blog/" target="_self" class=""
+                                                role="menuitem">Blog</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/communications/newsroom/" target="_self" class="" role="menuitem">Newsroom</a>
+                                            <a href="https://www.astho.org/communications/newsroom/" target="_self"
+                                                class="" role="menuitem">Newsroom</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/communications/podcasts/" target="_self" class="" role="menuitem">Podcasts</a>
+                                            <a href="https://www.astho.org/communications/podcasts/" target="_self"
+                                                class="" role="menuitem">Podcasts</a>
                                         </li>
                                         <li role="none">
-                                            <a href="https://www.astho.org/communications/subscribe/" target="_self" class="" role="menuitem">Subscribe</a>
+                                            <a href="https://www.astho.org/communications/subscribe/" target="_self"
+                                                class="" role="menuitem">Subscribe</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -10324,170 +10390,170 @@
                 </nav>
 
                 <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Get all dropdown toggles (the arrow buttons)
-                    const dropdownToggles = document.querySelectorAll('.toggle-l2');
-                    let activeDropdown = null;
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Get all dropdown toggles (the arrow buttons)
+                        const dropdownToggles = document.querySelectorAll('.toggle-l2');
+                        let activeDropdown = null;
 
-                    // Function to close all dropdowns
-                    function closeAllDropdowns() {
-                        document.querySelectorAll('.submenu').forEach(menu => {
-                            menu.classList.remove('active');
-                        });
-                        document.querySelectorAll('.nav-menu__link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        document.querySelectorAll('.toggle-l2').forEach(btn => {
-                            btn.setAttribute('aria-expanded', 'false');
-                        });
-                        activeDropdown = null;
-                    }
+                        // Function to close all dropdowns
+                        function closeAllDropdowns() {
+                            document.querySelectorAll('.submenu').forEach(menu => {
+                                menu.classList.remove('active');
+                            });
+                            document.querySelectorAll('.nav-menu__link').forEach(link => {
+                                link.classList.remove('active');
+                            });
+                            document.querySelectorAll('.toggle-l2').forEach(btn => {
+                                btn.setAttribute('aria-expanded', 'false');
+                            });
+                            activeDropdown = null;
+                        }
 
-                    // Function to toggle submenu
-                    function toggleSubmenu(button) {
-                        const parentLi = button.closest('li');
-                        const parentLink = button.closest('.nav-menu__link');
-                        const submenu = parentLi.querySelector('.submenu');
-                        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                        
-                        // Close other open dropdowns
-                        if (activeDropdown && activeDropdown !== submenu) {
-                            const currentButton = document.querySelector('.toggle-l2[aria-expanded="true"]');
-                            if (currentButton) {
-                                currentButton.setAttribute('aria-expanded', 'false');
-                                currentButton.closest('.nav-menu__link').classList.remove('active');
-                                currentButton.closest('li').querySelector('.submenu').classList.remove('active');
+                        // Function to toggle submenu
+                        function toggleSubmenu(button) {
+                            const parentLi = button.closest('li');
+                            const parentLink = button.closest('.nav-menu__link');
+                            const submenu = parentLi.querySelector('.submenu');
+                            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                            // Close other open dropdowns
+                            if (activeDropdown && activeDropdown !== submenu) {
+                                const currentButton = document.querySelector('.toggle-l2[aria-expanded="true"]');
+                                if (currentButton) {
+                                    currentButton.setAttribute('aria-expanded', 'false');
+                                    currentButton.closest('.nav-menu__link').classList.remove('active');
+                                    currentButton.closest('li').querySelector('.submenu').classList.remove('active');
+                                }
+                            }
+
+                            // Toggle current dropdown
+                            if (!isExpanded) {
+                                button.setAttribute('aria-expanded', 'true');
+                                parentLink.classList.add('active');
+                                submenu.classList.add('active');
+                                activeDropdown = submenu;
+
+                                // Focus first item in submenu when opened
+                                const firstItem = submenu.querySelector('a[role="menuitem"]');
+                                if (firstItem) {
+                                    firstItem.focus();
+                                }
+                            } else {
+                                closeAllDropdowns();
                             }
                         }
-                        
-                        // Toggle current dropdown
-                        if (!isExpanded) {
-                            button.setAttribute('aria-expanded', 'true');
-                            parentLink.classList.add('active');
-                            submenu.classList.add('active');
-                            activeDropdown = submenu;
-                            
-                            // Focus first item in submenu when opened
-                            const firstItem = submenu.querySelector('a[role="menuitem"]');
-                            if (firstItem) {
-                                firstItem.focus();
-                            }
-                        } else {
-                            closeAllDropdowns();
-                        }
-                    }
 
-                    // Add event listeners to dropdown toggles
-                    dropdownToggles.forEach(toggle => {
-                        // Click handler
-                        toggle.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            toggleSubmenu(this);
-                        });
-                        
-                        // Keyboard handler
-                        toggle.addEventListener('keydown', function(e) {
-                            if (e.key === 'Enter' || e.key === ' ') {
+                        // Add event listeners to dropdown toggles
+                        dropdownToggles.forEach(toggle => {
+                            // Click handler
+                            toggle.addEventListener('click', function (e) {
+                                e.stopPropagation();
                                 e.preventDefault();
                                 toggleSubmenu(this);
-                            } else if (e.key === 'Escape') {
-                                closeAllDropdowns();
-                                this.focus();
-                            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                                e.preventDefault();
-                                const submenu = this.closest('li').querySelector('.submenu');
-                                if (submenu) {
-                                    const firstItem = submenu.querySelector('a[role="menuitem"]');
-                                    if (firstItem) {
-                                        firstItem.focus();
+                            });
+
+                            // Keyboard handler
+                            toggle.addEventListener('keydown', function (e) {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    toggleSubmenu(this);
+                                } else if (e.key === 'Escape') {
+                                    closeAllDropdowns();
+                                    this.focus();
+                                } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                                    e.preventDefault();
+                                    const submenu = this.closest('li').querySelector('.submenu');
+                                    if (submenu) {
+                                        const firstItem = submenu.querySelector('a[role="menuitem"]');
+                                        if (firstItem) {
+                                            firstItem.focus();
+                                        }
                                     }
                                 }
-                            }
+                            });
                         });
-                    });
-                    
-                    // Add keyboard navigation for menu items
-                    document.querySelectorAll('.nav-menu__link-text').forEach(link => {
-                        link.addEventListener('keydown', function(e) {
-                            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                                e.preventDefault();
-                                const toggle = this.nextElementSibling;
-                                if (toggle && toggle.classList.contains('toggle-l2')) {
-                                    toggle.focus();
-                                }
-                            }
-                        });
-                    });
 
-                    // Close dropdowns when clicking outside
-                    document.addEventListener('click', function(e) {
-                        if (!e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
-                            closeAllDropdowns();
-                        }
-                    });
-                    
-                    // Close dropdowns when tabbing out of menu
-                    document.addEventListener('focusin', function(e) {
-                        if (activeDropdown && !e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
-                            closeAllDropdowns();
-                        }
-                    });
-
-                    // Close dropdowns when clicking the close button
-                    const closeButton = document.querySelector('.nav-menu__close');
-                    if (closeButton) {
-                        closeButton.addEventListener('click', closeAllDropdowns);
-                    }
-
-                    // Close dropdowns when pressing Escape key
-                    document.addEventListener('keydown', function(e) {
-                        if (e.key === 'Escape') {
-                            const activeToggle = document.querySelector('.toggle-l2[aria-expanded="true"]');
-                            if (activeToggle) {
-                                closeAllDropdowns();
-                                activeToggle.focus();
-                            }
-                        }
-                    });
-                    
-                    // Add keyboard navigation for submenu items
-                    document.querySelectorAll('.submenu [role="menuitem"]').forEach(item => {
-                        item.setAttribute('tabindex', '-1');
-                        
-                        item.addEventListener('keydown', function(e) {
-                            const menuItems = Array.from(this.parentElement.parentElement.querySelectorAll('[role="menuitem"]'));
-                            const currentIndex = menuItems.indexOf(this);
-                            
-                            switch(e.key) {
-                                case 'ArrowDown':
+                        // Add keyboard navigation for menu items
+                        document.querySelectorAll('.nav-menu__link-text').forEach(link => {
+                            link.addEventListener('keydown', function (e) {
+                                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
                                     e.preventDefault();
-                                    const nextItem = menuItems[currentIndex + 1] || menuItems[0];
-                                    nextItem.focus();
-                                    break;
-                                case 'ArrowUp':
-                                    e.preventDefault();
-                                    const prevItem = menuItems[currentIndex - 1] || menuItems[menuItems.length - 1];
-                                    prevItem.focus();
-                                    break;
-                                case 'Escape':
-                                    e.preventDefault();
-                                    const toggle = this.closest('li').parentElement.previousElementSibling.querySelector('.toggle-l2');
-                                    if (toggle) {
-                                        closeAllDropdowns();
+                                    const toggle = this.nextElementSibling;
+                                    if (toggle && toggle.classList.contains('toggle-l2')) {
                                         toggle.focus();
                                     }
-                                    break;
-                                case 'Tab':
-                                    // Close menu when tabbing out of the last item
-                                    if (!e.shiftKey && currentIndex === menuItems.length - 1) {
-                                        closeAllDropdowns();
-                                    }
-                                    break;
+                                }
+                            });
+                        });
+
+                        // Close dropdowns when clicking outside
+                        document.addEventListener('click', function (e) {
+                            if (!e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
+                                closeAllDropdowns();
                             }
                         });
+
+                        // Close dropdowns when tabbing out of menu
+                        document.addEventListener('focusin', function (e) {
+                            if (activeDropdown && !e.target.closest('.nav-menu__link') && !e.target.closest('.submenu')) {
+                                closeAllDropdowns();
+                            }
+                        });
+
+                        // Close dropdowns when clicking the close button
+                        const closeButton = document.querySelector('.nav-menu__close');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', closeAllDropdowns);
+                        }
+
+                        // Close dropdowns when pressing Escape key
+                        document.addEventListener('keydown', function (e) {
+                            if (e.key === 'Escape') {
+                                const activeToggle = document.querySelector('.toggle-l2[aria-expanded="true"]');
+                                if (activeToggle) {
+                                    closeAllDropdowns();
+                                    activeToggle.focus();
+                                }
+                            }
+                        });
+
+                        // Add keyboard navigation for submenu items
+                        document.querySelectorAll('.submenu [role="menuitem"]').forEach(item => {
+                            item.setAttribute('tabindex', '-1');
+
+                            item.addEventListener('keydown', function (e) {
+                                const menuItems = Array.from(this.parentElement.parentElement.querySelectorAll('[role="menuitem"]'));
+                                const currentIndex = menuItems.indexOf(this);
+
+                                switch (e.key) {
+                                    case 'ArrowDown':
+                                        e.preventDefault();
+                                        const nextItem = menuItems[currentIndex + 1] || menuItems[0];
+                                        nextItem.focus();
+                                        break;
+                                    case 'ArrowUp':
+                                        e.preventDefault();
+                                        const prevItem = menuItems[currentIndex - 1] || menuItems[menuItems.length - 1];
+                                        prevItem.focus();
+                                        break;
+                                    case 'Escape':
+                                        e.preventDefault();
+                                        const toggle = this.closest('li').parentElement.previousElementSibling.querySelector('.toggle-l2');
+                                        if (toggle) {
+                                            closeAllDropdowns();
+                                            toggle.focus();
+                                        }
+                                        break;
+                                    case 'Tab':
+                                        // Close menu when tabbing out of the last item
+                                        if (!e.shiftKey && currentIndex === menuItems.length - 1) {
+                                            closeAllDropdowns();
+                                        }
+                                        break;
+                                }
+                            });
+                        });
                     });
-                });
                 </script>
             </section>
         </Header>
@@ -10668,226 +10734,340 @@
                                     </div>
                                 </span>
                             </div>
-                            <div class="block eventlistblock col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half">
+                            <div
+                                class="block eventlistblock col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half">
                                 <div class="events">
                                     <div class="events__header-wrapper">
                                         <h2 class="sr-only">Events &amp; Opportunities</h2>
-                                        
-                                        <div role="tablist" aria-label="Event Tabs" class="events__header flex border-b border-solid border-gray-400 mb-8">
-                                            <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" class="cursor-pointer py-2 px-4 text-center font-bold event-tab event-tab--active">All</button>
-                                            <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Webinar</button>
-                                            <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Training</button>
+
+                                        <div role="tablist" aria-label="Event Tabs"
+                                            class="events__header flex border-b border-solid border-gray-400 mb-8">
+                                            <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1"
+                                                class="cursor-pointer py-2 px-4 text-center font-bold event-tab event-tab--active">All</button>
+                                            <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2"
+                                                class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Webinar</button>
+                                            <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3"
+                                                class="cursor-pointer py-2 px-4 text-center font-bold event-tab">Training</button>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="events__body relative">
-                                        <section id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" class="event-tab__content event-tab__content--active">
+                                        <section id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"
+                                            class="event-tab__content event-tab__content--active">
                                             <h3 class="sr-only">All Events</h3>
                                             <ol class="flex flex-col pl-0">
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
                                                         <time datetime="2026-01-22" class="events-day pb-0">22</time>
-                                                        <time datetime="2026-01" class="events-month font-bold">Jan</time>
+                                                        <time datetime="2026-01"
+                                                            class="events-month font-bold">Jan</time>
                                                     </div>
-                                                
+
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next</h4>
-                                                        <p class="pb-4">In the last webinar of this 2-part series, speakers will take a deeper dive into how intermediaries, including Health Information Exchanges (HIEs) and Health Data Utilities (HDUs), support real-world data exchange for public health action. Participants will hear directly from public health agencies as they share experiences, lessons learned, and considerations for engaging in interoperability initiatives.</p>
-                                                    
+                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health
+                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <p class="pb-4">In the last webinar of this 2-part series,
+                                                            speakers will take a deeper dive into how intermediaries,
+                                                            including Health Information Exchanges (HIEs) and Health
+                                                            Data Utilities (HDUs), support real-world data exchange for
+                                                            public health action. Participants will hear directly from
+                                                            public health agencies as they share experiences, lessons
+                                                            learned, and considerations for engaging in interoperability
+                                                            initiatives.</p>
+
                                                         <dl class="pb-4">
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Date</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
-                                                                    <time datetime="2026-01-22" class="font-bold">Jan 22, 2026</time>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">today</i>
+                                                                    <time datetime="2026-01-22" class="font-bold">Jan
+                                                                        22, 2026</time>
                                                                 </dd>
                                                             </div>
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Location</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">location_on</i>
                                                                     <span>Virtual, Online</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
-                                                    
-                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3" target="_blank" title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
-                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3"
+                                                            target="_blank"
+                                                            title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)"
+                                                            class="pb-4 link-arrow external-link-processed"
+                                                            aria-label="Register (opens in new window)"
+                                                            rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span
+                                                                    class="material-icons"
+                                                                    style="font-size: 1em; vertical-align: middle;"
+                                                                    aria-hidden="true">open_in_new</span></span>
                                                         </a>
                                                     </article>
                                                 </li>
-                                                
+
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
                                                         <time datetime="2026-02-11" class="events-day pb-0">11</time>
-                                                        <time datetime="2026-02" class="events-month font-bold">Feb</time>
+                                                        <time datetime="2026-02"
+                                                            class="events-month font-bold">Feb</time>
                                                     </div>
-                                                
+
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady Hands, Steady Teams: Leading with Confidence and Composure</h4>
-                                                        <p class="pb-4">Discover how intentional leadership can become your organization's anchor in uncertain times. Join us to explore practical ways leaders build trust, set a sustainable pace, and provide calm, credible direction when it matters most.</p>
-                                                    
+                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady
+                                                            Hands, Steady Teams: Leading with Confidence and Composure
+                                                        </h4>
+                                                        <p class="pb-4">Discover how intentional leadership can become
+                                                            your organization's anchor in uncertain times. Join us to
+                                                            explore practical ways leaders build trust, set a
+                                                            sustainable pace, and provide calm, credible direction when
+                                                            it matters most.</p>
+
                                                         <dl class="pb-4">
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Date</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
-                                                                    <time datetime="2026-02-11" class="font-bold">Feb 11, 2026</time>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">today</i>
+                                                                    <time datetime="2026-02-11" class="font-bold">Feb
+                                                                        11, 2026</time>
                                                                 </dd>
                                                             </div>
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Location</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">location_on</i>
                                                                     <span>Online, Virtual</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
-                                                    
-                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration" target="_blank" class="pb-4 link-arrow external-link-processed" title="Register for Insight and Inspiration webinar (External Link)" aria-label="Register (opens in new window)" rel="noopener noreferrer">
-                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+
+                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration"
+                                                            target="_blank"
+                                                            class="pb-4 link-arrow external-link-processed"
+                                                            title="Register for Insight and Inspiration webinar (External Link)"
+                                                            aria-label="Register (opens in new window)"
+                                                            rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span
+                                                                    class="material-icons"
+                                                                    style="font-size: 1em; vertical-align: middle;"
+                                                                    aria-hidden="true">open_in_new</span></span>
                                                         </a>
                                                     </article>
                                                 </li>
-                                                
+
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    </div>
                                                     <div class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <a href="/education/upcoming-events/" class="button button--blue">View More</a>
+                                                        <a href="/education/upcoming-events/"
+                                                            class="button button--blue">View More</a>
                                                     </div>
                                                 </li>
                                             </ol>
                                         </section>
-                                    
-                                        <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" class="event-tab__content" hidden>
+
+                                        <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
+                                            class="event-tab__content" hidden>
                                             <h3 class="sr-only">Webinar Events</h3>
                                             <ol class="flex flex-col pl-0">
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
                                                         <time datetime="2026-01-22" class="events-day pb-0">22</time>
-                                                        <time datetime="2026-01" class="events-month font-bold">Jan</time>
+                                                        <time datetime="2026-01"
+                                                            class="events-month font-bold">Jan</time>
                                                     </div>
-                                                
+
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next</h4>
-                                                        <p class="pb-4">In the last webinar of this 2-part series, speakers will take a deeper dive into how intermediaries, including Health Information Exchanges (HIEs) and Health Data Utilities (HDUs), support real-world data exchange for public health action. Participants will hear directly from public health agencies as they share experiences, lessons learned, and considerations for engaging in interoperability initiatives.</p>
-                                                    
+                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health
+                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <p class="pb-4">In the last webinar of this 2-part series,
+                                                            speakers will take a deeper dive into how intermediaries,
+                                                            including Health Information Exchanges (HIEs) and Health
+                                                            Data Utilities (HDUs), support real-world data exchange for
+                                                            public health action. Participants will hear directly from
+                                                            public health agencies as they share experiences, lessons
+                                                            learned, and considerations for engaging in interoperability
+                                                            initiatives.</p>
+
                                                         <dl class="pb-4">
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Date</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
-                                                                    <time datetime="2026-01-22" class="font-bold">Jan 22, 2026</time>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">today</i>
+                                                                    <time datetime="2026-01-22" class="font-bold">Jan
+                                                                        22, 2026</time>
                                                                 </dd>
                                                             </div>
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Location</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">location_on</i>
                                                                     <span>Virtual, Online</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
-                                                    
-                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3" target="_blank" title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
-                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=bb020c11-60db-f011-8543-6045bd0a0ee3"
+                                                            target="_blank"
+                                                            title="Register for The Next Frontier of Public Health Interoperability: TEFCA, HDUs, and What Comes Next (External Link)"
+                                                            class="pb-4 link-arrow external-link-processed"
+                                                            aria-label="Register (opens in new window)"
+                                                            rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span
+                                                                    class="material-icons"
+                                                                    style="font-size: 1em; vertical-align: middle;"
+                                                                    aria-hidden="true">open_in_new</span></span>
                                                         </a>
                                                     </article>
                                                 </li>
-                                                
+
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
                                                         <time datetime="2026-02-11" class="events-day pb-0">11</time>
-                                                        <time datetime="2026-02" class="events-month font-bold">Feb</time>
+                                                        <time datetime="2026-02"
+                                                            class="events-month font-bold">Feb</time>
                                                     </div>
-                                                
+
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady Hands, Steady Teams: Leading with Confidence and Composure</h4>
-                                                        <p class="pb-4">Discover how intentional leadership can become your organization's anchor in uncertain times. Join us to explore practical ways leaders build trust, set a sustainable pace, and provide calm, credible direction when it matters most.</p>
-                                                    
+                                                        <h4 class="pb-2 font-bold">Insight and Inspiration | Steady
+                                                            Hands, Steady Teams: Leading with Confidence and Composure
+                                                        </h4>
+                                                        <p class="pb-4">Discover how intentional leadership can become
+                                                            your organization's anchor in uncertain times. Join us to
+                                                            explore practical ways leaders build trust, set a
+                                                            sustainable pace, and provide calm, credible direction when
+                                                            it matters most.</p>
+
                                                         <dl class="pb-4">
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Date</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
-                                                                    <time datetime="2026-02-11" class="font-bold">Feb 11, 2026</time>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">today</i>
+                                                                    <time datetime="2026-02-11" class="font-bold">Feb
+                                                                        11, 2026</time>
                                                                 </dd>
                                                             </div>
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Location</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">location_on</i>
                                                                     <span>Online, Virtual</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
-                                                    
-                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration" target="_blank" class="pb-4 link-arrow external-link-processed" title="Register for Insight and Inspiration webinar (External Link)" aria-label="Register (opens in new window)" rel="noopener noreferrer">
-                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+
+                                                        <a href="https://astho.zoom.us/webinar/register/WN_GQAyeXHqShuGXojCI7saYg#/registration"
+                                                            target="_blank"
+                                                            class="pb-4 link-arrow external-link-processed"
+                                                            title="Register for Insight and Inspiration webinar (External Link)"
+                                                            aria-label="Register (opens in new window)"
+                                                            rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span
+                                                                    class="material-icons"
+                                                                    style="font-size: 1em; vertical-align: middle;"
+                                                                    aria-hidden="true">open_in_new</span></span>
                                                         </a>
                                                     </article>
                                                 </li>
-                                                
+
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    </div>
                                                     <div class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <a href="/education/upcoming-events/#Webinar" class="button button--blue">View More</a>
+                                                        <a href="/education/upcoming-events/#Webinar"
+                                                            class="button button--blue">View More</a>
                                                     </div>
                                                 </li>
                                             </ol>
                                         </section>
-                                    
-                                        <section id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" class="event-tab__content" hidden>
+
+                                        <section id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3"
+                                            class="event-tab__content" hidden>
                                             <h3 class="sr-only">Training Events</h3>
                                             <ol class="flex flex-col pl-0">
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
                                                         <time datetime="2026-03-24" class="events-day pb-0">24</time>
-                                                        <time datetime="2026-03" class="events-month font-bold">Mar</time>
+                                                        <time datetime="2026-03"
+                                                            class="events-month font-bold">Mar</time>
                                                     </div>
-                                                
+
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
                                                         <h4 class="pb-2 font-bold">Leading Change Workshop</h4>
-                                                        <p class="pb-4">Join ASTHO for a brand-new workshop designed to help members of the public health workforce build capacity to successfully respond to change. Discover applicable skills to navigate uncertainty as an individual, as part of a team, and within a larger organization.</p>
-                                                    
+                                                        <p class="pb-4">Join ASTHO for a brand-new workshop designed to
+                                                            help members of the public health workforce build capacity
+                                                            to successfully respond to change. Discover applicable
+                                                            skills to navigate uncertainty as an individual, as part of
+                                                            a team, and within a larger organization.</p>
+
                                                         <dl class="pb-4">
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Date</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">today</i>
-                                                                    <time datetime="2026-03-24/2026-03-25" class="font-bold">Mar 24 - 25, 2026</time>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">today</i>
+                                                                    <time datetime="2026-03-24/2026-03-25"
+                                                                        class="font-bold">Mar 24 - 25, 2026</time>
                                                                 </dd>
                                                             </div>
                                                             <div class="pb-4 flex items-center event-icon">
                                                                 <dt class="sr-only">Location</dt>
                                                                 <dd class="flex items-center">
-                                                                    <i class="material-icons mr-2" aria-hidden="true">location_on</i>
+                                                                    <i class="material-icons mr-2"
+                                                                        aria-hidden="true">location_on</i>
                                                                     <span>Arlington, Virginia</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
-                                                    
-                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=9e866e96-bdce-f011-bbd3-6045bd0a0ae3" target="_blank" title="Register for the Leading Change Workshop (External Link)" class="pb-4 link-arrow external-link-processed" aria-label="Register (opens in new window)" rel="noopener noreferrer">
-                                                            Register<span class="external-link-icon">&nbsp;<span class="material-icons" style="font-size: 1em; vertical-align: middle;" aria-hidden="true">open_in_new</span></span>
+
+                                                        <a href="https://account.astho.org/Events/Calendar-Of-Events/Meeting-Home-Page?meetingid=9e866e96-bdce-f011-bbd3-6045bd0a0ae3"
+                                                            target="_blank"
+                                                            title="Register for the Leading Change Workshop (External Link)"
+                                                            class="pb-4 link-arrow external-link-processed"
+                                                            aria-label="Register (opens in new window)"
+                                                            rel="noopener noreferrer">
+                                                            Register<span class="external-link-icon">&nbsp;<span
+                                                                    class="material-icons"
+                                                                    style="font-size: 1em; vertical-align: middle;"
+                                                                    aria-hidden="true">open_in_new</span></span>
                                                         </a>
                                                     </article>
                                                 </li>
-                                                
+
                                                 <li class="flex">
-                                                    <div class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date"></div>
+                                                    <div
+                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
+                                                    </div>
                                                     <div class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <a href="/education/upcoming-events/#Training" class="button button--blue">View More</a>
+                                                        <a href="/education/upcoming-events/#Training"
+                                                            class="button button--blue">View More</a>
                                                     </div>
                                                 </li>
                                             </ol>
                                         </section>
                                     </div>
                                 </div>
-                                
+
                                 <script>
-                                    $(document).ready(function() {
+                                    $(document).ready(function () {
                                         var anchor = window.location.hash;
-                                    
+
                                         if (anchor) {
                                             var button = $("div.events button:contains('" + anchor.substring(1, anchor.length) + "')");
                                             if (button) {
@@ -10933,86 +11113,105 @@
                                         <ul class="list-none pl-0">
                                             <li>
                                                 <button role="tab" aria-selected="true" aria-controls="panel-1"
-                                                    id="tab-1" class="text-white tab tab--active" data-tab-target="panel-1" data-tab-index="1">All Areas</button>
+                                                    id="tab-1" class="text-white tab tab--active"
+                                                    data-tab-target="panel-1" data-tab-index="1">All Areas</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-2"
-                                                    id="tab-2" class="tab text-white" data-tab-target="panel-2" data-tab-index="2">Chronic Disease Prevention and
+                                                    id="tab-2" class="tab text-white" data-tab-target="panel-2"
+                                                    data-tab-index="2">Chronic Disease Prevention and
                                                     Health Improvement</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-3"
-                                                    id="tab-3" class="tab text-white" data-tab-target="panel-3" data-tab-index="3">COVID-19</button>
+                                                    id="tab-3" class="tab text-white" data-tab-target="panel-3"
+                                                    data-tab-index="3">COVID-19</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-4"
-                                                    id="tab-4" class="tab text-white" data-tab-target="panel-4" data-tab-index="4">Crisis Communications</button>
+                                                    id="tab-4" class="tab text-white" data-tab-target="panel-4"
+                                                    data-tab-index="4">Crisis Communications</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-5"
-                                                    id="tab-5" class="tab text-white" data-tab-target="panel-5" data-tab-index="5">Data Modernization and
+                                                    id="tab-5" class="tab text-white" data-tab-target="panel-5"
+                                                    data-tab-index="5">Data Modernization and
                                                     Informatics</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-6"
-                                                    id="tab-6" class="tab text-white" data-tab-target="panel-6" data-tab-index="6">Environmental Health</button>
+                                                    id="tab-6" class="tab text-white" data-tab-target="panel-6"
+                                                    data-tab-index="6">Environmental Health</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-7"
-                                                    id="tab-7" class="tab text-white" data-tab-target="panel-7" data-tab-index="7">Federal Government
+                                                    id="tab-7" class="tab text-white" data-tab-target="panel-7"
+                                                    data-tab-index="7">Federal Government
                                                     Affairs</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-8"
-                                                    id="tab-8" class="tab text-white" data-tab-target="panel-8" data-tab-index="8">Health Equity</button>
+                                                    id="tab-8" class="tab text-white" data-tab-target="panel-8"
+                                                    data-tab-index="8">Health Equity</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-9"
-                                                    id="tab-9" class="tab text-white" data-tab-target="panel-9" data-tab-index="9">Health Care Access</button>
+                                                    id="tab-9" class="tab text-white" data-tab-target="panel-9"
+                                                    data-tab-index="9">Health Care Access</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-10"
-                                                    id="tab-10" class="tab text-white" data-tab-target="panel-10" data-tab-index="10">Infectious Disease</button>
+                                                    id="tab-10" class="tab text-white" data-tab-target="panel-10"
+                                                    data-tab-index="10">Infectious Disease</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-11"
-                                                    id="tab-11" class="tab text-white" data-tab-target="panel-11" data-tab-index="11">Leadership Development</button>
+                                                    id="tab-11" class="tab text-white" data-tab-target="panel-11"
+                                                    data-tab-index="11">Leadership Development</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-12"
-                                                    id="tab-12" class="tab text-white" data-tab-target="panel-12" data-tab-index="12">Population Health and
+                                                    id="tab-12" class="tab text-white" data-tab-target="panel-12"
+                                                    data-tab-index="12">Population Health and
                                                     Prevention</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-13"
-                                                    id="tab-13" class="tab text-white" data-tab-target="panel-13" data-tab-index="13">Preparedness</button>
+                                                    id="tab-13" class="tab text-white" data-tab-target="panel-13"
+                                                    data-tab-index="13">Preparedness</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-14"
-                                                    id="tab-14" class="tab text-white" data-tab-target="panel-14" data-tab-index="14">Public Health Infrastructure and
+                                                    id="tab-14" class="tab text-white" data-tab-target="panel-14"
+                                                    data-tab-index="14">Public Health Infrastructure and
                                                     Systems Improvement</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-15"
-                                                    id="tab-15" class="tab text-white" data-tab-target="panel-15" data-tab-index="15">Social and Behavioral
+                                                    id="tab-15" class="tab text-white" data-tab-target="panel-15"
+                                                    data-tab-index="15">Social and Behavioral
                                                     Health</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-16"
-                                                    id="tab-16" class="tab text-white" data-tab-target="panel-16" data-tab-index="16">State Health Policy</button>
+                                                    id="tab-16" class="tab text-white" data-tab-target="panel-16"
+                                                    data-tab-index="16">State Health Policy</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-17"
-                                                    id="tab-17" class="tab text-white" data-tab-target="panel-17" data-tab-index="17">Territories and Freely Associated
+                                                    id="tab-17" class="tab text-white" data-tab-target="panel-17"
+                                                    data-tab-index="17">Territories and Freely Associated
                                                     States</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-18"
-                                                    id="tab-18" class="tab text-white" data-tab-target="panel-18" data-tab-index="18">Public Health Workforce</button>
+                                                    id="tab-18" class="tab text-white" data-tab-target="panel-18"
+                                                    data-tab-index="18">Public Health Workforce</button>
                                             </li>
                                             <li>
                                                 <button role="tab" aria-selected="false" aria-controls="panel-19"
-                                                    id="tab-19" class="tab text-white" data-tab-target="panel-19" data-tab-index="19">Women, Infant, and Family
+                                                    id="tab-19" class="tab text-white" data-tab-target="panel-19"
+                                                    data-tab-index="19">Women, Infant, and Family
                                                     Health</button>
                                             </li>
                                         </ul>
@@ -15854,572 +16053,572 @@
     </section>
 
     <script>
-    // Search functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const searchToggle = document.querySelector('.nav-toggle--search');
-        const navMenu = document.querySelector('.nav-menu');
-        const searchWrapper = document.querySelector('.search-wrapper');
-        const desktopPlaceholder = document.querySelector('.desktop-search-placeholder');
-        const searchContainer = document.querySelector('.nav-menu__search-container');
-        const navMenuClose = document.querySelector('.nav-menu__close');
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchToggle = document.querySelector('.nav-toggle--search');
+            const navMenu = document.querySelector('.nav-menu');
+            const searchWrapper = document.querySelector('.search-wrapper');
+            const desktopPlaceholder = document.querySelector('.desktop-search-placeholder');
+            const searchContainer = document.querySelector('.nav-menu__search-container');
+            const navMenuClose = document.querySelector('.nav-menu__close');
 
-        // Function to close mobile menu
-        function closeMobileMenu() {
-            if (navMenu) navMenu.classList.add('hidden');
-        }
+            // Function to close mobile menu
+            function closeMobileMenu() {
+                if (navMenu) navMenu.classList.add('hidden');
+            }
 
-        // Function to handle search toggle
-        function handleSearchToggle() {
-            if (window.innerWidth >= 1023 && desktopPlaceholder && searchContainer) {
-                // Desktop: show inline search
-                searchWrapper.classList.add('show-inline-search');
-                
-                // Move the search container to the placeholder if it's not already there
-                if (!desktopPlaceholder.contains(searchContainer)) {
-                    desktopPlaceholder.appendChild(searchContainer);
-                }
-                
-                // Focus the search input
-                const searchInput = searchContainer.querySelector('input[type="text"]');
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            } else if (navMenu && searchContainer) {
-                // Mobile/tablet: open slide-down search menu
-                navMenu.classList.remove('hidden');
-                
-                // Make sure search container is in the mobile menu
-                const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
-                if (!mobileSearchContainer) {
-                    const menuContainer = document.querySelector('.nav-menu .container');
-                    if (menuContainer && searchContainer.parentNode !== menuContainer) {
-                        menuContainer.appendChild(searchContainer);
+            // Function to handle search toggle
+            function handleSearchToggle() {
+                if (window.innerWidth >= 1023 && desktopPlaceholder && searchContainer) {
+                    // Desktop: show inline search
+                    searchWrapper.classList.add('show-inline-search');
+
+                    // Move the search container to the placeholder if it's not already there
+                    if (!desktopPlaceholder.contains(searchContainer)) {
+                        desktopPlaceholder.appendChild(searchContainer);
                     }
-                }
-                
-                // Focus the search input
-                const searchInput = searchContainer.querySelector('input[type="text"]');
-                if (searchInput) {
-                    setTimeout(() => {
+
+                    // Focus the search input
+                    const searchInput = searchContainer.querySelector('input[type="text"]');
+                    if (searchInput) {
                         searchInput.focus();
-                    }, 100);
-                }
-            }
-        }
+                    }
+                } else if (navMenu && searchContainer) {
+                    // Mobile/tablet: open slide-down search menu
+                    navMenu.classList.remove('hidden');
 
-        // Event listeners
-        if (searchToggle) {
-            searchToggle.addEventListener('click', handleSearchToggle);
-        }
-
-        // Close menu when clicking the close button
-        if (navMenuClose) {
-            navMenuClose.addEventListener('click', closeMobileMenu);
-        }
-
-        // Close search when clicking outside on desktop
-        document.addEventListener('click', function(event) {
-            if (window.innerWidth >= 1023 && searchWrapper && searchWrapper.classList.contains('show-inline-search')) {
-                if (!searchWrapper.contains(event.target) && 
-                    !event.target.closest('.nav-toggle--search')) {
-                    searchWrapper.classList.remove('show-inline-search');
-                }
-            }
-        });
-
-        // Handle window resize
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                if (window.innerWidth < 1023 && searchContainer) {
-                    // On mobile, ensure search container is in the mobile menu
+                    // Make sure search container is in the mobile menu
                     const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
                     if (!mobileSearchContainer) {
                         const menuContainer = document.querySelector('.nav-menu .container');
-                        if (menuContainer) {
+                        if (menuContainer && searchContainer.parentNode !== menuContainer) {
                             menuContainer.appendChild(searchContainer);
                         }
                     }
-                    searchWrapper.classList.remove('show-inline-search');
-                }
-            }, 250);
-        });
-    });
 
-    // Keyboard Navigation for Dropdown Menus
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdownToggles = document.querySelectorAll('.toggle-l2');
-        
-        // Function to close all dropdowns except the one passed as parameter
-        function closeAllDropdowns(exceptThisOne = null) {
-            dropdownToggles.forEach(toggle => {
-                if (toggle !== exceptThisOne) {
-                    const dropdown = toggle.nextElementSibling;
-                    if (dropdown && dropdown.classList.contains('submenu')) {
-                        toggle.setAttribute('aria-expanded', 'false');
-                        dropdown.style.display = 'none';
-                        const icon = toggle.querySelector('i');
-                        if (icon) icon.textContent = 'arrow_drop_down';
+                    // Focus the search input
+                    const searchInput = searchContainer.querySelector('input[type="text"]');
+                    if (searchInput) {
+                        setTimeout(() => {
+                            searchInput.focus();
+                        }, 100);
+                    }
+                }
+            }
+
+            // Event listeners
+            if (searchToggle) {
+                searchToggle.addEventListener('click', handleSearchToggle);
+            }
+
+            // Close menu when clicking the close button
+            if (navMenuClose) {
+                navMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            // Close search when clicking outside on desktop
+            document.addEventListener('click', function (event) {
+                if (window.innerWidth >= 1023 && searchWrapper && searchWrapper.classList.contains('show-inline-search')) {
+                    if (!searchWrapper.contains(event.target) &&
+                        !event.target.closest('.nav-toggle--search')) {
+                        searchWrapper.classList.remove('show-inline-search');
                     }
                 }
             });
-        }
 
-        // Function to toggle dropdown
-        function toggleDropdown(toggle) {
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            const dropdown = toggle.nextElementSibling;
-            
-            if (isExpanded) {
-                toggle.setAttribute('aria-expanded', 'false');
-                if (dropdown && dropdown.classList.contains('submenu')) {
-                    dropdown.style.display = 'none';
-                    const icon = toggle.querySelector('i');
-                    if (icon) icon.textContent = 'arrow_drop_down';
-                }
-            } else {
-                closeAllDropdowns(toggle);
-                toggle.setAttribute('aria-expanded', 'true');
-                if (dropdown && dropdown.classList.contains('submenu')) {
-                    dropdown.style.display = 'block';
-                    const icon = toggle.querySelector('i');
-                    if (icon) icon.textContent = 'arrow_drop_up';
-                    
-                    // Focus on first item in dropdown
-                    const firstLink = dropdown.querySelector('a');
-                    if (firstLink) {
-                        firstLink.focus();
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    if (window.innerWidth < 1023 && searchContainer) {
+                        // On mobile, ensure search container is in the mobile menu
+                        const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
+                        if (!mobileSearchContainer) {
+                            const menuContainer = document.querySelector('.nav-menu .container');
+                            if (menuContainer) {
+                                menuContainer.appendChild(searchContainer);
+                            }
+                        }
+                        searchWrapper.classList.remove('show-inline-search');
                     }
-                }
+                }, 250);
+            });
+        });
+
+        // Keyboard Navigation for Dropdown Menus
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggles = document.querySelectorAll('.toggle-l2');
+
+            // Function to close all dropdowns except the one passed as parameter
+            function closeAllDropdowns(exceptThisOne = null) {
+                dropdownToggles.forEach(toggle => {
+                    if (toggle !== exceptThisOne) {
+                        const dropdown = toggle.nextElementSibling;
+                        if (dropdown && dropdown.classList.contains('submenu')) {
+                            toggle.setAttribute('aria-expanded', 'false');
+                            dropdown.style.display = 'none';
+                            const icon = toggle.querySelector('i');
+                            if (icon) icon.textContent = 'arrow_drop_down';
+                        }
+                    }
+                });
             }
-        }
 
-        // Initialize dropdown toggles
-        dropdownToggles.forEach(toggle => {
-            const dropdown = toggle.nextElementSibling;
-            
-            // Initialize ARIA attributes
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('role', 'button');
-            
-            if (dropdown && dropdown.classList.contains('submenu')) {
-                // Hide dropdown by default
-                dropdown.style.display = 'none';
-                
-                // Add role to submenu and menu items
-                dropdown.setAttribute('role', 'menu');
-                const menuItems = dropdown.querySelectorAll('a');
-                menuItems.forEach(item => {
-                    item.setAttribute('role', 'menuitem');
-                    item.tabIndex = -1;
-                });
-                
-                // Toggle on click
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleDropdown(toggle);
-                });
-                
-                // Toggle on keydown
-                toggle.addEventListener('keydown', (e) => {
-                    switch (e.key) {
-                        case 'Enter':
-                        case ' ':
-                            e.preventDefault();
-                            toggleDropdown(toggle);
-                            break;
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            if (toggle.getAttribute('aria-expanded') === 'false') {
-                                toggleDropdown(toggle);
-                            }
-                            break;
-                        case 'Escape':
-                            toggle.setAttribute('aria-expanded', 'false');
-                            dropdown.style.display = 'none';
-                            const icon = toggle.querySelector('i');
-                            if (icon) icon.textContent = 'arrow_drop_down';
-                            toggle.focus();
-                            break;
-                    }
-                });
-                
-                // Handle keyboard navigation in dropdown
-                dropdown.addEventListener('keydown', (e) => {
-                    const menuItems = Array.from(dropdown.querySelectorAll('a'));
-                    const currentIndex = menuItems.indexOf(document.activeElement);
-                    
-                    switch (e.key) {
-                        case 'Escape':
-                            e.preventDefault();
-                            toggle.setAttribute('aria-expanded', 'false');
-                            dropdown.style.display = 'none';
-                            const icon = toggle.querySelector('i');
-                            if (icon) icon.textContent = 'arrow_drop_down';
-                            toggle.focus();
-                            break;
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            if (currentIndex < menuItems.length - 1) {
-                                menuItems[currentIndex + 1].focus();
-                            } else {
-                                menuItems[0].focus();
-                            }
-                            break;
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            if (currentIndex > 0) {
-                                menuItems[currentIndex - 1].focus();
-                            } else {
-                                menuItems[menuItems.length - 1].focus();
-                            }
-                            break;
-                        case 'Home':
-                            e.preventDefault();
-                            menuItems[0].focus();
-                            break;
-                        case 'End':
-                            e.preventDefault();
-                            menuItems[menuItems.length - 1].focus();
-                            break;
-                    }
-                });
-                
-                // Close when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                        toggle.setAttribute('aria-expanded', 'false');
+            // Function to toggle dropdown
+            function toggleDropdown(toggle) {
+                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                const dropdown = toggle.nextElementSibling;
+
+                if (isExpanded) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    if (dropdown && dropdown.classList.contains('submenu')) {
                         dropdown.style.display = 'none';
                         const icon = toggle.querySelector('i');
                         if (icon) icon.textContent = 'arrow_drop_down';
                     }
-                });
-            }
-        });
-        
-        // Close dropdowns when tabbing out of the menu
-        document.addEventListener('focusin', (e) => {
-            const mainNav = document.querySelector('.nav-menu');
-            if (mainNav && !mainNav.contains(e.target) && !e.target.closest('.nav-menu__link')) {
-                closeAllDropdowns();
-            }
-        });
-    });
+                } else {
+                    closeAllDropdowns(toggle);
+                    toggle.setAttribute('aria-expanded', 'true');
+                    if (dropdown && dropdown.classList.contains('submenu')) {
+                        dropdown.style.display = 'block';
+                        const icon = toggle.querySelector('i');
+                        if (icon) icon.textContent = 'arrow_drop_up';
 
-    // Mobile Menu Keyboard Navigation
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.nav-toggle');
-        const menu = document.getElementById('main-nav');
-        const menuClose = document.getElementById('menu-close');
-        const menuLinks = document.querySelectorAll('.nav-menu__link a, .nav-menu__link button');
-        const firstMenuItem = menuLinks[0];
-        const lastMenuItem = menuLinks[menuLinks.length - 1];
-        let menuOpen = false;
+                        // Focus on first item in dropdown
+                        const firstLink = dropdown.querySelector('a');
+                        if (firstLink) {
+                            firstLink.focus();
+                        }
+                    }
+                }
+            }
 
-        // Toggle menu function
-        function toggleMenu() {
-            menuOpen = !menuOpen;
-            menuToggle.setAttribute('aria-expanded', menuOpen);
-            
-            if (menuOpen) {
-                menu.classList.remove('hidden');
-                menu.focus();
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-            } else {
+            // Initialize dropdown toggles
+            dropdownToggles.forEach(toggle => {
+                const dropdown = toggle.nextElementSibling;
+
+                // Initialize ARIA attributes
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('role', 'button');
+
+                if (dropdown && dropdown.classList.contains('submenu')) {
+                    // Hide dropdown by default
+                    dropdown.style.display = 'none';
+
+                    // Add role to submenu and menu items
+                    dropdown.setAttribute('role', 'menu');
+                    const menuItems = dropdown.querySelectorAll('a');
+                    menuItems.forEach(item => {
+                        item.setAttribute('role', 'menuitem');
+                        item.tabIndex = -1;
+                    });
+
+                    // Toggle on click
+                    toggle.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleDropdown(toggle);
+                    });
+
+                    // Toggle on keydown
+                    toggle.addEventListener('keydown', (e) => {
+                        switch (e.key) {
+                            case 'Enter':
+                            case ' ':
+                                e.preventDefault();
+                                toggleDropdown(toggle);
+                                break;
+                            case 'ArrowDown':
+                                e.preventDefault();
+                                if (toggle.getAttribute('aria-expanded') === 'false') {
+                                    toggleDropdown(toggle);
+                                }
+                                break;
+                            case 'Escape':
+                                toggle.setAttribute('aria-expanded', 'false');
+                                dropdown.style.display = 'none';
+                                const icon = toggle.querySelector('i');
+                                if (icon) icon.textContent = 'arrow_drop_down';
+                                toggle.focus();
+                                break;
+                        }
+                    });
+
+                    // Handle keyboard navigation in dropdown
+                    dropdown.addEventListener('keydown', (e) => {
+                        const menuItems = Array.from(dropdown.querySelectorAll('a'));
+                        const currentIndex = menuItems.indexOf(document.activeElement);
+
+                        switch (e.key) {
+                            case 'Escape':
+                                e.preventDefault();
+                                toggle.setAttribute('aria-expanded', 'false');
+                                dropdown.style.display = 'none';
+                                const icon = toggle.querySelector('i');
+                                if (icon) icon.textContent = 'arrow_drop_down';
+                                toggle.focus();
+                                break;
+                            case 'ArrowDown':
+                                e.preventDefault();
+                                if (currentIndex < menuItems.length - 1) {
+                                    menuItems[currentIndex + 1].focus();
+                                } else {
+                                    menuItems[0].focus();
+                                }
+                                break;
+                            case 'ArrowUp':
+                                e.preventDefault();
+                                if (currentIndex > 0) {
+                                    menuItems[currentIndex - 1].focus();
+                                } else {
+                                    menuItems[menuItems.length - 1].focus();
+                                }
+                                break;
+                            case 'Home':
+                                e.preventDefault();
+                                menuItems[0].focus();
+                                break;
+                            case 'End':
+                                e.preventDefault();
+                                menuItems[menuItems.length - 1].focus();
+                                break;
+                        }
+                    });
+
+                    // Close when clicking outside
+                    document.addEventListener('click', (e) => {
+                        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                            toggle.setAttribute('aria-expanded', 'false');
+                            dropdown.style.display = 'none';
+                            const icon = toggle.querySelector('i');
+                            if (icon) icon.textContent = 'arrow_drop_down';
+                        }
+                    });
+                }
+            });
+
+            // Close dropdowns when tabbing out of the menu
+            document.addEventListener('focusin', (e) => {
+                const mainNav = document.querySelector('.nav-menu');
+                if (mainNav && !mainNav.contains(e.target) && !e.target.closest('.nav-menu__link')) {
+                    closeAllDropdowns();
+                }
+            });
+        });
+
+        // Mobile Menu Keyboard Navigation
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('main-nav');
+            const menuClose = document.getElementById('menu-close');
+            const menuLinks = document.querySelectorAll('.nav-menu__link a, .nav-menu__link button');
+            const firstMenuItem = menuLinks[0];
+            const lastMenuItem = menuLinks[menuLinks.length - 1];
+            let menuOpen = false;
+
+            // Toggle menu function
+            function toggleMenu() {
+                menuOpen = !menuOpen;
+                menuToggle.setAttribute('aria-expanded', menuOpen);
+
+                if (menuOpen) {
+                    menu.classList.remove('hidden');
+                    menu.focus();
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                } else {
+                    menu.classList.add('hidden');
+                    menuToggle.focus();
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+            }
+
+            // Close menu function
+            function closeMenu() {
+                menuOpen = false;
+                menuToggle.setAttribute('aria-expanded', 'false');
                 menu.classList.add('hidden');
                 menuToggle.focus();
                 document.body.style.overflow = ''; // Re-enable scrolling
             }
-        }
 
-        // Close menu function
-        function closeMenu() {
-            menuOpen = false;
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menu.classList.add('hidden');
-            menuToggle.focus();
-            document.body.style.overflow = ''; // Re-enable scrolling
-        }
+            // Toggle menu on button click
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMenu);
 
-        // Toggle menu on button click
-        if (menuToggle) {
-            menuToggle.addEventListener('click', toggleMenu);
-            
-            // Handle keyboard events on menu toggle button
-            menuToggle.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleMenu();
-                } else if (e.key === 'Escape' && menuOpen) {
-                    closeMenu();
-                }
-            });
-        }
-
-        // Close menu when clicking the close button
-        if (menuClose) {
-            menuClose.addEventListener('click', closeMenu);
-            
-            // Handle keyboard events on close button
-            menuClose.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
-                    e.preventDefault();
-                    closeMenu();
-                }
-            });
-        }
-
-        // Handle keyboard navigation within the menu
-        if (menu) {
-            menu.addEventListener('keydown', function(e) {
-                // Close menu on Escape key
-                if (e.key === 'Escape') {
-                    closeMenu();
-                }
-                
-                // Trap focus within the menu when open
-                if (e.key === 'Tab') {
-                    if (e.shiftKey) {
-                        // Shift + Tab
-                        if (document.activeElement === firstMenuItem) {
-                            e.preventDefault();
-                            lastMenuItem.focus();
-                        }
-                    } else {
-                        // Tab
-                        if (document.activeElement === lastMenuItem) {
-                            e.preventDefault();
-                            firstMenuItem.focus();
-                        }
-                    }
-                }
-            });
-        }
-
-        // Handle keyboard events on menu items
-        menuLinks.forEach(link => {
-            // Toggle submenu on Enter/Space when on a button
-            link.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    if (this.tagName === 'BUTTON' || this.getAttribute('role') === 'button') {
+                // Handle keyboard events on menu toggle button
+                menuToggle.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
-                        this.click();
+                        toggleMenu();
+                    } else if (e.key === 'Escape' && menuOpen) {
+                        closeMenu();
                     }
-                }
-                
-                // Handle arrow keys for menu navigation
-                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    const nextItem = this.parentElement.nextElementSibling?.querySelector('a, button');
-                    if (nextItem) nextItem.focus();
-                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    const prevItem = this.parentElement.previousElementSibling?.querySelector('a, button');
-                    if (prevItem) {
-                        prevItem.focus();
-                    } else {
-                        menuToggle.focus();
+                });
+            }
+
+            // Close menu when clicking the close button
+            if (menuClose) {
+                menuClose.addEventListener('click', closeMenu);
+
+                // Handle keyboard events on close button
+                menuClose.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
+                        e.preventDefault();
+                        closeMenu();
                     }
-                }
-            });
-        });
+                });
+            }
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (menuOpen && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-                closeMenu();
-            }
-        });
+            // Handle keyboard navigation within the menu
+            if (menu) {
+                menu.addEventListener('keydown', function (e) {
+                    // Close menu on Escape key
+                    if (e.key === 'Escape') {
+                        closeMenu();
+                    }
 
-        // Close menu when focus moves outside the menu
-        document.addEventListener('focusin', function(e) {
-    });
-    </script>
-
-    <script>
-    (function () {
-        'use strict';
-    
-        var container = document.querySelector('.tab-card-collection');
-        if (!container) return;
-    
-        var tabs = Array.from(container.querySelectorAll('[role="tab"]'));
-        var panels = Array.from(container.querySelectorAll('[role="tabpanel"]'));
-    
-        var activePanel = null;
-    
-        function panelIdFor(tab) {
-            return tab.dataset.tabTarget || tab.getAttribute('aria-controls');
-        }
-    
-        /* -------------------------------
-           Keyboard-only panel deactivation
-           (DOES NOT affect UI visibility)
-        -------------------------------- */
-        function deactivatePanelKeyboard(panel) {
-            if (!panel) return;
-        
-            var focusables = panel.querySelectorAll('.card a, .card button');
-            focusables.forEach(function (el) {
-                el.setAttribute('tabindex', '-1');
-            });
-        
-            if (activePanel === panel) {
-                activePanel = null;
-            }
-        }
-    
-        function deactivateAllPanelKeyboards() {
-            panels.forEach(deactivatePanelKeyboard);
-        }
-    
-        /* -------------------------------
-           Activate tab (visual + optional keyboard)
-        -------------------------------- */
-        function activateTab(tab, focusFirstCard) {
-            tabs.forEach(function (t) {
-                t.setAttribute('aria-selected', 'false');
-                t.classList.remove('tab--active');
-            });
-        
-            tab.setAttribute('aria-selected', 'true');
-            tab.classList.add('tab--active');
-        
-            var targetId = panelIdFor(tab);
-            var panel = panels.find(function (p) {
-                return p.id === targetId;
-            });
-        
-            // Hide other panels visually (UI behavior)
-            panels.forEach(function (p) {
-                if (p !== panel) {
-                    p.hidden = true;
-                    p.setAttribute('aria-hidden', 'true');
-                    p.classList.remove('tab-content--active');
-                    deactivatePanelKeyboard(p);
-                }
-            });
-        
-            if (!panel) return;
-        
-            panel.hidden = false;
-            panel.setAttribute('aria-hidden', 'false');
-            panel.classList.add('tab-content--active');
-        
-            var cards = panel.querySelectorAll('.card a, .card button');
-            cards.forEach(function (el) {
-                el.setAttribute('tabindex', focusFirstCard ? '0' : '-1');
-            });
-        
-            if (focusFirstCard && cards.length) {
-                if (!panel.dataset.handlersAttached) {
-                    attachCardKeyHandlers(panel);
-                    panel.dataset.handlersAttached = 'true';
-                }
-                activePanel = panel;
-                cards[0].focus();
-            }
-        }
-    
-        /* -------------------------------
-           Tab keyboard behavior
-        -------------------------------- */
-        function onTabKeyDown(e) {
-            var tab = e.currentTarget;
-            var idx = parseInt(tab.dataset.index, 10);
-        
-            // Any Tab navigation kills panel keyboard access
-            deactivateAllPanelKeyboards();
-        
-            if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
-                e.preventDefault();
-                activateTab(tab, true);
-                return;
-            }
-        
-            if (e.key === 'Tab' && !e.shiftKey) {
-                if (idx < tabs.length - 1) {
-                    e.preventDefault();
-                    tabs[idx + 1].focus();
-                }
-                // last tab → allow natural DOM exit
-            }
-            // Shift+Tab = native behavior
-        }
-    
-        /* -------------------------------
-           Card keyboard behavior
-        -------------------------------- */
-        function attachCardKeyHandlers(panel) {
-            var focusable = Array.from(panel.querySelectorAll('.card a, .card button'));
-            if (!focusable.length) return;
-        
-            focusable.forEach(function (el, i) {
-                el.addEventListener('keydown', function (ev) {
-                
-                    if (panel !== activePanel) return;
-                
-                    // Tab forward
-                    if (ev.key === 'Tab' && !ev.shiftKey) {
-                        if (i === focusable.length - 1) {
-                            var activeTabIndex = tabs.findIndex(function (t) {
-                                return t.getAttribute('aria-selected') === 'true';
-                            });
-                        
-                            deactivatePanelKeyboard(panel);
-                        
-                            if (activeTabIndex < tabs.length - 1) {
-                                ev.preventDefault();
-                                tabs[activeTabIndex + 1].focus();
+                    // Trap focus within the menu when open
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            // Shift + Tab
+                            if (document.activeElement === firstMenuItem) {
+                                e.preventDefault();
+                                lastMenuItem.focus();
                             }
-                            // last tab → allow DOM exit
+                        } else {
+                            // Tab
+                            if (document.activeElement === lastMenuItem) {
+                                e.preventDefault();
+                                firstMenuItem.focus();
+                            }
                         }
                     }
-                
-                    // Shift + Tab backward
-                    if (ev.key === 'Tab' && ev.shiftKey) {
-                        if (i === 0) {
-                            ev.preventDefault();
-                            deactivatePanelKeyboard(panel);
-                        
-                            var activeTab = tabs.find(function (t) {
-                                return t.getAttribute('aria-selected') === 'true';
-                            });
-                            if (activeTab) activeTab.focus();
+                });
+            }
+
+            // Handle keyboard events on menu items
+            menuLinks.forEach(link => {
+                // Toggle submenu on Enter/Space when on a button
+                link.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        if (this.tagName === 'BUTTON' || this.getAttribute('role') === 'button') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    }
+
+                    // Handle arrow keys for menu navigation
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const nextItem = this.parentElement.nextElementSibling?.querySelector('a, button');
+                        if (nextItem) nextItem.focus();
+                    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prevItem = this.parentElement.previousElementSibling?.querySelector('a, button');
+                        if (prevItem) {
+                            prevItem.focus();
+                        } else {
+                            menuToggle.focus();
                         }
                     }
                 });
             });
-        }
-    
-        /* -------------------------------
-           Init
-        -------------------------------- */
-        tabs.forEach(function (tab, i) {
-            tab.setAttribute('tabindex', '0');
-            tab.dataset.index = i;
-            tab.addEventListener('keydown', onTabKeyDown);
-            tab.addEventListener('click', function () {
-                activateTab(tab, false);
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (menuOpen && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    closeMenu();
+                }
             });
-        });
-    
-        panels.forEach(function (panel) {
-            deactivatePanelKeyboard(panel);
-        });
-    
-        var initialTab =
-            tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; }) ||
-            tabs[0];
-    
-        if (initialTab) {
-            activateTab(initialTab, false);
-        }
-    
-    })();
-</script>
+
+            // Close menu when focus moves outside the menu
+            document.addEventListener('focusin', function (e) {
+            });
+    </script>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var container = document.querySelector('.tab-card-collection');
+            if (!container) return;
+
+            var tabs = Array.from(container.querySelectorAll('[role="tab"]'));
+            var panels = Array.from(container.querySelectorAll('[role="tabpanel"]'));
+
+            var activePanel = null;
+
+            function panelIdFor(tab) {
+                return tab.dataset.tabTarget || tab.getAttribute('aria-controls');
+            }
+
+            /* -------------------------------
+               Keyboard-only panel deactivation
+               (DOES NOT affect UI visibility)
+            -------------------------------- */
+            function deactivatePanelKeyboard(panel) {
+                if (!panel) return;
+
+                var focusables = panel.querySelectorAll('.card a, .card button');
+                focusables.forEach(function (el) {
+                    el.setAttribute('tabindex', '-1');
+                });
+
+                if (activePanel === panel) {
+                    activePanel = null;
+                }
+            }
+
+            function deactivateAllPanelKeyboards() {
+                panels.forEach(deactivatePanelKeyboard);
+            }
+
+            /* -------------------------------
+               Activate tab (visual + optional keyboard)
+            -------------------------------- */
+            function activateTab(tab, focusFirstCard) {
+                tabs.forEach(function (t) {
+                    t.setAttribute('aria-selected', 'false');
+                    t.classList.remove('tab--active');
+                });
+
+                tab.setAttribute('aria-selected', 'true');
+                tab.classList.add('tab--active');
+
+                var targetId = panelIdFor(tab);
+                var panel = panels.find(function (p) {
+                    return p.id === targetId;
+                });
+
+                // Hide other panels visually (UI behavior)
+                panels.forEach(function (p) {
+                    if (p !== panel) {
+                        p.hidden = true;
+                        p.setAttribute('aria-hidden', 'true');
+                        p.classList.remove('tab-content--active');
+                        deactivatePanelKeyboard(p);
+                    }
+                });
+
+                if (!panel) return;
+
+                panel.hidden = false;
+                panel.setAttribute('aria-hidden', 'false');
+                panel.classList.add('tab-content--active');
+
+                var cards = panel.querySelectorAll('.card a, .card button');
+                cards.forEach(function (el) {
+                    el.setAttribute('tabindex', focusFirstCard ? '0' : '-1');
+                });
+
+                if (focusFirstCard && cards.length) {
+                    if (!panel.dataset.handlersAttached) {
+                        attachCardKeyHandlers(panel);
+                        panel.dataset.handlersAttached = 'true';
+                    }
+                    activePanel = panel;
+                    cards[0].focus();
+                }
+            }
+
+            /* -------------------------------
+               Tab keyboard behavior
+            -------------------------------- */
+            function onTabKeyDown(e) {
+                var tab = e.currentTarget;
+                var idx = parseInt(tab.dataset.index, 10);
+
+                // Any Tab navigation kills panel keyboard access
+                deactivateAllPanelKeyboards();
+
+                if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
+                    e.preventDefault();
+                    activateTab(tab, true);
+                    return;
+                }
+
+                if (e.key === 'Tab' && !e.shiftKey) {
+                    if (idx < tabs.length - 1) {
+                        e.preventDefault();
+                        tabs[idx + 1].focus();
+                    }
+                    // last tab → allow natural DOM exit
+                }
+                // Shift+Tab = native behavior
+            }
+
+            /* -------------------------------
+               Card keyboard behavior
+            -------------------------------- */
+            function attachCardKeyHandlers(panel) {
+                var focusable = Array.from(panel.querySelectorAll('.card a, .card button'));
+                if (!focusable.length) return;
+
+                focusable.forEach(function (el, i) {
+                    el.addEventListener('keydown', function (ev) {
+
+                        if (panel !== activePanel) return;
+
+                        // Tab forward
+                        if (ev.key === 'Tab' && !ev.shiftKey) {
+                            if (i === focusable.length - 1) {
+                                var activeTabIndex = tabs.findIndex(function (t) {
+                                    return t.getAttribute('aria-selected') === 'true';
+                                });
+
+                                deactivatePanelKeyboard(panel);
+
+                                if (activeTabIndex < tabs.length - 1) {
+                                    ev.preventDefault();
+                                    tabs[activeTabIndex + 1].focus();
+                                }
+                                // last tab → allow DOM exit
+                            }
+                        }
+
+                        // Shift + Tab backward
+                        if (ev.key === 'Tab' && ev.shiftKey) {
+                            if (i === 0) {
+                                ev.preventDefault();
+                                deactivatePanelKeyboard(panel);
+
+                                var activeTab = tabs.find(function (t) {
+                                    return t.getAttribute('aria-selected') === 'true';
+                                });
+                                if (activeTab) activeTab.focus();
+                            }
+                        }
+                    });
+                });
+            }
+
+            /* -------------------------------
+               Init
+            -------------------------------- */
+            tabs.forEach(function (tab, i) {
+                tab.setAttribute('tabindex', '0');
+                tab.dataset.index = i;
+                tab.addEventListener('keydown', onTabKeyDown);
+                tab.addEventListener('click', function () {
+                    activateTab(tab, false);
+                });
+            });
+
+            panels.forEach(function (panel) {
+                deactivatePanelKeyboard(panel);
+            });
+
+            var initialTab =
+                tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; }) ||
+                tabs[0];
+
+            if (initialTab) {
+                activateTab(initialTab, false);
+            }
+
+        })();
+    </script>
 
 </body>
 
