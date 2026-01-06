@@ -9479,19 +9479,18 @@
 
 
                                 <a href="https://account.astho.org/" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="My Profile open_in_new (External Link)"
-                                    rel="noopener noreferrer">My Profile<span class="external-link-icon">&nbsp;<span
-                                            class="material-icons"
+                                    title=" (External Link)" aria-label="My Profile" rel="noopener noreferrer">My
+                                    Profile<span class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
 
                                 <a href="https://learn.astho.org/" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="e-Learning Center open_in_new (External Link)"
+                                    title=" (External Link)" aria-label="e-Learning Center"
                                     rel="noopener noreferrer">e-Learning Center<span
                                         class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
 
                                 <a href="https://my.astho.org/home" class="text-white mr-8 external-link-processed"
-                                    title=" (External Link)" aria-label="my.ASTHO open_in_new (External Link)"
+                                    title=" (External Link)" aria-label="my.ASTHO"
                                     rel="noopener noreferrer">my.ASTHO<span class="external-link-icon">&nbsp;<span
                                             class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9514,9 +9513,11 @@
                     <div class="container">
                         <div class="flex pt-8 justify-between items-center">
                             <div class="hamburger">
-                                <div class="flex cursor-pointer nav-toggle"><i class="material-icons mr-4">menu</i><span
-                                        class="uppercase">Menu</span></div>
-
+                                <button type="button" class="flex items-center nav-toggle" id="menu-toggle"
+                                    aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+                                    <i class="material-icons mr-4">menu</i>
+                                    <span class="uppercase">Menu</span>
+                                </button>
                             </div>
 
                             <div>
@@ -9538,7 +9539,7 @@
 
                             </div>
 
-                            <div class="search-wrapper flex lg:flex-row flex-col" role="search">
+                            <div class="search-wrapper flex lg:flex-row flex-col">
 
                                 <div class="search-toggle-container">
 
@@ -9557,10 +9558,10 @@
                                 <div class="desktop-search-placeholder hidden lg:block"></div>
 
                                 <!-- Mobile search form -->
-                                <div id="search-form" class="search-form hidden w-full lg:hidden mt-4" role="search"
+                                <div id="search-form" class="search-form hidden w-full lg:hidden mt-4"
                                     aria-label="Search form">
 
-                                    <form action="https://integration.astho.org/13" method="get" class="flex w-full">
+                                    <!-- <form action="https://integration.astho.org/13" method="get" class="flex w-full">
 
                                         <input type="text" placeholder="Search" name="q" required=""
                                             class="w-full p-2 border border-gray-300" aria-label="Search input"
@@ -9571,7 +9572,7 @@
                                             <i class="material-icons" aria-hidden="true">search</i>
                                         </button>
 
-                                    </form>
+                                    </form> -->
 
                                 </div>
 
@@ -9585,7 +9586,7 @@
 
 
                     <div id="main-nav" class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full bg-white"
-                        role="dialog" aria-modal="true" aria-labelledby="menu-title" tabindex="-1">
+                        role="navigation" aria-labelledby="menu-title" tabindex="-1">
                         <h2 id="menu-title" class="sr-only">Main Navigation</h2>
                         <div class="container">
                             <div class="flex justify-end close-container">
@@ -9594,40 +9595,40 @@
                                 </button>
                             </div>
                             <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center"
-                                role="menubar" aria-label="Main navigation">
+                                aria-label="Main navigation">
                                 <li class="group relative" role="none">
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/about/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="About Us open_in_new (External Link)"
-                                            rel="noopener noreferrer">About Us<span
+                                            aria-label="About Us" rel="noopener noreferrer">About Us<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
-                                        <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                        <button class="toggle-l2" aria-expanded="false" aria-controls="submenu-about"
+                                            aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-about"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/about/history/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Our History open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Our History<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Our History" rel="noopener noreferrer" tabindex="-1">Our
+                                                History<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/about/governance/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Leadership and Governance open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Leadership and Governance<span
+                                                aria-label="Leadership and Governance" rel="noopener noreferrer"
+                                                tabindex="-1">Leadership and Governance<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9635,17 +9636,17 @@
 
                                             <a href="https://www.astho.org/about/partnerships/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Partnerships open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Partnerships<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Partnerships" rel="noopener noreferrer"
+                                                tabindex="-1">Partnerships<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/about/careers/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Careers at ASTHO open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Careers at ASTHO<span
+                                                aria-label="Careers at ASTHO" rel="noopener noreferrer"
+                                                tabindex="-1">Careers at ASTHO<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9653,8 +9654,8 @@
 
                                             <a href="https://www.astho.org/about/public-health-careers/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Public Health Careers open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Public Health Careers<span
+                                                aria-label="Public Health Careers" rel="noopener noreferrer"
+                                                tabindex="-1">Public Health Careers<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9662,8 +9663,8 @@
 
                                             <a href="https://www.astho.org/about/strategic-plan/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="ASTHO&#39;s Strategic Plan open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">ASTHO's Strategic Plan<span
+                                                aria-label="ASTHO's Strategic Plan" rel="noopener noreferrer"
+                                                tabindex="-1">ASTHO's Strategic Plan<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9671,9 +9672,8 @@
 
                                             <a href="https://www.astho.org/about/contact/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Contact Us open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Contact Us<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Contact Us" rel="noopener noreferrer" tabindex="-1">Contact
+                                                Us<span class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                     </ul>
@@ -9682,26 +9682,26 @@
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/members/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="Members open_in_new (External Link)"
-                                            rel="noopener noreferrer">Members<span
+                                            aria-label="Members" rel="noopener noreferrer">Members<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
-                                        <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                        <button class="toggle-l2" aria-expanded="false" aria-controls="submenu-members"
+                                            aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-members"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/members/member-directory/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="ASTHO Member Directory open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">ASTHO Member Directory<span
+                                                aria-label="ASTHO Member Directory" rel="noopener noreferrer"
+                                                tabindex="-1">ASTHO Member Directory<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9709,7 +9709,7 @@
 
                                             <a href="https://www.astho.org/members/opportunities/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Funding &amp; Collaboration Opportunities open_in_new (External Link)"
+                                                aria-label="Funding &amp; Collaboration Opportunities"
                                                 rel="noopener noreferrer" tabindex="-1">Funding &amp; Collaboration
                                                 Opportunities<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9719,26 +9719,26 @@
 
                                             <a href="https://my.astho.org/home" target="_blank" role="menuitem"
                                                 class="external-link-processed" title=" (External Link)"
-                                                aria-label="my.ASTHO open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">my.ASTHO<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="my.ASTHO" rel="noopener noreferrer"
+                                                tabindex="-1">my.ASTHO<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/members/alumni-society/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Alumni Society open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Alumni Society<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Alumni Society" rel="noopener noreferrer"
+                                                tabindex="-1">Alumni Society<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/members/slrc/" target="_self" role="menuitem"
                                                 class="external-link-processed" title=" (External Link)"
-                                                aria-label="Senior Leader Reserve Corps open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Senior Leader Reserve Corps<span
+                                                aria-label="Senior Leader Reserve Corps" rel="noopener noreferrer"
+                                                tabindex="-1">Senior Leader Reserve Corps<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9746,9 +9746,9 @@
 
                                             <a href="https://www.astho.org/members/peer-networks/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Peer Networks open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Peer Networks<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Peer Networks" rel="noopener noreferrer" tabindex="-1">Peer
+                                                Networks<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                     </ul>
@@ -9757,36 +9757,34 @@
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/topic/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="Our Work open_in_new (External Link)"
-                                            rel="noopener noreferrer">Our Work<span
+                                            aria-label="Our Work" rel="noopener noreferrer">Our Work<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
-                                        <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                        <button class="toggle-l2" aria-expanded="false" aria-controls="submenu-our-work"
+                                            aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-our-work"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/topic/infectious-disease-prevention/covid-19/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="COVID-19 open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">COVID-19<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                title=" (External Link)" aria-label="COVID-19" rel="noopener noreferrer"
+                                                tabindex="-1">COVID-19<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/topic/data-modernization-informatics/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Data Modernization and Informatics open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Data Modernization and Informatics"
                                                 rel="noopener noreferrer" tabindex="-1">Data Modernization and
                                                 Informatics<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9796,8 +9794,7 @@
 
                                             <a href="https://www.astho.org/topic/environmental-public-health/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Environmental Public Health open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Environmental Public Health"
                                                 rel="noopener noreferrer" tabindex="-1">Environmental Public Health<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9806,8 +9803,7 @@
 
                                             <a href="https://www.astho.org/topic/evidence-based-public-health/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Evidence-Based Public Health open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Evidence-Based Public Health"
                                                 rel="noopener noreferrer" tabindex="-1">Evidence-Based Public
                                                 Health<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9817,17 +9813,17 @@
 
                                             <a href="https://www.astho.org/topic/health-equity/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Health Equity open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Health Equity<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Health Equity" rel="noopener noreferrer"
+                                                tabindex="-1">Health Equity<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/topic/hiap/" target="_self" role="menuitem"
                                                 class="external-link-processed" title=" (External Link)"
-                                                aria-label="Health in All Policies open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Health in All Policies<span
+                                                aria-label="Health in All Policies" rel="noopener noreferrer"
+                                                tabindex="-1">Health in All Policies<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9835,8 +9831,7 @@
 
                                             <a href="https://www.astho.org/topic/infectious-disease-prevention/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Infectious Disease Prevention open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Infectious Disease Prevention"
                                                 rel="noopener noreferrer" tabindex="-1">Infectious Disease
                                                 Prevention<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9846,8 +9841,7 @@
 
                                             <a href="https://www.astho.org/topic/public-health-leadership-development/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Leadership Development open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Leadership Development"
                                                 rel="noopener noreferrer" tabindex="-1">Leadership Development<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9856,8 +9850,7 @@
 
                                             <a href="https://www.astho.org/topic/population-health-prevention/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Population Health and Prevention open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Population Health and Prevention"
                                                 rel="noopener noreferrer" tabindex="-1">Population Health and
                                                 Prevention<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9867,8 +9860,7 @@
 
                                             <a href="https://www.astho.org/topic/public-health-preparedness/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Public Health Preparedness open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Public Health Preparedness"
                                                 rel="noopener noreferrer" tabindex="-1">Public Health Preparedness<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9877,7 +9869,7 @@
 
                                             <a href="https://www.astho.org/topic/crisis-communications/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Public Health &amp; Crisis Communications Resource Hub open_in_new (External Link)"
+                                                aria-label="Public Health &amp; Crisis Communications Resource Hub"
                                                 rel="noopener noreferrer" tabindex="-1">Public Health &amp; Crisis
                                                 Communications Resource Hub<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9888,7 +9880,7 @@
                                             <a href="https://www.astho.org/topic/public-health-infrastructure/"
                                                 target="_self" role="menuitem" class="external-link-processed"
                                                 title=" (External Link)"
-                                                aria-label="Public Health Infrastructure and Systems Improvement open_in_new (External Link)"
+                                                aria-label="Public Health Infrastructure and Systems Improvement"
                                                 rel="noopener noreferrer" tabindex="-1">Public Health Infrastructure and
                                                 Systems Improvement<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9898,8 +9890,7 @@
 
                                             <a href="https://www.astho.org/topic/public-health-infrastructure/phig/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Public Health Infrastructure Grant open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Public Health Infrastructure Grant"
                                                 rel="noopener noreferrer" tabindex="-1">Public Health Infrastructure
                                                 Grant<span class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9909,7 +9900,7 @@
                                             <a href="https://www.astho.org/topic/public-health-data-research/"
                                                 target="_self" role="menuitem" class="external-link-processed"
                                                 title=" (External Link)"
-                                                aria-label="Research, Analytics, and Data Visualization open_in_new (External Link)"
+                                                aria-label="Research, Analytics, and Data Visualization"
                                                 rel="noopener noreferrer" tabindex="-1">Research, Analytics, and Data
                                                 Visualization<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9920,7 +9911,7 @@
                                             <a href="https://www.astho.org/topic/territories-freely-associated-states/"
                                                 target="_self" role="menuitem" class="external-link-processed"
                                                 title=" (External Link)"
-                                                aria-label="U.S. Territories and Freely Associated States open_in_new (External Link)"
+                                                aria-label="U.S. Territories and Freely Associated States"
                                                 rel="noopener noreferrer" tabindex="-1">U.S. Territories and Freely
                                                 Associated States<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -9930,8 +9921,7 @@
 
                                             <a href="https://www.astho.org/topic/public-health-workforce/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Public Health Workforce open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Public Health Workforce"
                                                 rel="noopener noreferrer" tabindex="-1">Public Health Workforce<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9940,8 +9930,8 @@
 
                                             <a href="https://www.astho.org/topic/" target="_self" role="menuitem"
                                                 class="external-link-processed" title=" (External Link)"
-                                                aria-label="View All Topics open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">View All Topics<span
+                                                aria-label="View All Topics" rel="noopener noreferrer"
+                                                tabindex="-1">View All Topics<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9951,26 +9941,26 @@
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/advocacy/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="Policy &amp; Advocacy open_in_new (External Link)"
-                                            rel="noopener noreferrer">Policy &amp; Advocacy<span
-                                                class="external-link-icon">&nbsp;<span class="material-icons"
+                                            aria-label="Policy &amp; Advocacy" rel="noopener noreferrer">Policy &amp;
+                                            Advocacy<span class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                            aria-controls="submenu-policy-advocacy"
+                                            aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-policy-advocacy"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/advocacy/federal-government-affairs/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Federal Government Affairs open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Federal Government Affairs"
                                                 rel="noopener noreferrer" tabindex="-1">Federal Government Affairs<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -9979,8 +9969,8 @@
 
                                             <a href="https://www.astho.org/advocacy/state-health-policy/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="State Health Policy open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">State Health Policy<span
+                                                aria-label="State Health Policy" rel="noopener noreferrer"
+                                                tabindex="-1">State Health Policy<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9988,8 +9978,8 @@
 
                                             <a href="https://www.astho.org/advocacy/policy-statements/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Policy Statements open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Policy Statements<span
+                                                aria-label="Policy Statements" rel="noopener noreferrer"
+                                                tabindex="-1">Policy Statements<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -9997,8 +9987,7 @@
 
                                             <a href="https://www.astho.org/advocacy/health-policy-update/"
                                                 target="_self" role="menuitem" class="external-link-processed"
-                                                title=" (External Link)"
-                                                aria-label="Health Policy Update Series open_in_new (External Link)"
+                                                title=" (External Link)" aria-label="Health Policy Update Series"
                                                 rel="noopener noreferrer" tabindex="-1">Health Policy Update Series<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -10009,26 +9998,28 @@
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/education/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="Education &amp; Events open_in_new (External Link)"
-                                            rel="noopener noreferrer">Education &amp; Events<span
-                                                class="external-link-icon">&nbsp;<span class="material-icons"
+                                            aria-label="Education &amp; Events" rel="noopener noreferrer">Education
+                                            &amp; Events<span class="external-link-icon">&nbsp;<span
+                                                    class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                            aria-controls="submenu-education-events"
+                                            aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-education-events"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/education/past-events/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Past Event Recordings open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Past Event Recordings<span
+                                                aria-label="Past Event Recordings" rel="noopener noreferrer"
+                                                tabindex="-1">Past Event Recordings<span
                                                     class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
@@ -10036,7 +10027,7 @@
 
                                             <a href="https://www.astho.org/education/upcoming-events/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Upcoming Events, Trainings, and Opportunities open_in_new (External Link)"
+                                                aria-label="Upcoming Events, Trainings, and Opportunities"
                                                 rel="noopener noreferrer" tabindex="-1">Upcoming Events, Trainings, and
                                                 Opportunities<span class="external-link-icon">&nbsp;<span
                                                         class="material-icons"
@@ -10048,54 +10039,53 @@
                                     <div class="nav-menu__link">
 
                                         <a href="https://www.astho.org/communications/" target="_self" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text external-link-processed" title=" (External Link)"
-                                            aria-label="Communications open_in_new (External Link)"
-                                            rel="noopener noreferrer">Communications<span
+                                            aria-label="Communications" rel="noopener noreferrer">Communications<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         <button class="toggle-l2" aria-expanded="false"
-                                            aria-label="Toggle About Us submenu" tabindex="0" role="button">
+                                            aria-controls="submenu-communications" aria-label="Toggle About Us submenu">
                                             <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
                                         </button>
                                     </div>
 
-                                    <ul class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
-                                        role="menu">
+                                    <ul id="submenu-communications"
+                                        class="submenu absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100"
+                                        role="menu" aria-hidden="true">
                                         <li role="none">
 
                                             <a href="https://www.astho.org/communications/blog/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Blog open_in_new (External Link)" rel="noopener noreferrer"
-                                                tabindex="-1">Blog<span class="external-link-icon">&nbsp;<span
-                                                        class="material-icons"
+                                                aria-label="Blog" rel="noopener noreferrer" tabindex="-1">Blog<span
+                                                    class="external-link-icon">&nbsp;<span class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/communications/newsroom/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Newsroom open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Newsroom<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Newsroom" rel="noopener noreferrer"
+                                                tabindex="-1">Newsroom<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/communications/podcasts/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Podcasts open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Podcasts<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Podcasts" rel="noopener noreferrer"
+                                                tabindex="-1">Podcasts<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                         <li role="none">
 
                                             <a href="https://www.astho.org/communications/subscribe/" target="_self"
                                                 role="menuitem" class="external-link-processed" title=" (External Link)"
-                                                aria-label="Subscribe open_in_new (External Link)"
-                                                rel="noopener noreferrer" tabindex="-1">Subscribe<span
-                                                    class="external-link-icon">&nbsp;<span class="material-icons"
+                                                aria-label="Subscribe" rel="noopener noreferrer"
+                                                tabindex="-1">Subscribe<span class="external-link-icon">&nbsp;<span
+                                                        class="material-icons"
                                                         style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                         </li>
                                     </ul>
@@ -10256,8 +10246,7 @@
                                                 developments in five minutes on ASTHO’s daily newscast.<br><br><a
                                                     class="button button--ghost-white external-link-processed"
                                                     href="https://newscast.astho.org/" title=" (External Link)"
-                                                    aria-label="Listen Now open_in_new (External Link)"
-                                                    rel="noopener noreferrer">Listen Now<span
+                                                    aria-label="Listen Now" rel="noopener noreferrer">Listen Now<span
                                                         class="external-link-icon">&nbsp;<span class="material-icons"
                                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                             </div>
@@ -15011,31 +15000,28 @@
                             <h5 class="text-white footer-tab__headline inline-flex items-center">
 
                                 <a href="https://www.astho.org/about/" target="_self" role="menuitem"
-                                    aria-haspopup="true" aria-expanded="false"
+                                    aria-haspopup="menu" aria-expanded="false"
                                     class="nav-menu__link-text text-white external-link-processed"
-                                    title=" (External Link)" aria-label="About Us open_in_new (External Link)"
-                                    rel="noopener noreferrer">About Us<span class="external-link-icon">&nbsp;<span
-                                            class="material-icons"
+                                    title=" (External Link)" aria-label="About Us" rel="noopener noreferrer">About
+                                    Us<span class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                             </h5>
                             <ul class="list-none pl-0 footer-tab__list">
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/history/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Our History open_in_new (External Link)"
-                                        rel="noopener noreferrer">Our History<span
-                                            class="external-link-icon">&nbsp;<span class="material-icons"
+                                        title=" (External Link)" aria-label="Our History" rel="noopener noreferrer">Our
+                                        History<span class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                 </li>
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/governance/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Leadership and Governance open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Leadership and Governance"
                                         rel="noopener noreferrer">Leadership and Governance<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15043,9 +15029,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/partnerships/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Partnerships open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Partnerships"
                                         rel="noopener noreferrer">Partnerships<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15053,10 +15039,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/careers/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Careers at ASTHO open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Careers at ASTHO"
                                         rel="noopener noreferrer">Careers at ASTHO<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15064,10 +15049,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/public-health-careers/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Public Health Careers open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Public Health Careers"
                                         rel="noopener noreferrer">Public Health Careers<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15075,10 +15059,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/strategic-plan/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="ASTHO&#39;s Strategic Plan open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="ASTHO&#39;s Strategic Plan"
                                         rel="noopener noreferrer">ASTHO's Strategic Plan<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15086,9 +15069,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/about/contact/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Contact Us open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Contact Us"
                                         rel="noopener noreferrer">Contact Us<span class="external-link-icon">&nbsp;<span
                                                 class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15099,21 +15082,19 @@
                             <h5 class="text-white footer-tab__headline inline-flex items-center">
 
                                 <a href="https://www.astho.org/members/" target="_self" role="menuitem"
-                                    aria-haspopup="true" aria-expanded="false"
+                                    aria-haspopup="menu" aria-expanded="false"
                                     class="nav-menu__link-text text-white external-link-processed"
-                                    title=" (External Link)" aria-label="Members open_in_new (External Link)"
-                                    rel="noopener noreferrer">Members<span class="external-link-icon">&nbsp;<span
-                                            class="material-icons"
+                                    title=" (External Link)" aria-label="Members" rel="noopener noreferrer">Members<span
+                                        class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                             </h5>
                             <ul class="list-none pl-0 footer-tab__list">
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/members/member-directory/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="ASTHO Member Directory open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="ASTHO Member Directory"
                                         rel="noopener noreferrer">ASTHO Member Directory<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15121,10 +15102,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/members/opportunities/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Funding &amp; Collaboration Opportunities open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Funding &amp; Collaboration Opportunities"
                                         rel="noopener noreferrer">Funding &amp; Collaboration Opportunities<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15132,9 +15112,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://my.astho.org/home" target="_blank" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="my.ASTHO open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="my.ASTHO"
                                         rel="noopener noreferrer">my.ASTHO<span class="external-link-icon">&nbsp;<span
                                                 class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15142,9 +15122,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/members/alumni-society/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Alumni Society open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Alumni Society"
                                         rel="noopener noreferrer">Alumni Society<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15152,10 +15132,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/members/slrc/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Senior Leader Reserve Corps open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Senior Leader Reserve Corps"
                                         rel="noopener noreferrer">Senior Leader Reserve Corps<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15163,9 +15142,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/members/peer-networks/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Peer Networks open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Peer Networks"
                                         rel="noopener noreferrer">Peer Networks<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15181,10 +15160,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/topic/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="View All Topics open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="View All Topics"
                                         rel="noopener noreferrer">View All Topics<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15195,10 +15173,9 @@
                             <h5 class="text-white footer-tab__headline inline-flex items-center">
 
                                 <a href="https://www.astho.org/advocacy/" target="_self" role="menuitem"
-                                    aria-haspopup="true" aria-expanded="false"
+                                    aria-haspopup="menu" aria-expanded="false"
                                     class="nav-menu__link-text text-white external-link-processed"
-                                    title=" (External Link)"
-                                    aria-label="Policy &amp; Advocacy open_in_new (External Link)"
+                                    title=" (External Link)" aria-label="Policy &amp; Advocacy"
                                     rel="noopener noreferrer">Policy &amp; Advocacy<span
                                         class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15207,10 +15184,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/advocacy/federal-government-affairs/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Federal Government Affairs open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Federal Government Affairs"
                                         rel="noopener noreferrer">Federal Government Affairs<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15218,10 +15194,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/advocacy/state-health-policy/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="State Health Policy open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="State Health Policy"
                                         rel="noopener noreferrer">State Health Policy<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15229,10 +15204,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/advocacy/policy-statements/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Policy Statements open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Policy Statements"
                                         rel="noopener noreferrer">Policy Statements<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15240,10 +15214,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/advocacy/health-policy-update/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Health Policy Update Series open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Health Policy Update Series"
                                         rel="noopener noreferrer">Health Policy Update Series<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15254,10 +15227,9 @@
                             <h5 class="text-white footer-tab__headline inline-flex items-center">
 
                                 <a href="https://www.astho.org/education/" target="_self" role="menuitem"
-                                    aria-haspopup="true" aria-expanded="false"
+                                    aria-haspopup="menu" aria-expanded="false"
                                     class="nav-menu__link-text text-white external-link-processed"
-                                    title=" (External Link)"
-                                    aria-label="Education &amp; Events open_in_new (External Link)"
+                                    title=" (External Link)" aria-label="Education &amp; Events"
                                     rel="noopener noreferrer">Education &amp; Events<span
                                         class="external-link-icon">&nbsp;<span class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15266,10 +15238,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/education/past-events/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)"
-                                        aria-label="Past Event Recordings open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Past Event Recordings"
                                         rel="noopener noreferrer">Past Event Recordings<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15277,10 +15248,10 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/education/upcoming-events/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
                                         title=" (External Link)"
-                                        aria-label="Upcoming Events, Trainings, and Opportunities open_in_new (External Link)"
+                                        aria-label="Upcoming Events, Trainings, and Opportunities"
                                         rel="noopener noreferrer">Upcoming Events, Trainings, and Opportunities<span
                                             class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15291,9 +15262,9 @@
                             <h5 class="text-white footer-tab__headline inline-flex items-center">
 
                                 <a href="https://www.astho.org/communications/" target="_self" role="menuitem"
-                                    aria-haspopup="true" aria-expanded="false"
+                                    aria-haspopup="menu" aria-expanded="false"
                                     class="nav-menu__link-text text-white external-link-processed"
-                                    title=" (External Link)" aria-label="Communications open_in_new (External Link)"
+                                    title=" (External Link)" aria-label="Communications"
                                     rel="noopener noreferrer">Communications<span class="external-link-icon">&nbsp;<span
                                             class="material-icons"
                                             style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15302,19 +15273,18 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/communications/blog/" target="_self" role="menuitem"
-                                        aria-haspopup="true" aria-expanded="false"
+                                        aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Blog open_in_new (External Link)"
-                                        rel="noopener noreferrer">Blog<span class="external-link-icon">&nbsp;<span
-                                                class="material-icons"
+                                        title=" (External Link)" aria-label="Blog" rel="noopener noreferrer">Blog<span
+                                            class="external-link-icon">&nbsp;<span class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
                                 </li>
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/communications/newsroom/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Newsroom open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Newsroom"
                                         rel="noopener noreferrer">Newsroom<span class="external-link-icon">&nbsp;<span
                                                 class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15322,9 +15292,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/communications/podcasts/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Podcasts open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Podcasts"
                                         rel="noopener noreferrer">Podcasts<span class="external-link-icon">&nbsp;<span
                                                 class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15332,9 +15302,9 @@
                                 <li class="pb-2">
 
                                     <a href="https://www.astho.org/communications/subscribe/" target="_self"
-                                        role="menuitem" aria-haspopup="true" aria-expanded="false"
+                                        role="menuitem" aria-haspopup="menu" aria-expanded="false"
                                         class="nav-menu__link-text text-white external-link-processed"
-                                        title=" (External Link)" aria-label="Subscribe open_in_new (External Link)"
+                                        title=" (External Link)" aria-label="Subscribe"
                                         rel="noopener noreferrer">Subscribe<span class="external-link-icon">&nbsp;<span
                                                 class="material-icons"
                                                 style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15371,13 +15341,13 @@
                                     <h5 class="text-white px-4">
 
                                         <a href="https://integration.astho.org/about/careers/" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text text-white">Careers at ASTHO</a>
                                     </h5>
                                     <h5 class="text-white px-4">
 
                                         <a href="https://integration.astho.org/about/contact/" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text text-white">Contact Us</a>
                                     </h5>
                                 </div>
@@ -15391,10 +15361,9 @@
                                     <div class="uppercase text-white px-4 text-2xl">
 
                                         <a href="https://www.astho.org/footer/accessibility/" target="" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text text-white external-link-processed"
-                                            title=" (External Link)"
-                                            aria-label="Accessibility Statement open_in_new (External Link)"
+                                            title=" (External Link)" aria-label="Accessibility Statement"
                                             rel="noopener noreferrer">Accessibility Statement<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15403,10 +15372,9 @@
                                     <div class="uppercase text-white px-4 text-2xl">
 
                                         <a href="https://www.astho.org/footer/copyright/" target="" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text text-white external-link-processed"
-                                            title=" (External Link)"
-                                            aria-label="Copyright Notice open_in_new (External Link)"
+                                            title=" (External Link)" aria-label="Copyright Notice"
                                             rel="noopener noreferrer">Copyright Notice<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15415,10 +15383,9 @@
                                     <div class="uppercase text-white px-4 text-2xl">
 
                                         <a href="https://www.astho.org/footer/privacy/" target="" role="menuitem"
-                                            aria-haspopup="true" aria-expanded="false"
+                                            aria-haspopup="menu" aria-expanded="false"
                                             class="nav-menu__link-text text-white external-link-processed"
-                                            title=" (External Link)"
-                                            aria-label="Privacy Statement open_in_new (External Link)"
+                                            title=" (External Link)" aria-label="Privacy Statement"
                                             rel="noopener noreferrer">Privacy Statement<span
                                                 class="external-link-icon">&nbsp;<span class="material-icons"
                                                     style="font-size: 1em; vertical-align: middle;">open_in_new</span></span></a>
@@ -15581,16 +15548,24 @@
                     const currentButton = document.querySelector('.toggle-l2[aria-expanded="true"]');
                     if (currentButton) {
                         currentButton.setAttribute('aria-expanded', 'false');
-                        currentButton.closest('.nav-menu__link').classList.remove('active');
-                        currentButton.closest('li').querySelector('.submenu').classList.remove('active');
+                        const currentLink = currentButton.closest('.nav-menu__link');
+                        const currentSubmenu = currentButton.closest('li').querySelector('.submenu');
+                        currentLink.classList.remove('active');
+                        currentSubmenu.classList.remove('active');
+                        currentSubmenu.setAttribute('aria-hidden', 'true');
+                        const currentMenuLink = currentLink.querySelector('.nav-menu__link-text');
+                        if (currentMenuLink) currentMenuLink.setAttribute('aria-expanded', 'false');
                     }
                 }
 
                 // Toggle current dropdown
                 if (!isExpanded) {
                     button.setAttribute('aria-expanded', 'true');
+                    const menuLink = parentLink.querySelector('.nav-menu__link-text');
+                    if (menuLink) menuLink.setAttribute('aria-expanded', 'true');
                     parentLink.classList.add('active');
                     submenu.classList.add('active');
+                    submenu.setAttribute('aria-hidden', 'false');
                     activeDropdown = submenu;
 
                     // Focus first item in submenu when opened
@@ -15599,7 +15574,13 @@
                         firstItem.focus();
                     }
                 } else {
-                    closeAllDropdowns();
+                    button.setAttribute('aria-expanded', 'false');
+                    const menuLink = parentLink.querySelector('.nav-menu__link-text');
+                    if (menuLink) menuLink.setAttribute('aria-expanded', 'false');
+                    parentLink.classList.remove('active');
+                    submenu.classList.remove('active');
+                    submenu.setAttribute('aria-hidden', 'true');
+                    activeDropdown = null;
                 }
             }
 
@@ -15723,19 +15704,40 @@
             const navMenu = document.querySelector('.nav-menu');
             const searchWrapper = document.querySelector('.search-wrapper');
             const desktopPlaceholder = document.querySelector('.desktop-search-placeholder');
+            const mobileSearchForm = document.getElementById('search-form');
             const searchContainer = document.querySelector('.nav-menu__search-container');
             const navMenuClose = document.querySelector('.nav-menu__close');
+
+            function setSearchExpandedDesktop() {
+                if (!searchToggle || !searchWrapper) return;
+                searchToggle.setAttribute(
+                    'aria-expanded',
+                    searchWrapper.classList.contains('show-inline-search') ? 'true' : 'false'
+                );
+            }
+
+            function setSearchExpandedMobile() {
+                if (!searchToggle) return;
+                const isExpanded = mobileSearchForm
+                    ? !mobileSearchForm.classList.contains('hidden')
+                    : (navMenu ? !navMenu.classList.contains('hidden') : false);
+
+                searchToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+            }
 
             // Function to close mobile menu
             function closeMobileMenu() {
                 if (navMenu) navMenu.classList.add('hidden');
+                if (mobileSearchForm) mobileSearchForm.classList.add('hidden');
+                if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
             }
 
             // Function to handle search toggle
             function handleSearchToggle() {
-                if (window.innerWidth >= 1023 && desktopPlaceholder && searchContainer) {
-                    // Desktop: show inline search
-                    searchWrapper.classList.add('show-inline-search');
+                if (window.innerWidth >= 1023 && desktopPlaceholder && searchContainer && searchWrapper) {
+                    // Desktop: toggle inline search
+                    searchWrapper.classList.toggle('show-inline-search');
+                    setSearchExpandedDesktop();
 
                     // Move the search container to the placeholder if it's not already there
                     if (!desktopPlaceholder.contains(searchContainer)) {
@@ -15743,13 +15745,27 @@
                     }
 
                     // Focus the search input
-                    const searchInput = searchContainer.querySelector('input[type="text"]');
-                    if (searchInput) {
-                        searchInput.focus();
+                    if (searchWrapper.classList.contains('show-inline-search')) {
+                        const searchInput = searchContainer.querySelector('input[type="text"]');
+                        if (searchInput) searchInput.focus();
+                    }
+                } else if (mobileSearchForm) {
+                    // Mobile/tablet: toggle the header search form
+                    mobileSearchForm.classList.toggle('hidden');
+                    setSearchExpandedMobile();
+
+                    if (!mobileSearchForm.classList.contains('hidden')) {
+                        const searchInput = mobileSearchForm.querySelector('input[type="text"]');
+                        if (searchInput) {
+                            setTimeout(() => {
+                                searchInput.focus();
+                            }, 100);
+                        }
                     }
                 } else if (navMenu && searchContainer) {
-                    // Mobile/tablet: open slide-down search menu
-                    navMenu.classList.remove('hidden');
+                    // Fallback: toggle slide-down search menu
+                    navMenu.classList.toggle('hidden');
+                    setSearchExpandedMobile();
 
                     // Make sure search container is in the mobile menu
                     const mobileSearchContainer = document.querySelector('.nav-menu .nav-menu__search-container');
@@ -15761,11 +15777,13 @@
                     }
 
                     // Focus the search input
-                    const searchInput = searchContainer.querySelector('input[type="text"]');
-                    if (searchInput) {
-                        setTimeout(() => {
-                            searchInput.focus();
-                        }, 100);
+                    if (!navMenu.classList.contains('hidden')) {
+                        const searchInput = searchContainer.querySelector('input[type="text"]');
+                        if (searchInput) {
+                            setTimeout(() => {
+                                searchInput.focus();
+                            }, 100);
+                        }
                     }
                 }
             }
@@ -15777,7 +15795,11 @@
 
             // Close menu when clicking the close button
             if (navMenuClose) {
-                navMenuClose.addEventListener('click', closeMobileMenu);
+                navMenuClose.addEventListener('click', function () {
+                    closeMobileMenu();
+                    if (searchWrapper) searchWrapper.classList.remove('show-inline-search');
+                    if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
+                });
             }
 
             // Close search when clicking outside on desktop
@@ -15786,6 +15808,7 @@
                     if (!searchWrapper.contains(event.target) &&
                         !event.target.closest('.nav-toggle--search')) {
                         searchWrapper.classList.remove('show-inline-search');
+                        if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
                     }
                 }
             });
@@ -15804,194 +15827,18 @@
                                 menuContainer.appendChild(searchContainer);
                             }
                         }
-                        searchWrapper.classList.remove('show-inline-search');
+                        if (searchWrapper) searchWrapper.classList.remove('show-inline-search');
+                        if (mobileSearchForm) mobileSearchForm.classList.add('hidden');
+                        if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        if (mobileSearchForm) mobileSearchForm.classList.add('hidden');
+                        setSearchExpandedDesktop();
                     }
                 }, 250);
             });
         });
-
-        // Keyboard Navigation for Dropdown Menus
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdownToggles = document.querySelectorAll('.toggle-l2');
-
-            // Function to close all dropdowns except the one passed as parameter
-            function closeAllDropdowns(exceptThisOne = null) {
-                dropdownToggles.forEach(toggle => {
-                    if (toggle !== exceptThisOne) {
-                        const dropdown = toggle.nextElementSibling;
-                        if (dropdown && dropdown.classList.contains('submenu')) {
-                            toggle.setAttribute('aria-expanded', 'false');
-                            dropdown.style.display = 'none';
-                            const icon = toggle.querySelector('i');
-                            if (icon) icon.textContent = 'arrow_drop_down';
-                        }
-                    }
-                });
-            }
-
-            // Function to toggle dropdown
-            function toggleDropdown(toggle) {
-                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-                const dropdown = toggle.nextElementSibling;
-
-                if (isExpanded) {
-                    toggle.setAttribute('aria-expanded', 'false');
-                    if (dropdown && dropdown.classList.contains('submenu')) {
-                        dropdown.style.display = 'none';
-                        const icon = toggle.querySelector('i');
-                        if (icon) icon.textContent = 'arrow_drop_down';
-                    }
-                } else {
-                    closeAllDropdowns(toggle);
-                    toggle.setAttribute('aria-expanded', 'true');
-                    if (dropdown && dropdown.classList.contains('submenu')) {
-                        dropdown.style.display = 'block';
-                        const icon = toggle.querySelector('i');
-                        if (icon) icon.textContent = 'arrow_drop_up';
-
-                        // Focus on first item in dropdown
-                        const firstLink = dropdown.querySelector('a');
-                        if (firstLink) {
-                            firstLink.focus();
-                        }
-                    }
-                }
-            }
-
-            // Initialize dropdown toggles
-            dropdownToggles.forEach(toggle => {
-                const dropdown = toggle.nextElementSibling;
-
-                // Initialize ARIA attributes
-                toggle.setAttribute('aria-expanded', 'false');
-                toggle.setAttribute('role', 'button');
-
-                if (dropdown && dropdown.classList.contains('submenu')) {
-                    // Hide dropdown by default
-                    dropdown.style.display = 'none';
-
-                    // Add role to submenu and menu items
-                    dropdown.setAttribute('role', 'menu');
-                    const menuItems = dropdown.querySelectorAll('a');
-                    menuItems.forEach(item => {
-                        item.setAttribute('role', 'menuitem');
-                        item.tabIndex = -1;
-                    });
-
-                    // Toggle on click
-                    toggle.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        toggleDropdown(toggle);
-                    });
-
-                    // Toggle on keydown
-                    toggle.addEventListener('keydown', (e) => {
-                        switch (e.key) {
-                            case 'Enter':
-                            case ' ':
-                                e.preventDefault();
-                                toggleDropdown(toggle);
-                                break;
-                            case 'ArrowDown':
-                                e.preventDefault();
-                                if (toggle.getAttribute('aria-expanded') === 'false') {
-                                    toggleDropdown(toggle);
-                                }
-                                break;
-                            case 'Escape':
-                                toggle.setAttribute('aria-expanded', 'false');
-                                dropdown.style.display = 'none';
-                                const icon = toggle.querySelector('i');
-                                if (icon) icon.textContent = 'arrow_drop_down';
-                                toggle.focus();
-                                break;
-                        }
-                    });
-
-                    // Handle keyboard navigation in dropdown
-                    dropdown.addEventListener('keydown', (e) => {
-                        const menuItems = Array.from(dropdown.querySelectorAll('a'));
-                        const currentIndex = menuItems.indexOf(document.activeElement);
-
-                        switch (e.key) {
-                            case 'Escape':
-                                e.preventDefault();
-                                toggle.setAttribute('aria-expanded', 'false');
-                                dropdown.style.display = 'none';
-                                const icon = toggle.querySelector('i');
-                                if (icon) icon.textContent = 'arrow_drop_down';
-                                toggle.focus();
-                                break;
-                            case 'ArrowDown':
-                                e.preventDefault();
-                                if (currentIndex < menuItems.length - 1) {
-                                    menuItems[currentIndex + 1].focus();
-                                } else {
-                                    menuItems[0].focus();
-                                }
-                                break;
-                            case 'ArrowUp':
-                                e.preventDefault();
-                                if (currentIndex > 0) {
-                                    menuItems[currentIndex - 1].focus();
-                                } else {
-                                    menuItems[menuItems.length - 1].focus();
-                                }
-                                break;
-                            case 'Home':
-                                e.preventDefault();
-                                menuItems[0].focus();
-                                break;
-                            case 'End':
-                                e.preventDefault();
-                                menuItems[menuItems.length - 1].focus();
-                                break;
-                        }
-                    });
-
-                    // Close when clicking outside
-                    document.addEventListener('click', (e) => {
-                        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                            toggle.setAttribute('aria-expanded', 'false');
-                            dropdown.style.display = 'none';
-                            const icon = toggle.querySelector('i');
-                            if (icon) icon.textContent = 'arrow_drop_down';
-                        }
-                    });
-                }
-            });
-
-            // Close dropdowns when tabbing out of the menu
-            document.addEventListener('focusin', (e) => {
-                const mainNav = document.querySelector('.nav-menu');
-                if (mainNav && !mainNav.contains(e.target) && !e.target.closest('.nav-menu__link')) {
-                    closeAllDropdowns();
-                }
-            });
-        });
     </script>
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        (function () {
-            var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
-            sz.src = '//siteimproveanalytics.com/js/siteanalyze_6175884.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
-        })();
-        /*]]>*/
-        $(document).ready(function () {
-            $(".accordion__header").click(function () {
-                /* target the iframe */
-                var iframeTarget = $(this).siblings('.accordion__tab-content').find(".policyiframe");
-                /* looping through each iframe inside the accordion which has been clicked and reloading the src */
-                jQuery.each($(iframeTarget), function () {
-                    $(this).attr({
-                        src: $(this).attr("src")
-                    });
-                });
-            });
-        });
-    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             if (window.innerWidth < 1024) {
@@ -16013,18 +15860,20 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
         })();
         /*]]>*/
-        $(document).ready(function () {
-            $(".accordion__header").click(function () {
-                /* target the iframe */
-                var iframeTarget = $(this).siblings('.accordion__tab-content').find(".policyiframe");
-                /* looping through each iframe inside the accordion which has been clicked and reloading the src */
-                jQuery.each($(iframeTarget), function () {
-                    $(this).attr({
-                        src: $(this).attr("src")
+        if (window.jQuery) {
+            jQuery(function ($) {
+                $(".accordion__header").click(function () {
+                    /* target the iframe */
+                    var iframeTarget = $(this).siblings('.accordion__tab-content').find(".policyiframe");
+                    /* looping through each iframe inside the accordion which has been clicked and reloading the src */
+                    jQuery.each($(iframeTarget), function () {
+                        $(this).attr({
+                            src: $(this).attr("src")
+                        });
                     });
                 });
             });
-        });
+        }
     </script>
     <div id="st-2" class=" st-sticky-share-buttons st-right st-toggleable ">
         <div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
