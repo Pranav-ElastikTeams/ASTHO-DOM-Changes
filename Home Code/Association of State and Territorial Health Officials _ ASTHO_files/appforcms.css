@@ -1428,7 +1428,7 @@ a.text-white:hover {
 }
 
 .bg-grey {
-    background-color: #e0e0e0
+    background-color: #d2d2d2
 }
 
 .link-icon-container svg {
@@ -2453,9 +2453,6 @@ a.text-white:hover {
     display: revert
 }
 
-.bg-grey {
-    background-color: #e5e5e5
-}
 
 .bg-lightblue {
     background-color: #367aab
