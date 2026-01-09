@@ -92,6 +92,12 @@ dfn {
     font-style: italic
 }
 
+@media (min-width: 1024px) {
+    .page-title {
+        margin-left: 4rem;
+    }
+}
+
 small {
     font-size: .9em
 }
