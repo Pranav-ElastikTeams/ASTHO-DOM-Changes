@@ -55,7 +55,10 @@ audio:not([controls]) {
 body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 a {
@@ -227,7 +230,10 @@ table {
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -1831,11 +1837,6 @@ a.text-white:hover {
 }
 
 @media (min-width: 768px) {
-    .hero-container {
-        top: 15%;
-        position: absolute;
-    }
-
     .col-md {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -3002,10 +3003,6 @@ a.text-white:hover {
     background-color: #06476b;
     color: white;
     padding: 0.5rem 0;
-}
-
-/* Make nav-util scrollable when it contains a p element */
-.nav-util:has(p) {
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
@@ -3325,6 +3322,13 @@ a.text-white:hover {
 
 .hero-container {
     z-index: 1
+}
+
+@media (min-width: 460px) {
+    .hero-container {
+        top: 15%;
+        position: absolute;
+    }
 }
 
 .bg-img--hero {
@@ -6224,72 +6228,58 @@ a[href^="mailto:"] {
 }
 
 /* 390px */
-@media (min-width: 377px) and (max-width: 391px) {
+@media (min-width: 377px) and (max-width: 432px) {
     .hero-banner {
         margin-top: -20rem;
     }
 }
 
-/* 412px */
-@media (min-width: 392px) and (max-width: 413px) {
+@media (min-width: 432px) and (max-width: 450px) {
     .hero-banner {
-        margin-top: -20rem;
+        margin-top: -9rem;
     }
 }
 
-/* 414px */
-@media (min-width: 414px) and (max-width: 414px) {
-    .hero-banner {
-        margin-top: -20rem;
-    }
-}
-
-/* 430px */
-@media (min-width: 415px) and (max-width: 431px) {
-    .hero-banner {
-        margin-top: -20rem;
-    }
-}
-
-/* 540px */
-@media (min-width: 432px) and (max-width: 541px) {
+@media (min-width: 450px)and (max-width: 500px) {
     .hero-banner {
         margin-top: -7rem;
     }
 }
 
+@media (min-width: 500px) and (max-width: 541px) {
+    .hero-banner {
+        margin-top: -4rem;
+    }
+}
+
 /* 768px */
-@media (min-width: 542px) and (max-width: 769px) {
+@media (min-width: 541px) and (max-width: 600px) {
     .hero-banner {
-        margin-top: -14rem;
+        margin-top: -2rem;
     }
 }
 
-/* 820px */
-@media (min-width: 770px) and (max-width: 821px) {
+@media (min-width: 600px) and (max-width: 630px) {
     .hero-banner {
-        margin-top: -14rem;
+        margin-top: 0rem;
     }
 }
 
-/* 853px */
-@media (min-width: 822px) and (max-width: 854px) {
+@media (min-width: 630px) and (max-width: 767px) {
     .hero-banner {
-        margin-top: -14rem;
+        margin-top: 3rem;
     }
 }
 
-/* 912px */
-@media (min-width: 855px) and (max-width: 913px) {
+@media (min-width: 767px) and (max-width: 768px) {
     .hero-banner {
-        margin-top: -14rem;
+        margin-top: -10rem;
     }
 }
 
-/* 1024px */
-@media (min-width: 914px) and (max-width: 1025px) {
+@media (min-width: 768px) and (max-width: 1025px) {
     .hero-banner {
-        margin-top: -21rem;
+        margin-top: -14rem;
     }
 }
 
