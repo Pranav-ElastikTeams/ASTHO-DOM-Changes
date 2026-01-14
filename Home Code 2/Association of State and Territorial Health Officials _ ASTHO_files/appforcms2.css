@@ -3851,6 +3851,96 @@ a.text-white:hover {
     .tab-card-headline {
         color: #fff
     }
+
+    .topic-areas {
+        padding-right: 2rem;
+    }
+
+    /* Mobile accordion styles for tab-card-collection */
+    .tab-card-collection .container {
+        display: block;
+    }
+
+    .tab-card-collection .row {
+        display: block;
+    }
+
+    .tab-card-collection .col-lg-3 {
+        width: 100%;
+        position: relative;
+        background: #06476b;
+        padding: 2rem 1rem;
+    }
+
+    .tab-card-collection .col-lg-9 {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        display: none;
+    }
+
+    /* Reset tab content positioning for mobile */
+    .tab-card-collection .tab-content {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        opacity: 1 !important;
+        transition: none !important;
+        display: none;
+        width: 100%;
+        background: #fff;
+        padding: 1rem;
+        margin: 0 !important;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .tab-card-collection .tab-content--active {
+        display: block !important;
+        position: relative !important;
+        opacity: 1 !important;
+        z-index: auto !important;
+    }
+
+    /* Tab button styles for mobile */
+    .tab-card-collection .tab {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .tab-card-collection .tab::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+
+    .tab-card-collection .tab[data-expanded="true"]::after {
+        transform: rotate(45deg);
+    }
+
+
+    /* Hide inactive panels completely */
+    .tab-card-collection .tab-content:not(.tab-content--active) {
+        display: none !important;
+    }
+
+    /* Adjust card grid for mobile */
+    .tab-card-collection .tab-content .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Hide navigation arrows on mobile */
+    .tab-card-collection .tab-content .next,
+    .tab-card-collection .tab-content .prev {
+        display: none !important;
+    }
 }
 
 .tab-content {
@@ -6183,6 +6273,14 @@ a[href^="mailto:"] {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
 }
 
 /* Ensure cards in inactive panels are visually hidden */

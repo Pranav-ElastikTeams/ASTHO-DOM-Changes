@@ -10513,7 +10513,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <div class="pl-8">
+                                    <div class="pl-8 topic-areas">
                                         <h2 class="text-white">Explore Topic Areas</h2>
                                         <div class="text-white pb-4 text-3xl">Select a topic area to display the latest
                                             associated reports, briefs, blog posts, webinars, podcasts, and additional
@@ -15631,9 +15631,20 @@
                             var panels = Array.from(container.querySelectorAll('[role="tabpanel"]'));
 
                             var activePanel = null;
+                            var MOBILE_BREAKPOINT = 1024;
+                            var originalPanelContainer = null;
+
+                            function isMobileView() {
+                                return window.innerWidth < MOBILE_BREAKPOINT;
+                            }
 
                             function panelIdFor(tab) {
                                 return tab.dataset.tabTarget || tab.getAttribute('aria-controls');
+                            }
+
+                            // Store original panel container for restoration
+                            if (panels.length > 0) {
+                                originalPanelContainer = panels[0].parentNode;
                             }
 
                             /* -------------------------------
@@ -15657,6 +15668,14 @@
                                 panels.forEach(deactivatePanelKeyboard);
                             }
 
+                            function hidePanel(panel) {
+                                if (!panel) return;
+                                panel.hidden = true;
+                                panel.setAttribute('aria-hidden', 'true');
+                                panel.classList.remove('tab-content--active');
+                                deactivatePanelKeyboard(panel);
+                            }
+
                             /* -------------------------------
                                Activate tab (visual + optional keyboard)
                             -------------------------------- */
@@ -15674,21 +15693,40 @@
                                     return p.id === targetId;
                                 });
 
+                                // Check if we're in mobile view
+                                var isMobile = isMobileView();
+
                                 // Hide other panels visually (UI behavior)
                                 panels.forEach(function (p) {
                                     if (p !== panel) {
-                                        p.hidden = true;
-                                        p.setAttribute('aria-hidden', 'true');
-                                        p.classList.remove('tab-content--active');
-                                        deactivatePanelKeyboard(p);
+                                        hidePanel(p);
                                     }
                                 });
 
                                 if (!panel) return;
 
-                                panel.hidden = false;
-                                panel.setAttribute('aria-hidden', 'false');
-                                panel.classList.add('tab-content--active');
+                                if (isMobile) {
+                                    // Mobile: move panel to be positioned directly after its tab (guarded)
+                                    var tabListItem = tab.closest('li');
+                                    if (tabListItem && panel.parentNode !== tabListItem && !panel.dataset.moved) {
+                                        // Insert the panel right after the tab's list item
+                                        tabListItem.parentNode.insertBefore(panel, tabListItem.nextSibling);
+                                        panel.dataset.moved = 'true';
+                                    }
+                                    panel.hidden = false;
+                                    panel.setAttribute('aria-hidden', 'false');
+                                    panel.classList.add('tab-content--active');
+                                } else {
+                                    // Desktop: restore panel to original container if it was moved
+                                    if (panel.dataset.moved && originalPanelContainer && panel.parentNode !== originalPanelContainer) {
+                                        originalPanelContainer.appendChild(panel);
+                                        delete panel.dataset.moved;
+                                    }
+                                    // Desktop: use original behavior
+                                    panel.hidden = false;
+                                    panel.setAttribute('aria-hidden', 'false');
+                                    panel.classList.add('tab-content--active');
+                                }
 
                                 var cards = panel.querySelectorAll('.card a, .card button');
                                 cards.forEach(function (el) {
@@ -15783,8 +15821,72 @@
                                 tab.setAttribute('tabindex', '0');
                                 tab.dataset.index = i;
                                 tab.addEventListener('keydown', onTabKeyDown);
-                                tab.addEventListener('click', function () {
-                                    activateTab(tab, false);
+                                tab.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    var isMobile = isMobileView();
+                                    var targetId = panelIdFor(tab);
+                                    var panel = panels.find(function (p) {
+                                        return p.id === targetId;
+                                    });
+
+                                    if (isMobile && panel) {
+                                        // Mobile accordion toggle behavior
+                                        var isActive =
+                                            tab.classList.contains('tab--active') &&
+                                            tab.getAttribute('aria-selected') === 'true' &&
+                                            !panel.hidden;
+
+                                        if (isActive) {
+                                            // Close the accordion
+                                            tab.classList.remove('tab--active');
+                                            tab.setAttribute('aria-selected', 'false');
+                                            delete tab.dataset.expanded;
+
+                                            // Restore panel to original container if it was moved
+                                            if (panel.dataset.moved && originalPanelContainer && panel.parentNode !== originalPanelContainer) {
+                                                originalPanelContainer.appendChild(panel);
+                                                delete panel.dataset.moved;
+                                            }
+
+                                            hidePanel(panel);
+                                            activePanel = null;
+
+                                            return;
+                                        } else {
+                                            // First, close any currently active tab
+                                            var currentActiveTab = tabs.find(function (t) {
+                                                return t.classList.contains('tab--active');
+                                            });
+
+                                            if (currentActiveTab && currentActiveTab !== tab) {
+                                                delete currentActiveTab.dataset.expanded;
+
+                                                var currentPanelId = panelIdFor(currentActiveTab);
+                                                var currentPanel = panels.find(function (p) {
+                                                    return p.id === currentPanelId;
+                                                });
+
+                                                if (currentPanel) {
+                                                    currentActiveTab.classList.remove('tab--active');
+                                                    currentActiveTab.setAttribute('aria-selected', 'false');
+
+                                                    // Restore panel to original container if it was moved
+                                                    if (currentPanel.dataset.moved && originalPanelContainer && currentPanel.parentNode !== originalPanelContainer) {
+                                                        originalPanelContainer.appendChild(currentPanel);
+                                                        delete currentPanel.dataset.moved;
+                                                    }
+
+                                                    hidePanel(currentPanel);
+                                                }
+                                            }
+
+                                            activateTab(tab, false);
+                                            tab.dataset.expanded = 'true';
+                                        }
+                                    } else {
+                                        // Desktop tab behavior
+                                        activateTab(tab, false);
+                                    }
                                 });
                             });
 
@@ -15796,9 +15898,51 @@
                                 tabs.find(function (t) { return t.getAttribute('aria-selected') === 'true'; }) ||
                                 tabs[0];
 
-                            if (initialTab) {
+                            // Desktop only: auto-activate
+                            if (initialTab && !isMobileView()) {
                                 activateTab(initialTab, false);
                             }
+
+                            // Mobile: force all panels closed
+                            if (isMobileView()) {
+                                tabs.forEach(function (tab) {
+                                    tab.classList.remove('tab--active');
+                                    tab.setAttribute('aria-selected', 'false');
+                                });
+
+                                panels.forEach(function (panel) {
+                                    hidePanel(panel);
+                                });
+
+                                activePanel = null;
+                            }
+
+                            // Handle window resize for responsive behavior
+                            var resizeTimeout;
+                            window.addEventListener('resize', function () {
+                                clearTimeout(resizeTimeout);
+                                resizeTimeout = setTimeout(function () {
+                                    var isMobile = isMobileView();
+
+                                    // Restore panels to original container when switching to desktop
+                                    if (!isMobile && originalPanelContainer) {
+                                        panels.forEach(function (panel) {
+                                            if (panel.dataset.moved && panel.parentNode !== originalPanelContainer) {
+                                                originalPanelContainer.appendChild(panel);
+                                                delete panel.dataset.moved;
+                                            }
+                                        });
+                                    }
+
+                                    var activeTab = tabs.find(function (t) {
+                                        return t.getAttribute('aria-selected') === 'true';
+                                    });
+
+                                    if (activeTab) {
+                                        activateTab(activeTab, false);
+                                    }
+                                }, 250);
+                            });
 
                         })();
                     </script>
