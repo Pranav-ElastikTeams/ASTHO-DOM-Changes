@@ -2695,7 +2695,7 @@ a.text-white:hover {
 }
 
 /* Mobile layout */
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
     .content-layout {
         gap: 0;
     }
@@ -2713,9 +2713,14 @@ a.text-white:hover {
 }
 
 /* Desktop layout */
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     .content-layout {
         grid-template-columns: 1fr 38.4rem;
+    }
+
+    /* Single element takes full width */
+    .content-layout > :only-child {
+        grid-column: 1 / -1;
     }
 
     .main-content {
@@ -6215,9 +6220,9 @@ a[href^="mailto:"] {
 }
 
 @media (max-width: 1023px) {
-    aside .mobile-movable {
+    /* aside .mobile-movable {
         display: none;
-    }
+    } */
 
     .mobile-lightblue-anchor {
         display: block;
