@@ -1,0 +1,135 @@
+$(document).ready((function () {
+    $("#ess-vertical-tab1-desktop, #ess-vertical-tab1-mobile").click((function () {
+        $(".ess-vertical-tabs-desktop__tab.tab1").attr("class", "ess-vertical-tabs-desktop__tab tab1 active"),
+            $(".ess-vertical-tabs-desktop__tab.tab2").attr("class", "ess-vertical-tabs-desktop__tab tab2"),
+            $(".ess-vertical-tabs-desktop__tab.tab3").attr("class", "ess-vertical-tabs-desktop__tab tab3"),
+            $(".ess-vertical-tabs-desktop__tab.tab4").attr("class", "ess-vertical-tabs-desktop__tab tab4"),
+            $(".ess-vertical-tabs-desktop__tab.tab5").attr("class", "ess-vertical-tabs-desktop__tab tab5"),
+            $("#ess-vertical-content1-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content active"),
+            $("#ess-vertical-content2-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+            $("#ess-vertical-content3-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+            $("#ess-vertical-content4-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+            $("#ess-vertical-content5-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+            $(".ess-vertical-tabs-mobile__tab.tab1").attr("class", "ess-vertical-tabs-mobile__tab tab1 active"),
+            $(".ess-vertical-tabs-mobile__tab.tab2").attr("class", "ess-vertical-tabs-mobile__tab tab2"),
+            $(".ess-vertical-tabs-mobile__tab.tab3").attr("class", "ess-vertical-tabs-mobile__tab tab3"),
+            $(".ess-vertical-tabs-mobile__tab.tab4").attr("class", "ess-vertical-tabs-mobile__tab tab4"),
+            $(".ess-vertical-tabs-mobile__tab.tab5").attr("class", "ess-vertical-tabs-mobile__tab tab5"),
+            $("#ess-vertical-content1-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content active"),
+            $("#ess-vertical-content2-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+            $("#ess-vertical-content3-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+            $("#ess-vertical-content4-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+            $("#ess-vertical-content5-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+    }
+    )),
+        $("#ess-vertical-tab2-desktop, #ess-vertical-tab2-mobile").click((function () {
+            $(".ess-vertical-tabs-desktop__tab.tab2").attr("class", "ess-vertical-tabs-desktop__tab tab2 active"),
+                $(".ess-vertical-tabs-desktop__tab.tab1").attr("class", "ess-vertical-tabs-desktop__tab tab1"),
+                $(".ess-vertical-tabs-desktop__tab.tab3").attr("class", "ess-vertical-tabs-desktop__tab tab3"),
+                $(".ess-vertical-tabs-desktop__tab.tab4").attr("class", "ess-vertical-tabs-desktop__tab tab4"),
+                $(".ess-vertical-tabs-desktop__tab.tab5").attr("class", "ess-vertical-tabs-desktop__tab tab5"),
+                $("#ess-vertical-content1-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content2-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content active"),
+                $("#ess-vertical-content3-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content4-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content5-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $(".ess-vertical-tabs-mobile__tab.tab1").attr("class", "ess-vertical-tabs-mobile__tab tab1"),
+                $(".ess-vertical-tabs-mobile__tab.tab2").attr("class", "ess-vertical-tabs-mobile__tab tab2 active"),
+                $(".ess-vertical-tabs-mobile__tab.tab3").attr("class", "ess-vertical-tabs-mobile__tab tab3"),
+                $(".ess-vertical-tabs-mobile__tab.tab4").attr("class", "ess-vertical-tabs-mobile__tab tab4"),
+                $(".ess-vertical-tabs-mobile__tab.tab5").attr("class", "ess-vertical-tabs-mobile__tab tab5"),
+                $("#ess-vertical-content1-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content2-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content active"),
+                $("#ess-vertical-content3-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content4-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content5-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+        }
+        )),
+        $("#ess-vertical-tab3-desktop, #ess-vertical-tab3-mobile").click((function () {
+            $(".ess-vertical-tabs-desktop__tab.tab5").attr("class", "ess-vertical-tabs-desktop__tab tab5"),
+                $(".ess-vertical-tabs-desktop__tab.tab4").attr("class", "ess-vertical-tabs-desktop__tab tab4"),
+                $(".ess-vertical-tabs-desktop__tab.tab3").attr("class", "ess-vertical-tabs-desktop__tab tab3 active"),
+                $(".ess-vertical-tabs-desktop__tab.tab2").attr("class", "ess-vertical-tabs-desktop__tab tab2"),
+                $(".ess-vertical-tabs-desktop__tab.tab1").attr("class", "ess-vertical-tabs-desktop__tab tab1"),
+                $("#ess-vertical-content5-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content4-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content3-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content active"),
+                $("#ess-vertical-content2-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content1-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $(".ess-vertical-tabs-mobile__tab.tab5").attr("class", "ess-vertical-tabs-mobile__tab tab5"),
+                $(".ess-vertical-tabs-mobile__tab.tab4").attr("class", "ess-vertical-tabs-mobile__tab tab4"),
+                $(".ess-vertical-tabs-mobile__tab.tab3").attr("class", "ess-vertical-tabs-mobile__tab tab3 active"),
+                $(".ess-vertical-tabs-mobile__tab.tab2").attr("class", "ess-vertical-tabs-mobile__tab tab2"),
+                $(".ess-vertical-tabs-mobile__tab.tab1").attr("class", "ess-vertical-tabs-mobile__tab tab1"),
+                $("#ess-vertical-content5-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+            $("#ess-vertical-content4-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content3-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content active"),
+                $("#ess-vertical-content2-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content1-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+        }
+        )),
+        $("#ess-vertical-tab4-desktop, #ess-vertical-tab4-mobile").click((function () {
+            $(".ess-vertical-tabs-desktop__tab.tab5").attr("class", "ess-vertical-tabs-desktop__tab tab5"),
+                $(".ess-vertical-tabs-desktop__tab.tab4").attr("class", "ess-vertical-tabs-desktop__tab tab4 active"),
+                $(".ess-vertical-tabs-desktop__tab.tab3").attr("class", "ess-vertical-tabs-desktop__tab tab3"),
+                $(".ess-vertical-tabs-desktop__tab.tab2").attr("class", "ess-vertical-tabs-desktop__tab tab2"),
+                $(".ess-vertical-tabs-desktop__tab.tab1").attr("class", "ess-vertical-tabs-desktop__tab tab1"),
+                $("#ess-vertical-content5-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content4-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content active"),
+                $("#ess-vertical-content3-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content2-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content1-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $(".ess-vertical-tabs-mobile__tab.tab5").attr("class", "ess-vertical-tabs-mobile__tab tab5"),
+                $(".ess-vertical-tabs-mobile__tab.tab4").attr("class", "ess-vertical-tabs-mobile__tab tab4 active"),
+                $(".ess-vertical-tabs-mobile__tab.tab3").attr("class", "ess-vertical-tabs-mobile__tab tab3"),
+                $(".ess-vertical-tabs-mobile__tab.tab2").attr("class", "ess-vertical-tabs-mobile__tab tab2"),
+                $(".ess-vertical-tabs-mobile__tab.tab1").attr("class", "ess-vertical-tabs-mobile__tab tab1"),
+                $("#ess-vertical-content5-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content4-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content active"),
+                $("#ess-vertical-content3-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content2-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content1-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+        }
+        )),
+        $("#ess-vertical-tab5-desktop, #ess-vertical-tab5-mobile").click((function () {
+            $(".ess-vertical-tabs-desktop__tab.tab5").attr("class", "ess-vertical-tabs-desktop__tab tab5 active"),
+                $(".ess-vertical-tabs-desktop__tab.tab4").attr("class", "ess-vertical-tabs-desktop__tab tab4"),
+                $(".ess-vertical-tabs-desktop__tab.tab3").attr("class", "ess-vertical-tabs-desktop__tab tab3"),
+                $(".ess-vertical-tabs-desktop__tab.tab2").attr("class", "ess-vertical-tabs-desktop__tab tab2"),
+                $(".ess-vertical-tabs-desktop__tab.tab1").attr("class", "ess-vertical-tabs-desktop__tab tab1"),
+                $("#ess-vertical-content5-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content active"),
+                $("#ess-vertical-content4-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content3-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content2-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $("#ess-vertical-content1-desktop").attr("class", "no-gutters ess-vertical-tabs-desktop__panel-content"),
+                $(".ess-vertical-tabs-mobile__tab.tab5").attr("class", "ess-vertical-tabs-mobile__tab tab5 active"),
+                $(".ess-vertical-tabs-mobile__tab.tab4").attr("class", "ess-vertical-tabs-mobile__tab tab4"),
+                $(".ess-vertical-tabs-mobile__tab.tab3").attr("class", "ess-vertical-tabs-mobile__tab tab3"),
+                $(".ess-vertical-tabs-mobile__tab.tab2").attr("class", "ess-vertical-tabs-mobile__tab tab2"),
+                $(".ess-vertical-tabs-mobile__tab.tab1").attr("class", "ess-vertical-tabs-mobile__tab tab1"),
+                $("#ess-vertical-content5-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content active"),
+                $("#ess-vertical-content4-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content3-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content2-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content"),
+                $("#ess-vertical-content1-mobile").attr("class", "no-gutters ess-vertical-tabs-mobile__panel-content")
+        }
+        ))
+}
+)),
+    $((function () {
+        $('[data-toggle="popover"]').popover();
+        var desktopTabs = $(".ess-vertical-tabs-desktop");
+        if (desktopTabs && desktopTabs.is(":visible")) {
+            $(".ess-vertical-tabs-desktop__panel-content").height(desktopTabs.height() * .8);
+        }
+    }
+    )),
+    $("#gunShopPopover").on("show.bs.popover", (function () {
+        $(".gun-shop-text").addClass("highlight")
+    }
+    )),
+    $("#gunShopPopover").on("hide.bs.popover", (function () {
+        $(".gun-shop-text").removeClass("highlight")
+    }
+    ));
+//# sourceMappingURL=main.js.map
