@@ -9508,7 +9508,7 @@
                         <div class="flex pt-8 justify-between items-center">
 
                             <div class="hamburger">
-                                <button type="button" class="flex items-center nav-toggle" id="menu-toggle"
+                                <button type="button" class="flex pl-8 items-center nav-toggle" id="menu-toggle"
                                     aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
                                     <i class="material-icons mr-4">menu</i>
                                     <span class="uppercase">Menu</span>
@@ -9568,9 +9568,8 @@
 
 
 
-                    <div id="main-nav" class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full bg-white"
+                    <div id="main-nav" class="nav-menu hidden pt-8 pb-16 absolute top-0 left-0 w-full bg-white"
                         role="navigation" aria-labelledby="menu-title" tabindex="-1">
-                        <h2 id="menu-title" class="sr-only">Main Navigation</h2>
                         <div class="container">
                             <div class="flex justify-end close-container">
                                 <button type="button" class="nav-menu__close" aria-label="Close menu" id="menu-close">
@@ -10146,7 +10145,7 @@
                                 class="block eventlistblock col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half">
                                 <div class="events">
                                     <div class="events__header-wrapper">
-                                        <h2 class="sr-only">Events &amp; Opportunities</h2>
+                                        <h2>Events &amp; Opportunities</h2>
                                         <div role="tablist" aria-label="Event Tabs"
                                             class="events__header flex border-b border-solid border-gray-400 mb-8">
                                             <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1"
@@ -10169,14 +10168,14 @@
                                                 <li class="flex">
                                                     <div
                                                         class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                        <time datetime="1/15/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-15"
                                                             class="events-day pb-0">15</time>
-                                                        <time datetime="1/15/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-15"
                                                             class="events-month font-bold">Jan</time>
                                                     </div>
 
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">Test Event</h4>
+                                                        <h3 class="pb-2 font-bold">Test Event</h3>
                                                         <p class="pb-4">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -10189,7 +10188,7 @@
                                                                 <dd class="flex items-center">
                                                                     <i class="material-icons mr-2"
                                                                         aria-hidden="true">today</i>
-                                                                    <time datetime="1/15/2026 5:00:00 AM"
+                                                                    <time datetime="2026-01-15"
                                                                         class="font-bold">Jan 15 - 30, 2026</time>
                                                                 </dd>
                                                             </div>
@@ -10213,15 +10212,15 @@
                                                 <li class="flex">
                                                     <div
                                                         class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                        <time datetime="1/22/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-22"
                                                             class="events-day pb-0">22</time>
-                                                        <time datetime="1/22/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-22"
                                                             class="events-month font-bold">Jan</time>
                                                     </div>
 
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health
-                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <h3 class="pb-2 font-bold">The Next Frontier of Public Health
+                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h3>
                                                         <p class="pb-4">In the last webinar of this 2-part series,
                                                             speakers will take a deeper dive into how intermediaries,
                                                             including Health Information Exchanges (HIEs) and Health
@@ -10237,7 +10236,7 @@
                                                                 <dd class="flex items-center">
                                                                     <i class="material-icons mr-2"
                                                                         aria-hidden="true">today</i>
-                                                                    <time datetime="1/22/2026 5:00:00 AM"
+                                                                    <time datetime="2026-01-22"
                                                                         class="font-bold">Jan 22 - 23, 2026</time>
                                                                 </dd>
                                                             </div>
@@ -10263,22 +10262,11 @@
 
                                                     </article>
                                                 </li>
-                                                <li class="flex">
 
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    </div>
-                                                    <div class="flex flex-col pl-16 pr-8 pb-8">
-
-
-                                                        <a href="https://integration.astho.org/education/upcoming-events/"
-                                                            target="_blank" rel="noopener noreferrer"
-                                                            class="button button--blue">View More</a>
-
-
-                                                    </div>
-                                                </li>
                                             </ol>
+                                            <div class="flex flex-col pl-16 pr-8 pb-8">
+                                                <button type="button" onclick="window.open('https://integration.astho.org/education/upcoming-events/', '_blank', 'noopener,noreferrer')" class="button button--blue">View More</button>
+                                            </div>
                                         </section>
 
                                         <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
@@ -10288,14 +10276,14 @@
                                                 <li class="flex">
                                                     <div
                                                         class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                        <time datetime="1/15/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-15"
                                                             class="events-day pb-0">15</time>
-                                                        <time datetime="1/15/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-15"
                                                             class="events-month font-bold">Jan</time>
                                                     </div>
 
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">Test Event</h4>
+                                                        <h3 class="pb-2 font-bold">Test Event</h3>
                                                         <p class="pb-4">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -10308,7 +10296,7 @@
                                                                 <dd class="flex items-center">
                                                                     <i class="material-icons mr-2"
                                                                         aria-hidden="true">today</i>
-                                                                    <time datetime="1/15/2026 5:00:00 AM"
+                                                                    <time datetime="2026-01-15"
                                                                         class="font-bold">Jan 15 - 30, 2026</time>
                                                                 </dd>
                                                             </div>
@@ -10329,19 +10317,11 @@
 
                                                     </article>
                                                 </li>
-                                                <li class="flex">
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    </div>
-                                                    <div class="flex flex-col pl-16 pr-8 pb-8">
 
-
-                                                        <a href="https://integration.astho.org/education/upcoming-events/#Meeting"
-                                                            target="_blank" rel="noopener noreferrer"
-                                                            class="button button--blue">View More</a>
-                                                    </div>
-                                                </li>
                                             </ol>
+                                            <div class="flex flex-col pl-16 pr-8 pb-8">
+                                                <button type="button" onclick="window.open('https://integration.astho.org/education/upcoming-events/#Meeting', '_blank', 'noopener,noreferrer')" class="button button--blue">View More</button>
+                                            </div>
                                         </section>
                                         <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
                                             class="event-tab__content">
@@ -10350,15 +10330,15 @@
                                                 <li class="flex">
                                                     <div
                                                         class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                        <time datetime="1/22/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-22"
                                                             class="events-day pb-0">22</time>
-                                                        <time datetime="1/22/2026 5:00:00 AM"
+                                                        <time datetime="2026-01-22"
                                                             class="events-month font-bold">Jan</time>
                                                     </div>
 
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">The Next Frontier of Public Health
-                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h4>
+                                                        <h3 class="pb-2 font-bold">The Next Frontier of Public Health
+                                                            Interoperability: TEFCA, HDUs, and What Comes Next</h3>
                                                         <p class="pb-4">In the last webinar of this 2-part series,
                                                             speakers will take a deeper dive into how intermediaries,
                                                             including Health Information Exchanges (HIEs) and Health
@@ -10374,7 +10354,7 @@
                                                                 <dd class="flex items-center">
                                                                     <i class="material-icons mr-2"
                                                                         aria-hidden="true">today</i>
-                                                                    <time datetime="1/22/2026 5:00:00 AM"
+                                                                    <time datetime="2026-01-22"
                                                                         class="font-bold">Jan 22 - 23, 2026</time>
                                                                 </dd>
                                                             </div>
@@ -10400,19 +10380,11 @@
 
                                                     </article>
                                                 </li>
-                                                <li class="flex">
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    </div>
-                                                    <div class="flex flex-col pl-16 pr-8 pb-8">
 
-
-                                                        <a href="https://integration.astho.org/education/upcoming-events/#Webinar"
-                                                            target="_blank" rel="noopener noreferrer"
-                                                            class="button button--blue">View More</a>
-                                                    </div>
-                                                </li>
                                             </ol>
+                                            <div class="flex flex-col pl-16 pr-8 pb-8">
+                                                <button type="button" onclick="window.open('https://integration.astho.org/education/upcoming-events/#Webinar', '_blank', 'noopener,noreferrer')" class="button button--blue">View More</button>
+                                            </div>
                                         </section>
                                         <section id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
                                             class="event-tab__content">
@@ -10421,12 +10393,12 @@
                                                 <li class="flex">
                                                     <div
                                                         class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                        <h5 class="events-month font-bold">On Demand</h5>
+                                                        <span class="events-month font-bold">On Demand</span>
                                                     </div>
 
                                                     <article class="flex flex-col pl-16 pr-8 pb-8">
-                                                        <h4 class="pb-2 font-bold">Bridging Trust and Care: The Unique
-                                                            Role of Community Health Workers in Dementia Efforts</h4>
+                                                        <h3 class="pb-2 font-bold">Bridging Trust and Care: The Unique
+                                                            Role of Community Health Workers in Dementia Efforts</h3>
                                                         <p class="pb-4">Join ASTHO and the Building Our Largest Dementia
                                                             Public Health Centers of Excellence for a webinar discussing
                                                             how community health workers can address brain health and
@@ -10455,19 +10427,11 @@
 
                                                     </article>
                                                 </li>
-                                                <li class="flex">
-                                                    <div
-                                                        class="flex flex-col pr-8 border-r border-solid border-gray-400 events-date">
-                                                    </div>
-                                                    <div class="flex flex-col pl-16 pr-8 pb-8">
 
-
-                                                        <a href="https://integration.astho.org/education/upcoming-events/#Training"
-                                                            target="_blank" rel="noopener noreferrer"
-                                                            class="button button--blue">View More</a>
-                                                    </div>
-                                                </li>
                                             </ol>
+                                            <div class="flex flex-col pl-16 pr-8 pb-8">
+                                                <button type="button" onclick="window.open('https://integration.astho.org/education/upcoming-events/#Training', '_blank', 'noopener,noreferrer')" class="button button--blue">View More</button>
+                                            </div>
                                         </section>
                                     </div>
                                 </div>
@@ -16050,8 +16014,6 @@
             <div class="container">
                 <div class="footer-bottom pt-12">
                     <div class="row">
-                        <p>
-                        </p>
                         <div class="col-lg-2">
                             <div class="pb-8 lg:pb-0 px-2 flex justify-center w-full">
 
@@ -16065,7 +16027,6 @@
                                 </a>
                             </div>
                         </div>
-                        <p></p>
                         <div class="col-lg-8">
                             <div>
 
@@ -16120,8 +16081,6 @@
                             <div class="flex justify-center text-white uppercase text-2xl text-center w-full pb-4">©
                                 2026 ASSOCIATION OF STATE AND TERRITORIAL HEALTH OFFICIALS. ALL RIGHTS RESERVED.</div>
                         </div>
-                        <p>
-                        </p>
                         <div class="col-lg-2">
                             <div class="pl-0 list-none flex justify-center w-full">
                                 <ul class="flex list-none p-0 m-0">
@@ -16200,7 +16159,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <p></p>
 
                     </div>
                 </div>
