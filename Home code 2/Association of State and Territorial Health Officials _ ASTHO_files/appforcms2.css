@@ -4040,10 +4040,11 @@ a.text-white:hover {
         content: '+';
         font-size: 1.5rem;
         font-weight: bold;
+        padding: 0 5px;
         transition: transform 0.3s ease;
     }
 
-    .tab-card-collection .tab[data-expanded="true"]::after {
+    .tab-card-collection .tab--active[data-expanded="true"]::after {
         transform: rotate(45deg);
     }
 

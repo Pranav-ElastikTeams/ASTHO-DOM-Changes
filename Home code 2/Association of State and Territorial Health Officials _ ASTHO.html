@@ -15616,6 +15616,7 @@
                                     panel.hidden = false;
                                     panel.setAttribute('aria-hidden', 'false');
                                     panel.classList.add('tab-content--active');
+                                    tab.setAttribute('data-expanded', 'true');
                                 } else {
                                     // Desktop: restore panel to original container if it was moved
                                     if (panel.dataset.moved && originalPanelContainer && panel.parentNode !== originalPanelContainer) {
@@ -15740,7 +15741,7 @@
                                             // Close the accordion
                                             tab.classList.remove('tab--active');
                                             tab.setAttribute('aria-selected', 'false');
-                                            delete tab.dataset.expanded;
+                                            tab.removeAttribute('data-expanded');
 
                                             // Restore panel to original container if it was moved
                                             if (panel.dataset.moved && originalPanelContainer && panel.parentNode !== originalPanelContainer) {
@@ -15759,7 +15760,7 @@
                                             });
 
                                             if (currentActiveTab && currentActiveTab !== tab) {
-                                                delete currentActiveTab.dataset.expanded;
+                                                currentActiveTab.removeAttribute('data-expanded');
 
                                                 var currentPanelId = panelIdFor(currentActiveTab);
                                                 var currentPanel = panels.find(function (p) {
@@ -15781,7 +15782,7 @@
                                             }
 
                                             activateTab(tab, false);
-                                            tab.dataset.expanded = 'true';
+                                            tab.setAttribute('data-expanded', 'true');
                                         }
                                     } else {
                                         // Desktop tab behavior
@@ -15839,7 +15840,7 @@
                                         return t.getAttribute('aria-selected') === 'true';
                                     });
 
-                                    if (activeTab) {
+                                    if (activeTab && !isMobile) {
                                         activateTab(activeTab, false);
                                     }
                                 }, 250);
