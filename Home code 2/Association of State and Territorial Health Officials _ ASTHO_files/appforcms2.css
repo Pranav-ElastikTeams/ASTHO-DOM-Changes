@@ -3802,13 +3802,8 @@ a.text-white:hover {
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
     padding: 0 1rem 12px;
-    /* Add horizontal padding for scroll area */
-    margin: 0 -1rem;
-    /* Compensate for container padding */
     scrollbar-width: thin;
-    /* Show thin scrollbar in Firefox */
     scrollbar-color: #c1c1c1 transparent;
-    /* Scrollbar color for Firefox */
 }
 
 /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
