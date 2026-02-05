@@ -2719,7 +2719,7 @@ a.text-white:hover {
     }
 
     /* Single element takes full width */
-    .content-layout > :only-child {
+    .content-layout> :only-child {
         grid-column: 1 / -1;
     }
 

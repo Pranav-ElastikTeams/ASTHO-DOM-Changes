@@ -2167,6 +2167,7 @@ a.text-white:hover {
         page-break-inside: avoid;
     }
 
+
     .hero-container {
         position: absolute;
         top: 30%;
@@ -2711,7 +2712,7 @@ a.text-white:hover {
 }
 
 /* Mobile layout */
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
     .content-layout {
         gap: 0;
     }
@@ -2729,9 +2730,14 @@ a.text-white:hover {
 }
 
 /* Desktop layout */
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     .content-layout {
         grid-template-columns: 1fr 38.4rem;
+    }
+
+    /* Single element takes full width */
+    .content-layout> :only-child {
+        grid-column: 1 / -1;
     }
 
     .main-content {
@@ -2989,7 +2995,6 @@ a.text-white:hover {
 .nav {
     z-index: 4;
     background-color: #f9f9f9;
-    margin-bottom: 3.2rem
 }
 
 .home .nav {
@@ -2999,6 +3004,18 @@ a.text-white:hover {
 
 .main .nav {
     margin-bottom: 0
+}
+
+@media (max-width: 1023px) {
+    .nav {
+        margin-bottom: 3.2rem
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        margin-bottom: 0
+    }
 }
 
 .nav-logo {
@@ -3234,6 +3251,7 @@ a.text-white:hover {
         font-size: 1.6rem !important;
         padding: 0 !important;
         border: none !important;
+
     }
 
     .toggle-l2 {
@@ -3795,13 +3813,8 @@ a.text-white:hover {
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
     padding: 0 1rem 12px;
-    /* Add horizontal padding for scroll area */
-    margin: 0 -1rem;
-    /* Compensate for container padding */
     scrollbar-width: thin;
-    /* Show thin scrollbar in Firefox */
     scrollbar-color: #c1c1c1 transparent;
-    /* Scrollbar color for Firefox */
 }
 
 /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
@@ -3846,13 +3859,13 @@ a.text-white:hover {
 }
 
 /* Center and reduce width of View More buttons in events section */
-    .events .button.button--blue {
-        display: inline-block !important;
-        width: auto !important;
-        min-width: 120px !important;
-        max-width: 200px !important;
-        text-align: center !important;
-    }
+.events .button.button--blue {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 200px !important;
+    text-align: center !important;
+}
 
 .bg-img--video {
     bottom: 0;
@@ -3966,6 +3979,97 @@ a.text-white:hover {
 @media (max-width: 1023px) {
     .tab-card-headline {
         color: #fff
+    }
+
+    .topic-areas {
+        padding-right: 2rem;
+    }
+
+    /* Mobile accordion styles for tab-card-collection */
+    .tab-card-collection .container {
+        display: block;
+    }
+
+    .tab-card-collection .row {
+        display: block;
+    }
+
+    .tab-card-collection .col-lg-3 {
+        width: 100%;
+        position: relative;
+        background: #06476b;
+        padding: 2rem 1rem;
+    }
+
+    .tab-card-collection .col-lg-9 {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        display: none;
+    }
+
+    /* Reset tab content positioning for mobile */
+    .tab-card-collection .tab-content {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        opacity: 1 !important;
+        transition: none !important;
+        display: none;
+        width: 100%;
+        background: #fff;
+        padding: 1rem;
+        margin: 0 !important;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .tab-card-collection .tab-content--active {
+        display: block !important;
+        position: relative !important;
+        opacity: 1 !important;
+        z-index: auto !important;
+    }
+
+    /* Tab button styles for mobile */
+    .tab-card-collection .tab {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .tab-card-collection .tab::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .tab-card-collection .tab--active[data-expanded="true"]::after {
+        transform: rotate(45deg);
+    }
+
+
+    /* Hide inactive panels completely */
+    .tab-card-collection .tab-content:not(.tab-content--active) {
+        display: none !important;
+    }
+
+    /* Adjust card grid for mobile */
+    .tab-card-collection .tab-content .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Hide navigation arrows on mobile */
+    .tab-card-collection .tab-content .next,
+    .tab-card-collection .tab-content .prev {
+        display: none !important;
     }
 }
 
@@ -6301,6 +6405,14 @@ a[href^="mailto:"] {
     border: 0;
 }
 
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+}
+
 /* Ensure cards in inactive panels are visually hidden */
 .tab-content:not(.tab-content--active) .card {
     opacity: 0;
@@ -6329,9 +6441,9 @@ a[href^="mailto:"] {
 }
 
 @media (max-width: 1023px) {
-    aside .mobile-movable {
+    /*  aside .mobile-movable {
         display: none;
-    }
+    }*/
 
     .mobile-lightblue-anchor {
         display: block;
