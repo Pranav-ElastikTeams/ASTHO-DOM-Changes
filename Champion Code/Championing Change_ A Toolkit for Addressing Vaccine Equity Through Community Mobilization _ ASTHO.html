@@ -12036,7 +12036,7 @@
                         <div class="c-richtext">
                             <div class="d-flex">
                                 <span>
-                                    <div class="-container p-8 mb-16">
+                                    <div class="-container p-8">
 
                                         <p><em>The construction of this toolkit and all activities completed under the
                                                 Vaccine Equity Project were supported by CDC, under Grant Number
@@ -12050,6 +12050,7 @@
                 </div>
             </div>
 
+            <div class="mobile-lightblue-anchor mb-16"></div>
 
             <section>
                 <div class="backToTop" style="display: block;">
@@ -12789,14 +12790,35 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.innerWidth < 1024) {
+            function moveLightBlueBox() {
                 const lightBlueBox = document.querySelector(".mobile-movable");
                 const anchor = document.querySelector(".mobile-lightblue-anchor");
 
                 if (lightBlueBox && anchor) {
-                    anchor.insertAdjacentElement("afterend", lightBlueBox);
+                    if (window.innerWidth < 1024) {
+                        // Move to anchor position on small screens
+                        if (!anchor.nextElementSibling || !anchor.nextElementSibling.classList.contains("mobile-movable")) {
+                            anchor.insertAdjacentElement("afterend", lightBlueBox);
+                        }
+                    } else {
+                        // Move back to original position on large screens
+                        const originalAside = document.querySelector("aside.col-lg-3");
+                        if (originalAside && !originalAside.contains(lightBlueBox)) {
+                            originalAside.appendChild(lightBlueBox);
+                        }
+                    }
                 }
             }
+
+            // Run on page load
+            moveLightBlueBox();
+
+            // Run on window resize
+            let resizeTimer;
+            window.addEventListener("resize", function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(moveLightBlueBox, 250);
+            });
         });
     </script>
 
