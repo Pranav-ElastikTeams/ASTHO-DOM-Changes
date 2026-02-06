@@ -4310,8 +4310,30 @@ summary:before {
 .accordion-collapse:hover i.material-icons,
 .accordion-expand:active i.material-icons,
 .accordion-expand:focus i.material-icons,
-.accordion-expand:hover i.material-icons {
+.accordion-expand:hover i.material-icons,
+.accordion-collapse:hover .accordion-icon,
+.accordion-collapse:focus .accordion-icon,
+.accordion-collapse:active .accordion-icon,
+.accordion-expand:hover .accordion-icon,
+.accordion-expand:focus .accordion-icon,
+.accordion-expand:active .accordion-icon {
     background-color: #c35322
+}
+
+.accordion-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #367aab;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #ffffff;
 }
 
 .img-cta__img-wrapper {
