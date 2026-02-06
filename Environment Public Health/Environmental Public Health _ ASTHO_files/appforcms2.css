@@ -5906,6 +5906,16 @@ a[href^="mailto:"] {
     font-size: 2rem
 }
 
+.card__link {
+    color: #323e48;
+}
+
+.card__link:hover,
+.card__link:focus,
+.card__link:active {
+    color: #c35322;
+}
+
 .c-search-results .category-tag {
     width: 100%;
     padding-right: 130px;
