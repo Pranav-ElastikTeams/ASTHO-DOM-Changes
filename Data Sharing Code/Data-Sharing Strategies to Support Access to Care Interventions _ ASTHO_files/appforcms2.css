@@ -1424,6 +1424,16 @@ a.button:not(.button--blue, .button--ghost-white) {
     background-color: white;
 }
 
+.related-content-link h4 {
+    color: #367aab;
+}
+
+.related-content-link:active h4,
+.related-content-link:focus h4,
+.related-content-link:hover h4 {
+    color: #c35322;
+}
+
 a.text-white:active,
 a.text-white:focus,
 a.text-white:hover {
