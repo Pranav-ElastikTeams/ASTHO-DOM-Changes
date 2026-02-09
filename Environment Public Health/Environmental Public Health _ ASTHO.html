@@ -8486,6 +8486,14 @@
     <script src="./Environmental Public Health _ ASTHO_files/vt.js.download" async=""></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Check if landing-banner__rail exists, if not remove page-content__skeleton
+            const landingBannerRail = document.querySelector('.landing-banner__rail');
+            const pageContentSkeleton = document.querySelector('.page-content__skeleton');
+            
+            if (!landingBannerRail && pageContentSkeleton) {
+                pageContentSkeleton.remove();
+            }
+            
             const currentOrigin = window.location.origin;
             const externalSelector = `a[href^='http']:not([href^='${currentOrigin}'], :has(img, h1, h2, h3, h4, h5, h6))`;
             const externalLinks = document.querySelectorAll(externalSelector);
