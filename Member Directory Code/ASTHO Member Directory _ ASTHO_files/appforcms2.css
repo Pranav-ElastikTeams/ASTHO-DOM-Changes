@@ -4213,6 +4213,10 @@ a.text-white:hover {
     height: 100%
 }
 
+.biographyblock img {
+    object-fit: cover;
+}
+
 .table-section {
     background-color: #06476b
 }
