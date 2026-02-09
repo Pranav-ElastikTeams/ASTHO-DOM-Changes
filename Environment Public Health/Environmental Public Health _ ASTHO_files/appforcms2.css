@@ -4352,11 +4352,16 @@ summary:before {
 }
 
 .page-content {
-    position: relative
+    position: relative;
+    padding-top: 4rem
 }
 
 .page-content__skeleton {
     display: none
+}
+
+.landing-body {
+    padding: 0 4rem 4rem 4rem;
 }
 
 @media (min-width: 1024px) {
