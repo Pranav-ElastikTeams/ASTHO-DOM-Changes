@@ -793,6 +793,10 @@ video {
     margin-bottom: 8rem
 }
 
+.ml-32 {
+    margin-left: 8rem
+}
+
 .overflow-hidden {
     overflow: hidden
 }
