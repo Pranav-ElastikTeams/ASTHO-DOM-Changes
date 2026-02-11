@@ -4345,9 +4345,19 @@ summary:before {
 @media (max-width: 1023px) {
     .landing-banner .row {
         -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .landing-banner .landing-banner__content,
+    .landing-banner .landing-banner__rail,
+    .landing-banner .landing-banner__share {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%
     }
 }
 
@@ -4362,6 +4372,10 @@ summary:before {
 
 .landing-body {
     padding: 0 4rem 4rem 4rem;
+}
+
+#left-rail-heading {
+    font-size: 18px;
 }
 
 @media (min-width: 1024px) {
@@ -4434,10 +4448,10 @@ summary:before {
 }
 
 .rail-wrapper {
-    position: absolute;
-    top: .4rem;
-    left: 0;
-    width: 100%
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.6rem
 }
 
 .rail-wrapper a {
@@ -4452,11 +4466,13 @@ summary:before {
     font-weight: 700
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 1024px) {
     .rail-wrapper {
-        margin-top: 0;
-        margin-bottom: 1.6rem;
-        position: static
+        position: absolute;
+        top: .4rem;
+        left: 0;
+        width: 100%;
+        margin-bottom: 0
     }
 }
 
