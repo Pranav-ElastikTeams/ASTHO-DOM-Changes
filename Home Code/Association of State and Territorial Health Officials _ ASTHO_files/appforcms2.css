@@ -797,6 +797,10 @@ video {
     margin-left: 8rem
 }
 
+.ml-48 {
+    margin-left: 12rem
+}
+
 .overflow-hidden {
     overflow: hidden
 }
