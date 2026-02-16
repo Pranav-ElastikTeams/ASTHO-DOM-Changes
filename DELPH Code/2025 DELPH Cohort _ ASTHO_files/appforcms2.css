@@ -4206,7 +4206,8 @@ a.text-white:hover {
 .bg-darkBlue .text-blue,
 .bg-darkBlue a,
 .bg-darkBlue h2,
-.bg-darkBlue h3 {
+.bg-darkBlue h3,
+.bg-darkBlue h4 {
     color: #fff
 }
 
