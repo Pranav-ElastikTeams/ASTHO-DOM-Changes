@@ -4162,9 +4162,9 @@ a.text-white:hover {
     border-bottom: 0
 }
 
-.featured h2,
-.featured h3,
-.featured h4 {
+.categorylistblock ul h2,
+.categorylistblock ul h3,
+.categorylistblock ul h4 {
     font-size: 1.8rem
 }
 
