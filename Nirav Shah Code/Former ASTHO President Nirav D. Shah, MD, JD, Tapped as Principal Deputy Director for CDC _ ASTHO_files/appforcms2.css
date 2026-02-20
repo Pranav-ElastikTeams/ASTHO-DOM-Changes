@@ -82,7 +82,7 @@ audio:not([controls]) {
     z-index: 1;
   }
 
-  .main-body-content::before {
+  .main-content-wrapper.has-right-content .main-body-content::before {
     content: "";
     float: right;
     width: 28%;
@@ -90,6 +90,18 @@ audio:not([controls]) {
     margin-left: 2rem;
     margin-bottom: 1rem;
     shape-outside: inset(0);
+  }
+
+  @supports selector(.main-content-wrapper:has(.right-of-main-content)) {
+    .main-content-wrapper:has(.right-of-main-content) .main-body-content::before {
+      content: "";
+      float: right;
+      width: 28%;
+      height: var(--bio-height, 24rem);
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      shape-outside: inset(0);
+    }
   }
 
 }

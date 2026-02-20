@@ -10913,7 +10913,20 @@
       function initBioWrap() {
         var mainBody = document.querySelector('.main-body-content');
         var bioCard = document.querySelector('.right-of-main-content');
-        if (!mainBody || !bioCard) return;
+        if (!mainBody) return;
+
+        var wrapper = mainBody.closest('.main-content-wrapper') || (bioCard ? bioCard.closest('.main-content-wrapper') : null);
+        if (!bioCard) {
+          if (wrapper) {
+            wrapper.classList.remove('has-right-content');
+          }
+          mainBody.style.removeProperty('--bio-height');
+          return;
+        }
+
+        if (wrapper) {
+          wrapper.classList.add('has-right-content');
+        }
 
         var update = function () {
           var height = bioCard.offsetHeight || bioCard.getBoundingClientRect().height;
