@@ -2693,63 +2693,6 @@ a.text-white:hover {
     height: auto
 }
 
-.content-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    width: 100%;
-}
-
-.main-content {
-    order: 1;
-}
-
-.sidebar {
-    order: 2;
-    padding: 1.5rem;
-    border-radius: 4px;
-    max-width: 38.4rem;
-}
-
-/* Mobile layout */
-@media (max-width: 1023px) {
-    .content-layout {
-        gap: 0;
-    }
-
-    .sidebar {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .sidebar .lightblue-container {
-        display: inline-block;
-        text-align: left;
-        margin: 0 auto;
-    }
-}
-
-/* Desktop layout */
-@media (min-width: 1024px) {
-    .content-layout {
-        grid-template-columns: 1fr 38.4rem;
-    }
-
-    /* Single element takes full width */
-    .content-layout> :only-child {
-        grid-column: 1 / -1;
-    }
-
-    .main-content {
-        order: 1;
-    }
-
-    .sidebar {
-        order: 2;
-    }
-}
-
-
 .half-right-grey {
     position: relative
 }
@@ -6436,26 +6379,6 @@ a[href^="mailto:"] {
 /* Focus order debugging (optional, remove in production) */
 [role="tabpanel"]:focus {
     box-shadow: inset 0 0 0 2px #4CAF50;
-}
-
-/* Mobile Lightblue Anchor Styles */
-.mobile-lightblue-anchor {
-    display: none;
-}
-
-@media (max-width: 1023px) {
-    /*  aside .mobile-movable {
-        display: none;
-    }*/
-
-    .mobile-lightblue-anchor {
-        display: block;
-    }
-
-    .lightblue-container {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
 }
 
 /* 390px */
