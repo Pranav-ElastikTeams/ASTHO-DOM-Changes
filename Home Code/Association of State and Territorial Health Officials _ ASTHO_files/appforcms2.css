@@ -1949,6 +1949,19 @@ a.text-white:hover {
     }
 }
 
+.nav-logo__image {
+    display: block;
+    width: 10rem;
+    height: auto;
+    max-height: 10rem;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    flex-shrink: 0
+}
+
 @media (min-width: 1024px) {
     .navspace {
         justify-content: flex-start;
@@ -1984,6 +1997,12 @@ a.text-white:hover {
         text-align: left;
         max-width: calc(100% - 30px);
         box-sizing: border-box;
+        gap: 1rem;
+    }
+
+    .nav-logo__image {
+        width: 13rem;
+        margin-right: 10px;
     }
 
     .nav-logo:hover {
