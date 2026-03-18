@@ -1953,7 +1953,7 @@ a.text-white:hover {
     display: block;
     width: 10rem;
     height: auto;
-    max-height: 10rem;
+    max-height: 12rem;
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
@@ -1997,12 +1997,10 @@ a.text-white:hover {
         text-align: left;
         max-width: calc(100% - 30px);
         box-sizing: border-box;
-        gap: 1rem;
     }
 
     .nav-logo__image {
-        width: 13rem;
-        margin-right: 10px;
+        width: 15rem;
     }
 
     .nav-logo:hover {
