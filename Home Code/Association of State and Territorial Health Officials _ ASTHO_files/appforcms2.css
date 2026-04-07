@@ -3470,14 +3470,37 @@ a.text-white:hover {
     }
 }
 
-.hero-container {
-    z-index: 1
+.hero .hero-container {
+    z-index: 1;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
 
-@media (min-width: 460px) {
-    .hero-container {
-        top: 15%;
-        position: absolute;
+@media (max-width: 431px) {
+    .hero .hero-container {
+        top: 16%;
+    }
+}
+
+@media (min-width: 432px) and (max-width: 470px) {
+    .hero .hero-container {
+        top: 20%;
+    }
+}
+
+@media (min-width: 471px) and (max-width: 510px) {
+    .hero .hero-container {
+        top: 24%;
+    }
+}
+
+@media (min-width: 511px) and (max-width: 539px) {
+    .hero .hero-container {
+        top: 27%;
     }
 }
 
@@ -6536,8 +6559,13 @@ a[href^="mailto:"] {
     }
 }
 
-/* 1026px and above */
-@media (min-width: 1026px) {
+@media (min-width: 1026px) and (max-width: 1199px) {
+    .hero-banner {
+        margin-top: -20rem;
+    }
+}
+
+@media (min-width: 1200px) {
     .hero-banner {
         margin-top: -28rem;
     }
